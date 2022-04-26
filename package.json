@@ -1,9 +1,9 @@
 {
-  "name": "name-2",
+  "name": "quasar-project",
   "version": "0.0.1",
-  "description": "This is my first appliction bro",
-  "productName": "Name-3",
-  "author": "Mahmood Khalil <mahmood.khalil@technologi.co.uk>",
+  "description": "A Quasar Project",
+  "productName": "Quasar App",
+  "author": "MahmoodKhalil57 <2393401k@student.gla.ac.uk>",
   "private": true,
   "scripts": {
     "test": "echo \"No test specified\" && exit 0"
@@ -33,8 +33,5 @@
     "node": ">= 12.22.1",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
-  },
-  "scripts": {
-    "deploy": "push-dir --dir=dist/spa --remote=gh-pages --branch=master"
   }
 }

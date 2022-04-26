@@ -7,20 +7,12 @@ const routes = [
       { path: '', component: () => import('pages/IndexPage.vue') }
     ]
   },
-
+  
   {
     path: '/about',
     component: () => import('layouts/docLayout.vue'),
     children: [
       { path: '', component: () => import('pages/about.vue') }
-    ]
-  },
-
-  {
-    path: '/page4',
-    component: () => import('layouts/docLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/page4.vue') }
     ]
   },
 

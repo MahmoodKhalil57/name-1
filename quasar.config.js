@@ -48,10 +48,10 @@ module.exports = configure(function (ctx) {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-build
     build: {
-      vueRouterMode: 'history', // available values: 'hash', 'history'
+      vueRouterMode: 'hash', // available values: 'hash', 'history'
 
       // transpile: false,
-      publicPath: '/',
+      // publicPath: '/',
 
       // Add dependencies for transpiling with Babel (Array of string/regex)
       // (from node_modules, which are by default not transpiled).
@@ -94,12 +94,11 @@ module.exports = configure(function (ctx) {
       // (like functional components as one of the examples),
       // you can manually specify Quasar components/directives to be available everywhere:
       //
-      all:"auto",
       // components: [],
       // directives: [],
 
       // Quasar plugins
-      plugins: ["Loading", "Meta"]
+      plugins: []
     },
 
     // animations: 'all', // --- includes all animations
@@ -141,9 +140,9 @@ module.exports = configure(function (ctx) {
       
 
       manifest: {
-        name: `Name-3`,
-        short_name: `Name-3`,
-        description: `This is my first appliction bro`,
+        name: `Quasar App`,
+        short_name: `Quasar App`,
+        description: `A Quasar Project`,
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
@@ -208,7 +207,7 @@ module.exports = configure(function (ctx) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'name-2'
+        appId: 'quasar-project'
       },
 
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain

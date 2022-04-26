@@ -1,6 +1,6 @@
-# Name-3 (name-2)
+# Quasar App (quasar-project)
 
-This is my first appliction bro
+A Quasar Project
 
 ## Install the dependencies
 ```bash
