@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
     <!-- content -->
-    <header>HEADER BTETSHAF YA BRO </header>
+    <header>HEADER lazem tetmese7 YA BRO </header>
     <h3> lorem ipsum </h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
