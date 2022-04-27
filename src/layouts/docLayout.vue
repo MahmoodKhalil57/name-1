@@ -28,13 +28,12 @@
         <q-btn push color="green" text-color="White" rounded>
           <q-avatar>
             <q-icon name="fa-brands fa-whatsapp" />
-            <!--<img src="\static\kindpng_497719.png" style="max-width: 30px; height: 30px;">-->
           </q-avatar>
           <q-item-section>
             Whatsapp Us!
           </q-item-section>
           <q-badge color="red" label="!" rounded floating>!</q-badge>
-          
+
         </q-btn>
       </div>
     </q-footer>
