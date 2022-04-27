@@ -23,11 +23,12 @@
       <router-view />
     </q-page-container>
 
-    <q-footer>
+    <q-footer class="transparent">
       <div class="q-pa-md q-gutter-sm">
         <q-btn push color="green" text-color="White" rounded>
           <q-avatar>
-            <img src="\static\kindpng_497719.png" style="max-width: 30px; height: 30px;">
+            <q-icon name="fa-brands fa-whatsapp" />
+            <!--<img src="\static\kindpng_497719.png" style="max-width: 30px; height: 30px;">-->
           </q-avatar>
           <q-item-section>
             Whatsapp Us!
