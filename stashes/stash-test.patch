@@ -1,0 +1,13 @@
+diff --git a/src/pages/about.vue b/src/pages/about.vue
+index b966a0b..8e184be 100644
+--- a/src/pages/about.vue
++++ b/src/pages/about.vue
+@@ -1,7 +1,7 @@
+ <template>
+   <q-page padding>
+     <!-- content -->
+-    <header>HEADER BTETSHAF YA BRO </header>
++    <header> Test stash </header>
+     <h3> lorem ipsum </h3>
+     <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
