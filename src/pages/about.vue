@@ -2,7 +2,7 @@
   <q-page padding>
     <!-- content -->
     <header>HEADER lazem tetmese7 YA BRO </header>
-    <h3> lorem ipsum </h3>
+    <h3> lorel ipsum </h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus
