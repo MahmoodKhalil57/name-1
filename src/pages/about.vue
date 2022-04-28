@@ -2,6 +2,7 @@
   <q-page padding>
     <!-- content -->
     <header>HEADER lazem tetmese7 YA BRO </header>
+    <h1> farouk 3el2</h1>
     <h3> lorel ipsum </h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
