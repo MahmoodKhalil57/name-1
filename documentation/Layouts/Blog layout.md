@@ -1,4 +1,4 @@
-# Blog page
+# Blog layout
 
 ##### Pages that use this layout: 
 

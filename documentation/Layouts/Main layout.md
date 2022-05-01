@@ -1,4 +1,4 @@
-# Main page
+# Main layout
 
 ##### Pages that use this layout: 
 
