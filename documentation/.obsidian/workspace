@@ -7,8 +7,12 @@
         "id": "4a6e70632f6d3af2",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "index.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,14 +90,14 @@
   "active": "4a6e70632f6d3af2",
   "lastOpenFiles": [
     "index.md",
+    "Layouts/Docs layout.md",
+    "Layouts/Main layout.md",
+    "Layouts/Blog layout.md",
+    "Pages/About page.md",
+    "Pages/Gallery page.md",
     "Pages/Visit-us page.md",
     "Pages/View-cart page.md",
     "Pages/Tips page.md",
-    "Pages/Testimonials page.md",
-    "Pages/Shop page.md",
-    "Pages/Our-job page.md",
-    "Pages/Login page.md",
-    "Pages/Home page.md",
-    "Pages/Gallery page.md"
+    "Pages/Testimonials page.md"
   ]
 }
