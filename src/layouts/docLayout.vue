@@ -1,17 +1,16 @@
 <template>
   <q-layout view="hHh lpR lFr">
 
-    <q-header elevated class="bg-primary text-white" height-hint="98">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
-          </q-avatar>
-          Title 2
-        </q-toolbar-title>
-      </q-toolbar>
+    <q-header elevated class="bg-primary text-white q-pa-xl" height-hint="98">
 
-      <q-tabs align="left">
+      <q-avatar>
+        <img src="/SVG/manggo.svg">
+      </q-avatar>
+      Title
+
+
+
+      <q-tabs alignment="center">
         <q-route-tab to="/page1" label="Page One" />
         <q-route-tab to="/page2" label="Page Two" />
         <q-route-tab to="/page3" label="Page Three" />
@@ -26,13 +25,13 @@
     <q-footer class="transparent">
       <div class="q-pa-md q-gutter-sm">
         <q-btn push color="green" text-color="White" rounded>
-          <q-avatar>
-            <q-icon name="fa-brands fa-whatsapp" />
-          </q-avatar>
+          <q-avatar icon="fa-brands fa-whatsapp"> </q-avatar>
           <q-item-section>
-            Whatsapp Us!
+            Whatsapp Us
           </q-item-section>
-          <q-badge color="red" label="!" rounded floating>!</q-badge>
+          <q-badge color="red" rounded floating>
+            <q-avatar icon="fa-solid fa-exclamation" size="1.5em"> </q-avatar>
+          </q-badge>
 
         </q-btn>
       </div>
