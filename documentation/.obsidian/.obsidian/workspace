@@ -1,13 +1,13 @@
 {
   "main": {
-    "id": "29aa148dedd2ebe6",
+    "id": "242f882a1777f9b7",
     "type": "split",
     "children": [
       {
-        "id": "4a6e70632f6d3af2",
+        "id": "e1c28641ef2bb19f",
         "type": "leaf",
         "state": {
-          "type": "graph",
+          "type": "empty",
           "state": {}
         }
       }
@@ -15,15 +15,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "d249bc54fbf17815",
+    "id": "2b4032ddb66dcd9b",
     "type": "split",
     "children": [
       {
-        "id": "6d0c2cc0e3947bd4",
+        "id": "b369cc4e226efecf",
         "type": "tabs",
         "children": [
           {
-            "id": "cf0ddb9c76f8607b",
+            "id": "f6ac67fb9e0819c1",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -31,7 +31,7 @@
             }
           },
           {
-            "id": "1ae14062a3000717",
+            "id": "1a0dbca098642283",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -52,15 +52,15 @@
     "width": 300
   },
   "right": {
-    "id": "83d656facf2ed297",
+    "id": "d4961d5399c86169",
     "type": "split",
     "children": [
       {
-        "id": "b8d04c6676268cb8",
+        "id": "b59cf1fa17e81cfd",
         "type": "tabs",
         "children": [
           {
-            "id": "01c40beb7e10cdb3",
+            "id": "4542522c1815e2bc",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -82,17 +82,6 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "4a6e70632f6d3af2",
-  "lastOpenFiles": [
-    "index.md",
-    "Layouts/Docs layout.md",
-    "Layouts/Main layout.md",
-    "Layouts/Blog layout.md",
-    "Pages/About page.md",
-    "Pages/Gallery page.md",
-    "Pages/Visit-us page.md",
-    "Pages/View-cart page.md",
-    "Pages/Tips page.md",
-    "Pages/Testimonials page.md"
-  ]
+  "active": "e1c28641ef2bb19f",
+  "lastOpenFiles": []
 }
