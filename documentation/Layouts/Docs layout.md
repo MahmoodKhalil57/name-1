@@ -1,10 +1,10 @@
 # Docs layout
 
-##### Pages that use this layout: 
+##### Pages that use this layout:
 
 ### User stories:
 <--- Header --->
-1. [x] The user should see a header with a background image which shows the green nature of the website and $primary-color.
+1. [ ] The user should see a header with a background image which shows the green nature of the website and $primary-color.
 2. [ ] The user should see the logo, name of the farm, their moto on the left side of the header.
 3. [ ] User should see a list of the main webpages as hyperlinks that direct the user to the main pages.(home  with logo instead of words).
 5. [ ] User should see a button (menu) with $secondary-color which reveals a list showing the remaining webpages of the website when hovered over.
