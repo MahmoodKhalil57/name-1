@@ -5,7 +5,7 @@
         <template v-slot:media>
           <img
             class="my-custom-image"
-            src="background\pexels-maksim-goncharenok-4597121.jpg"
+            src="\background\pexels-maksim-goncharenok-4597121.jpg"
           />
         </template>
 

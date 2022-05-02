@@ -4,3 +4,6 @@
 /.quasar
 /node_modules
 .eslintrc.js
+# Documentation and stashes
+/documentations
+/stashes
