@@ -11,3 +11,6 @@ Font Awesome: https://fontawesome.com/
 
 Javascript CheatSheet: [https://github.com/lukehoban/es6features](https://github.com/lukehoban/es6features "https://github.com/lukehoban/es6features")
 Javascript full documentation: [http://es6-features.org/#Constants](http://es6-features.org/#Constants "http://es6-features.org/#Constants")
+
+Template Website: https://next-quasar-admin.netlify.app/Pagination
+Template code: https://github.com/pratik227/quasar-admin
