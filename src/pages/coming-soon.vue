@@ -20,24 +20,25 @@
           >
             <div class="q-gutter">
               <q-icon
-                class="rotate-315 apple"
+                style="transform: translateX(75px) rotate(-45deg)"
                 name="fa-solid fa-apple-whole"
                 size="140px"
                 color="positive"
               />
               <q-icon
-                class="leaf"
+                style="transform: translateY(-25px)"
                 name="fa-solid fa-leaf"
                 size="140px"
                 color="secondary"
               />
               <q-icon
-                class="carrot"
+                style="transform: translateX(-75px)"
                 name="fa-solid fa-carrot"
                 size="140px"
                 color="warning"
               />
             </div>
+
             <div class="text-h3 text-white text-center text-bold" size="xl">
               Coming Soon!
             </div>
@@ -63,16 +64,5 @@ export default {
 <style lang="scss">
 .my-custom-image {
   filter: blur(3.5px);
-}
-.apple {
-  //rotate -45 deg
-  transform: translateX(75px) rotate(-45deg);
-}
-.leaf {
-  transform: translateY(-25px);
-}
-.carrot {
-  //move left
-  transform: translateX(-75px);
 }
 </style>
