@@ -1,17 +1,18 @@
 <template>
-  <q-layout view="hHh lpR lFr">
+  <q-layout view="hhh lpr fff">
+    <!-- Be sure to play with the Layout demo on docs -->
 
-    <q-header elevated class="bg-primary text-white" height-hint="98">
+    <!-- (Optional) The Header -->
+    <q-header elevated>
       <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
-          </q-avatar>
-          Title
-        </q-toolbar-title>
+        <q-avatar>
+          <img src="\icons\twomangoes-ripe.svg" />
+        </q-avatar>
+
+        <q-toolbar-title>Farmweb</q-toolbar-title>
       </q-toolbar>
 
-      <q-tabs align="left">
+      <q-tabs>
         <q-route-tab to="/page1" label="Page One" />
         <q-route-tab to="/page2" label="Page Two" />
         <q-route-tab to="/page3" label="Page Three" />
@@ -19,44 +20,77 @@
       </q-tabs>
     </q-header>
 
-    <q-page-container>
-      <router-view />
-    </q-page-container>
-
-    <q-footer class="transparent">
+    <!-- (Optional) The Footer -->
+    <q-footer>
       <div class="q-pa-md q-gutter-sm">
-        <q-btn push color="green" text-color="White" rounded>
-          <q-avatar>
-            <q-icon name="fa-brands fa-whatsapp" />
-            <!--<img src="\static\kindpng_497719.png" style="max-width: 30px; height: 30px;">-->
-          </q-avatar>
-          <q-item-section>
-            Whatsapp Us!
-          </q-item-section>
-          <q-badge color="red" label="!" rounded floating>!</q-badge>
-          
-        </q-btn>
+        <p>
+          I was gonna take the time to sit down and write you a little letter.
+          But I thought a song would probably be a little better. Instead of a
+          ,letter. That you'd probably just shred up--yeah. I stumbled on your
+          picture yesterday and it made me stop and think of. How much of a
+          waste it'd ,be for me to put some ink to, a stupid piece a. Paper, I'd
+          rather let you see how. Much I fucking hate you in a freestyle.kol
+          5ara
+        </p>
+        <p>
+          So bad, I’m so good that I’m so bad. Guarantee I’ll be the greatest
+          thing you ever had. ‘Cause you ain't never met nobody like me. And you
+          ain't gonna wanna fuck nobody else again. I'ma make you learn to
+          appreciate me, differentiate me. From these phony, little fishy and
+          sissy fake G’s. Skip over the "huggy bear," and all the "kissy face,"
+          please. Initiate phase three, missy, now service me. Take another shot
+          of Jäger, shakin' so nervously. Take your time, baby, oh, you’re the
+          bomb, baby. Oh, you’re doing that even better than your mom, lady. I
+          told you why I’m Shady, you didn't listen now, did ya?. Relax woman,
+          you know that I’m only kiddin' with ya. Got a twisted sense of humor,
+          its warped, but I didn't hit ya. I think you’re finally starting to
+          get the picture. I’m just… So bad, I’m so good that I’m so bad.
+          Guarantee I’ll be the greatest thing you ever had. ‘Cause you ain't
+          never met nobody like me. And you ain't gonna wanna fuck nobody else
+          again. I'ma make you learn to appreciate me, differentiate me. From
+          these phony, little fishy and sissy fake G’s. Skip over the.
+        </p>
       </div>
     </q-footer>
 
+    <!-- (Optional) A Drawer; you can add one more with side="right" or change this one's side -->
+
+    <q-page-container>
+      <!-- This is where pages get injected -->
+      <router-view />
+      <q-page-scroller
+        position="bottom-left"
+        :scroll-offset="10"
+        :offset="[30, 30]"
+        expand
+      >
+        <q-btn push color="green" rounded>
+          <q-avatar icon="fa-brands fa-whatsapp"> </q-avatar>
+          Whatsapp Us
+          <q-badge color="red" rounded floating>
+            <q-avatar icon="fa-solid fa-exclamation" size="1.5em"> </q-avatar>
+          </q-badge>
+        </q-btn>
+      </q-page-scroller>
+    </q-page-container>
   </q-layout>
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref } from "vue";
 
 export default {
   // name: 'LayoutName',
 
-  setup () {
-    const leftDrawerOpen = ref(false)
+  setup() {
+    const leftDrawerOpen = ref(false);
 
     return {
       leftDrawerOpen,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
-  }
-}
+      toggleLeftDrawer() {
+        leftDrawerOpen.value = !leftDrawerOpen.value;
+      },
+    };
+  },
+};
 </script>
