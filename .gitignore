@@ -29,5 +29,5 @@ yarn-error.log*
 *.sln
 
 # Documentation and stashes
-/documentations
-/stashes
+/documentation
+/stash
