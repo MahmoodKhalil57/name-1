@@ -1,15 +1,18 @@
 <template>
   <q-layout view="hhh lpr fff">
+    <!-- Be sure to play with the Layout demo on docs -->
+
+    <!-- (Optional) The Header -->
     <q-header elevated>
       <q-toolbar>
         <q-avatar>
-          <img src="\SVG\twomangoes-ripe.svg" />
+          <img src="\icons\twomangoes-ripe.svg" />
         </q-avatar>
 
         <q-toolbar-title>Farmweb</q-toolbar-title>
       </q-toolbar>
 
-      <q-tabs alignment="center">
+      <q-tabs>
         <q-route-tab to="/page1" label="Page One" />
         <q-route-tab to="/page2" label="Page Two" />
         <q-route-tab to="/page3" label="Page Three" />
@@ -17,24 +20,7 @@
       </q-tabs>
     </q-header>
 
-    <q-page-container>
-      <router-view />
-
-      <q-page-sticky
-        position="bottom-left"
-        :scroll-offset="10"
-        :offset="[18, 18]"
-      >
-        <q-btn push color="green" rounded>
-          <q-avatar icon="fa-brands fa-whatsapp"> </q-avatar>
-          Whatsapp Us
-          <q-badge color="red" rounded floating>
-            <q-avatar icon="fa-solid fa-exclamation" size="1.5em"> </q-avatar>
-          </q-badge>
-        </q-btn>
-      </q-page-sticky>
-    </q-page-container>
-
+    <!-- (Optional) The Footer -->
     <q-footer>
       <div class="q-pa-md q-gutter-sm">
         <p>
@@ -66,24 +52,45 @@
         </p>
       </div>
     </q-footer>
+
+    <!-- (Optional) A Drawer; you can add one more with side="right" or change this one's side -->
+
+    <q-page-container>
+      <!-- This is where pages get injected -->
+      <router-view />
+      <q-page-scroller
+        position="bottom-left"
+        :scroll-offset="10"
+        :offset="[30, 30]"
+        expand
+      >
+        <q-btn push color="green" rounded>
+          <q-avatar icon="fa-brands fa-whatsapp"> </q-avatar>
+          Whatsapp Us
+          <q-badge color="red" rounded floating>
+            <q-avatar icon="fa-solid fa-exclamation" size="1.5em"> </q-avatar>
+          </q-badge>
+        </q-btn>
+      </q-page-scroller>
+    </q-page-container>
   </q-layout>
 </template>
 
 <script>
-  import { ref } from 'vue'
+import { ref } from "vue";
 
-  export default {
-    // name: 'LayoutName',
+export default {
+  // name: 'LayoutName',
 
-    // setup () {
-    //   const leftDrawerOpen = ref(false)
+  setup() {
+    const leftDrawerOpen = ref(false);
 
-    //   return {
-    //     leftDrawerOpen,
-    //     toggleLeftDrawer () {
-    //       leftDrawerOpen.value = !leftDrawerOpen.value
-    //     }
-    //   }
-    // }
-  }
+    return {
+      leftDrawerOpen,
+      toggleLeftDrawer() {
+        leftDrawerOpen.value = !leftDrawerOpen.value;
+      },
+    };
+  },
+};
 </script>
