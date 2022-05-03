@@ -2,7 +2,7 @@
   <q-page padding>
     <!-- content -->
     <h1>hello</h1>
-
+    <WIcon />
     <br />
 
     <p>
