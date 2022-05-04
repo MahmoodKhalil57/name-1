@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="styles.css" />
+
 <template>
   <q-layout view="hhh lpr fff">
     <!-- Be sure to play with the Layout demo on docs -->
@@ -11,6 +13,12 @@
 
         <q-toolbar-title>Farmweb</q-toolbar-title>
       </q-toolbar>
+
+      <q-image
+        src="\public\background\pexels-kelly-l-4098496.jpg"
+        alt=""
+        class="absolute-top header-image"
+      />
 
       <q-tabs>
         <q-route-tab to="/page1" label="Page One" />

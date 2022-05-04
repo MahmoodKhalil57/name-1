@@ -1,1 +1,12 @@
 // app global css in SCSS form
+
+/* SCSS syntax is similar to css with addition of variables,
+nesting, mixins(@mixin-@include) with arguments, and functions. */
+
+.header-image {
+  width: 500px;
+  height: 500px;
+  z-index: 2;
+  display: block;
+  opacity: 1;
+}
