@@ -14,3 +14,6 @@ Javascript full documentation: [http://es6-features.org/#Constants](http://es6-f
 
 Template Website: https://next-quasar-admin.netlify.app/Pagination
 Template code: https://github.com/pratik227/quasar-admin
+
+Template Layout: https://quasar.dev/layout/gallery
+Template code: https://github.com/quasarframework/quasar/blob/dev/docs/src/layouts/gallery/github.vue
