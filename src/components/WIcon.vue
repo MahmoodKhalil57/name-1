@@ -19,7 +19,6 @@
       color="warning"
     />
   </div>
-  c
 </template>
 
 <script>

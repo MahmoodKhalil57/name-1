@@ -1,35 +1,153 @@
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="app.scss" />
 
 <template>
   <q-layout view="hhh lpr fff">
     <!-- Be sure to play with the Layout demo on docs -->
 
     <!-- (Optional) The Header -->
-    <q-header elevated>
-      <q-toolbar>
-        <q-avatar>
-          <img src="\icons\twomangoes-ripe.svg" />
-        </q-avatar>
+    <q-header
+      elevated
+      class="header-container"
+      style="height: 150px; padding: 0px"
+    >
+      <q-toolbar class="col-md-auto q-py-sm q-px-md">
+        <div class="row no-wrap items-center">
+          <div class="col">
+            <q-btn
+              round
+              dense
+              flat
+              :ripple="false"
+              size="40px"
+              color="white"
+              class="q-mr-sm ds"
+              no-caps
+              style=""
+            >
+              <div class="row">
+                <div class="col col-md-auto"><WIcon class="no-wrap" /></div>
 
-        <q-toolbar-title>Farmweb</q-toolbar-title>
+                <div class="col column" style="height: 150px" absolute>
+                  <div
+                    class="col"
+                    style="transform: translateY(-75px) translateX(-75px)"
+                  >
+                    <h1>FarmWeb</h1>
+                  </div>
+                  <div
+                    class="col text-no-wrap text-gray"
+                    style="transform: translateX(-75px)"
+                  >
+                    we do mangos you eat them!
+                  </div>
+                </div>
+              </div>
+            </q-btn>
+          </div>
+          <!-- links -->
+          <div class="col">
+            <div
+              v-if="$q.screen.gt.sm"
+              class="GL__toolbar-link q-ml-xl q-gutter-lg text-body1 text-weight-bold row items-center no-wrap"
+            >
+              <a
+                href="javascript:void(0)"
+                class="text-white q-gutter-lg text-no-wrap"
+              >
+                <q-icon class="q-ma-xs" name="home" /> Home
+              </a>
+              <a href="javascript:void(0)" class="text-white"> About </a>
+              <a href="javascript:void(0)" class="text-white"> Shop </a>
+              <a href="javascript:void(0)" class="text-white"> MangoPicking </a>
+              <a href="javascript:void(0)" class="text-white"> Testimonials </a>
+              <a href="javascript:void(0)" class="text-white"> Contact </a>
+            </div>
+          </div>
+          <!-- menu -->
+          <div class="col">
+            <div
+              class="q-pl-sm q-gutter-sm row items-center no-wrap absolute-right q-mr-xl text-black"
+            >
+              <q-btn v-if="$q.screen.gt.xs" dense flat>
+                <div
+                  class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
+                >
+                  more
+                  <q-icon
+                    name="arrow_drop_down"
+                    size="16px"
+                    style="margin-left: -2px"
+                  />
+                </div>
+                <q-menu auto-close>
+                  <q-list dense style="min-width: 100px">
+                    <q-item clickable class="GL__menu-link">
+                      <q-item-section>Blog</q-item-section>
+                    </q-item>
+                    <q-item clickable class="GL__menu-link">
+                      <q-item-section>Gallery</q-item-section>
+                    </q-item>
+                    <q-item clickable class="GL__menu-link">
+                      <q-item-section>Ripening Tips</q-item-section>
+                    </q-item>
+                    <q-item clickable class="GL__menu-link">
+                      <q-item-section>Harvesting Process</q-item-section>
+                    </q-item>
+                    <q-separator />
+                    <q-item clickable class="GL__menu-link text-no-wrap">
+                      <q-item-section
+                        ><q-icon name="login" />Login</q-item-section
+                      >
+                    </q-item>
+                  </q-list>
+                </q-menu>
+              </q-btn>
+
+              <div
+                class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
+              >
+                <q-btn
+                  v-if="$q.screen.gt.xs"
+                  dense
+                  flat
+                  round
+                  size="sm"
+                  icon="shopping_cart"
+                />
+                Cart
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- stuff -->
+
+        <!-- stuff  -->
       </q-toolbar>
-
-      <q-image
-        src="\public\background\pexels-kelly-l-4098496.jpg"
-        alt=""
-        class="absolute-top header-image"
-      />
-
-      <q-tabs>
-        <q-route-tab to="/page1" label="Page One" />
-        <q-route-tab to="/page2" label="Page Two" />
-        <q-route-tab to="/page3" label="Page Three" />
-        <q-route-tab to="/page4" label="Page Four" />
-      </q-tabs>
     </q-header>
 
     <!-- (Optional) The Footer -->
-    <q-footer>
+    <q-footer elevated>
+      <q-toolbar>
+        <div class="row">
+          <div class="col col-md-auto"><WIcon class="no-wrap" /></div>
+
+          <div class="col column" style="height: 150px" absolute>
+            <div
+              class="col"
+              style="transform: translateY(-75px) translateX(-75px)"
+            >
+              <h1>FarmWeb</h1>
+            </div>
+            <div
+              class="col text-no-wrap text-gray"
+              style="transform: translateX(-75px)"
+            >
+              we do mangos you eat them!
+            </div>
+          </div>
+        </div>
+      </q-toolbar>
       <div class="q-pa-md q-gutter-sm">
         <p>
           I was gonna take the time to sit down and write you a little letter.
@@ -39,24 +157,6 @@
           waste it'd ,be for me to put some ink to, a stupid piece a. Paper, I'd
           rather let you see how. Much I fucking hate you in a freestyle.kol
           5ara
-        </p>
-        <p>
-          So bad, I’m so good that I’m so bad. Guarantee I’ll be the greatest
-          thing you ever had. ‘Cause you ain't never met nobody like me. And you
-          ain't gonna wanna fuck nobody else again. I'ma make you learn to
-          appreciate me, differentiate me. From these phony, little fishy and
-          sissy fake G’s. Skip over the "huggy bear," and all the "kissy face,"
-          please. Initiate phase three, missy, now service me. Take another shot
-          of Jäger, shakin' so nervously. Take your time, baby, oh, you’re the
-          bomb, baby. Oh, you’re doing that even better than your mom, lady. I
-          told you why I’m Shady, you didn't listen now, did ya?. Relax woman,
-          you know that I’m only kiddin' with ya. Got a twisted sense of humor,
-          its warped, but I didn't hit ya. I think you’re finally starting to
-          get the picture. I’m just… So bad, I’m so good that I’m so bad.
-          Guarantee I’ll be the greatest thing you ever had. ‘Cause you ain't
-          never met nobody like me. And you ain't gonna wanna fuck nobody else
-          again. I'ma make you learn to appreciate me, differentiate me. From
-          these phony, little fishy and sissy fake G’s. Skip over the.
         </p>
       </div>
     </q-footer>
@@ -102,3 +202,5 @@ export default {
   },
 };
 </script>
+
+<style lang="scss"></style>

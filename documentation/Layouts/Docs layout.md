@@ -4,10 +4,10 @@
 
 ### User stories:
 <--- Header --->
-1. [ ] The user should see a header with a background image which shows the green nature of the website and $primary-color.
+1. [x] The user should see a header with a background image which shows the green nature of the website and $primary-color.
 2. [ ] The user should see the logo, name of the farm, their moto on the left side of the header.
-3. [ ] User should see a list of the main webpages as hyperlinks that direct the user to the main pages.(home  with logo instead of words).
-5. [ ] User should see a button (menu) with $secondary-color which reveals a list showing the remaining webpages of the website when hovered over.
+3. [x] User should see a list of the main webpages as hyperlinks that direct the user to the main pages.(home  with logo instead of words).
+5. [x] User should see a button (menu) with $secondary-color which reveals a list showing the remaining webpages of the website when hovered over.
 6. [ ] User should see a button (cart with logo) with $secondary-color that directs them to their cart.
 7. [ ] User should see the number of items they selected from the shop, written on the cart button.
 8. [ ] User should see a button that redirects them to the login page.

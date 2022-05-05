@@ -20,3 +20,14 @@ progress:
 
 3- has syntax of sass and css, we use scss as it contains variables, nesting, mixins(@mixin-@include) with arguments, and functions.
 
+Day no.5:
+----------------
+both parties joined in time.
+
+KD needed a break after 2:30 hrs, after coming back from break his effieciency plummeted. 
+
+both parties used layout on quasar.com as a start point, and reached a good point.
+
+
+
+

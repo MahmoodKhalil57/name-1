@@ -5,8 +5,34 @@ nesting, mixins(@mixin-@include) with arguments, and functions. */
 
 .header-image {
   width: 500px;
-  height: 500px;
-  z-index: 2;
+  height: 600px;
+  z-index: -1;
   display: block;
   opacity: 1;
+}
+
+.header-container {
+  display: flex;
+  height: 75px;
+  background-image: url(D:\Work\code\name-1\src\background\pexels-kelly-l-4098496.jpg);
+}
+
+.ds {
+  transform: scale(0.4);
+}
+
+.lfls {
+  width: fit-content;
+}
+
+.GL {
+  &__toolbar-link {
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
 }
