@@ -6,114 +6,65 @@
 
     <!-- (Optional) The Header -->
     <q-header elevated>
-      <q-toolbar class="GNL__toolbar  ">
-        <div class="ds">
-          <q-btn
-            round
-            dense
-            flat
-            :ripple="false"
-            size="40px"
-            color="black"
-            no-caps
-            style=""
-          >
-            <WIcon />
-            <WIconName />
-          </q-btn>
-        </div>
-
-        <br />
-        <q-space />
-
-        <!--- Links -->
-        <div
-          class="
-            GL__toolbar-link
-            q-ml-xl q-gutter-lg
-            text-body1 text-weight-bold
-            row
-            items-center
-            no-wrap
-            absolute-center
-          "
-        >
-          <a
-            href="javascript:void(0)"
-            class="text-white q-gutter-lg text-no-wrap"
-          >
-            <q-icon class="q-ma-xs" name="home" /> Home
-          </a>
-          <a href="javascript:void(0)" class="text-white"> About </a>
-          <a href="javascript:void(0)" class="text-white"> Shop </a>
-          <a href="javascript:void(0)" class="text-white"> MangoPicking </a>
-          <a href="javascript:void(0)" class="text-white"> Testimonials </a>
-          <a href="javascript:void(0)" class="text-white"> Contact </a>
-        </div>
-        <q-space />
-        <!--- Links -->
-
-        <!--- Menu -->
-        <div
-          class="
-            q-pl-sm q-gutter-sm
-            row
-            items-center
-            no-wrap
-            absolute-right
-            q-mr-xl
-            text-black
-          "
-        >
-          <q-btn dense flat>
-            <div
-              class="
-                row
-                items-center
-                no-wrap
-                bg-warning
-                q-pa-sm
-                rounded-borders
-              "
-            >
-              more
-              <q-icon
-                name="arrow_drop_down"
-                size="16px"
-                style="margin-left: -2px"
-              />
-            </div>
-            <q-menu auto-close>
-              <q-list dense style="min-width: 100px">
-                <q-item clickable class="GL__menu-link">
-                  <q-item-section>Blog</q-item-section>
-                </q-item>
-                <q-item clickable class="GL__menu-link">
-                  <q-item-section>Gallery</q-item-section>
-                </q-item>
-                <q-item clickable class="GL__menu-link">
-                  <q-item-section>Ripening Tips</q-item-section>
-                </q-item>
-                <q-item clickable class="GL__menu-link">
-                  <q-item-section>Harvesting Process</q-item-section>
-                </q-item>
-                <q-separator />
-                <q-item clickable class="GL__menu-link text-no-wrap">
-                  <q-item-section><q-icon name="login" />Login</q-item-section>
-                </q-item>
-              </q-list>
-            </q-menu>
-          </q-btn>
-
+      <div class="column no-wrap items-center fit GNL__toolbar">
+        <div class="col">
           <div
-            class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
+          class="q-my-lg"
+          style="
+            width:300px;
+            height:100px;
+            background:gray
+            "
           >
-            <q-btn dense flat round size="sm" icon="shopping_cart" />
-            Cart
           </div>
-        </div>
+        <!--- Links -->
+        <div class="col row items-center">
+          <div
+            class="
+              GL__toolbar-link
+              q-mx-xl q-gutter-lg
+              row
+              items-center
+            "
+            >
+
+            <div
+              style="
+                content: '';
+                width:75px;
+                height:50px;
+                background:gray
+                "
+            >
+            </div>
+          </div>
+        <!--- Links -->
+
         <!--- Menu -->
-      </q-toolbar>
+            <div
+              class="q-mx-xl"
+              style="
+                content: '';
+                width:75px;
+                height:50px;
+                background:gray
+                "
+            >
+            </div>
+            <div
+              class="q-mx-xl"
+              style="
+                content: '';
+                width:75px;
+                height:50px;
+                background:gray
+                "
+            >
+            </div>
+          </div>
+        <!--- Menu -->
+        </div>
+      </div>
       <q-toolbar class="row">
         <q-breadcrumbs>
           <q-breadcrumbs-el label="Farmweb" />

@@ -7,6 +7,13 @@ const routes = [
       { path: '', component: () => import('pages/about.vue') }
     ]
   },
+  {
+    path: '/dev2',
+    component: () => import('layouts/testLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/about.vue') }
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it
