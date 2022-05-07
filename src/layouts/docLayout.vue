@@ -5,124 +5,143 @@
     <!-- Be sure to play with the Layout demo on docs -->
 
     <!-- (Optional) The Header -->
-    <q-header
-      elevated
-      class="header-container"
-      style="height: 150px; padding: 0px"
-    >
-      <q-toolbar class="col-md-auto q-py-sm q-px-md">
-        <div class="row no-wrap items-center">
-          <div class="col">
-            <q-btn
-              round
-              dense
-              flat
-              :ripple="false"
-              size="40px"
-              color="white"
-              class="q-mr-sm ds"
-              no-caps
-              style=""
-            >
-              <div class="row">
-                <div class="col col-md-auto"><WIcon class="no-wrap" /></div>
-
-                <div class="col column" style="height: 150px" absolute>
-                  <div
-                    class="col"
-                    style="transform: translateY(-75px) translateX(-75px)"
-                  >
-                    <h1>FarmWeb</h1>
-                  </div>
-                  <div
-                    class="col text-no-wrap text-gray"
-                    style="transform: translateX(-75px)"
-                  >
-                    we do mangos you eat them!
-                  </div>
-                </div>
-              </div>
-            </q-btn>
-          </div>
-          <!-- links -->
-          <div class="col">
-            <div
-              v-if="$q.screen.gt.sm"
-              class="GL__toolbar-link q-ml-xl q-gutter-lg text-body1 text-weight-bold row items-center no-wrap"
-            >
-              <a
-                href="javascript:void(0)"
-                class="text-white q-gutter-lg text-no-wrap"
-              >
-                <q-icon class="q-ma-xs" name="home" /> Home
-              </a>
-              <a href="javascript:void(0)" class="text-white"> About </a>
-              <a href="javascript:void(0)" class="text-white"> Shop </a>
-              <a href="javascript:void(0)" class="text-white"> MangoPicking </a>
-              <a href="javascript:void(0)" class="text-white"> Testimonials </a>
-              <a href="javascript:void(0)" class="text-white"> Contact </a>
-            </div>
-          </div>
-          <!-- menu -->
-          <div class="col">
-            <div
-              class="q-pl-sm q-gutter-sm row items-center no-wrap absolute-right q-mr-xl text-black"
-            >
-              <q-btn v-if="$q.screen.gt.xs" dense flat>
-                <div
-                  class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
-                >
-                  more
-                  <q-icon
-                    name="arrow_drop_down"
-                    size="16px"
-                    style="margin-left: -2px"
-                  />
-                </div>
-                <q-menu auto-close>
-                  <q-list dense style="min-width: 100px">
-                    <q-item clickable class="GL__menu-link">
-                      <q-item-section>Blog</q-item-section>
-                    </q-item>
-                    <q-item clickable class="GL__menu-link">
-                      <q-item-section>Gallery</q-item-section>
-                    </q-item>
-                    <q-item clickable class="GL__menu-link">
-                      <q-item-section>Ripening Tips</q-item-section>
-                    </q-item>
-                    <q-item clickable class="GL__menu-link">
-                      <q-item-section>Harvesting Process</q-item-section>
-                    </q-item>
-                    <q-separator />
-                    <q-item clickable class="GL__menu-link text-no-wrap">
-                      <q-item-section
-                        ><q-icon name="login" />Login</q-item-section
-                      >
-                    </q-item>
-                  </q-list>
-                </q-menu>
-              </q-btn>
-
-              <div
-                class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
-              >
-                <q-btn
-                  v-if="$q.screen.gt.xs"
-                  dense
-                  flat
-                  round
-                  size="sm"
-                  icon="shopping_cart"
-                />
-                Cart
-              </div>
-            </div>
-          </div>
+    <q-header elevated>
+      <q-toolbar class="GNL__toolbar col-md-auto q-py-sm q-px-md">
+        <div class="q-mr-sm q-pa-xs items-center ds">
+          <q-btn
+            round
+            dense
+            flat
+            :ripple="false"
+            size="40px"
+            color="black"
+            no-caps
+            style=""
+          >
+            <WIcon />
+            <WIconName v-if="$q.screen.gt.md" />
+          </q-btn>
         </div>
 
-        <!-- stuff -->
+        <q-space />
 
-        <!-- stuff  -->
+        <!--- Links -->
+        <div
+          v-if="$q.screen.gt.sm"
+          class="
+            GL__toolbar-link
+            q-ml-xl q-gutter-lg
+            text-body1 text-weight-bold
+            row
+            items-center
+            no-wrap
+            absolute-center
+          "
+        >
+          <a
+            href="javascript:void(0)"
+            class="text-white q-gutter-lg text-no-wrap"
+          >
+            <q-icon class="q-ma-xs" name="home" /> Home
+          </a>
+          <a href="javascript:void(0)" class="text-white"> About </a>
+          <a href="javascript:void(0)" class="text-white"> Shop </a>
+          <a href="javascript:void(0)" class="text-white"> MangoPicking </a>
+          <a href="javascript:void(0)" class="text-white"> Testimonials </a>
+          <a href="javascript:void(0)" class="text-white"> Contact </a>
+        </div>
+        <q-space />
+        <!--- Links -->
+
+        <!--- Menu -->
+        <div
+          class="
+            q-pl-sm q-gutter-sm
+            row
+            items-center
+            no-wrap
+            absolute-right
+            q-mr-xl
+            text-black
+          "
+          v-if="$q.screen.gt.xs"
+        >
+          <q-btn dense flat>
+            <div
+              class="
+                row
+                items-center
+                no-wrap
+                bg-warning
+                q-pa-sm
+                rounded-borders
+              "
+            >
+              more
+              <q-icon
+                name="arrow_drop_down"
+                size="16px"
+                style="margin-left: -2px"
+              />
+            </div>
+            <q-menu auto-close>
+              <q-list dense style="min-width: 100px">
+                <q-item clickable class="GL__menu-link">
+                  <q-item-section>Blog</q-item-section>
+                </q-item>
+                <q-item clickable class="GL__menu-link">
+                  <q-item-section>Gallery</q-item-section>
+                </q-item>
+                <q-item clickable class="GL__menu-link">
+                  <q-item-section>Ripening Tips</q-item-section>
+                </q-item>
+                <q-item clickable class="GL__menu-link">
+                  <q-item-section>Harvesting Process</q-item-section>
+                </q-item>
+                <q-separator />
+                <q-item clickable class="GL__menu-link text-no-wrap">
+                  <q-item-section><q-icon name="login" />Login</q-item-section>
+                </q-item>
+              </q-list>
+            </q-menu>
+          </q-btn>
+
+          <div
+            class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
+          >
+            <q-btn dense flat round size="sm" icon="shopping_cart" />
+            Cart
+          </div>
+        </div>
+        <!--- Menu -->
+      </q-toolbar>
+      <q-toolbar class="row">
+        <q-breadcrumbs>
+          <q-breadcrumbs-el label="Farmweb" />
+          <q-breadcrumbs-el label="About" />
+        </q-breadcrumbs>
+        <q-space />
+        <q-input
+          class="GNL__toolbar-input"
+          rounded
+          outlined
+          dense
+          v-model="search"
+          bg-color="white"
+          color="shadow-1"
+          placeholder="Search for fresh fruits or vegetables"
+        >
+          <template v-slot:prepend>
+            <q-icon v-if="search === ''" name="search" />
+            <q-icon
+              v-else
+              name="clear"
+              class="cursor-pointer"
+              @click="search = ''"
+            />
+          </template>
+        </q-input>
+        <q-space />
       </q-toolbar>
     </q-header>
 
@@ -191,16 +210,22 @@ export default {
   // name: 'LayoutName',
 
   setup() {
-    const leftDrawerOpen = ref(false);
+    const search = ref("");
 
     return {
-      leftDrawerOpen,
-      toggleLeftDrawer() {
-        leftDrawerOpen.value = !leftDrawerOpen.value;
-      },
+      search,
     };
   },
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="sass">
+.GNL
+
+  &__toolbar
+    height: 150px
+    background-image: url("/background/pexels-kelly-l-4098496.jpg")
+
+  &__toolbar-input
+    width: 55%
+</style>
