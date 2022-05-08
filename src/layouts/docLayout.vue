@@ -6,35 +6,68 @@
 
     <!-- (Optional) The Header -->
     <q-header elevated>
-      <q-toolbar class="GNL__toolbar">
-        <WIconName icon-size="4"/>
+      <div class=" GNL__toolbar row q-pa-md justify-center items-center">
+        <div v-if="$q.screen.gt.lg" ><WIconName icon-size="4"/></div>
+        <div v-else class="q-ml-md"><WIconName icon-size="5.5"/></div>
 
-        <br />
-        <q-space />
-
-        <!--- Links -->
-        <nav
-          class="GL__toolbar-link q-ml-xl q-gutter-lg text-body1 text-weight-bold row no-wrap"
-        >
-          <a
-            href="javascript:void(0)"
-            class="text-white q-gutter-lg text-no-wrap"
+        <div v-if="$q.screen.gt.lg" class="gt-md">
+          <q-space/>
+          <!--- Links -->
+          <div
+            class="inline GL__toolbar-link row no-wrap q-mx-xl q-gutter-lg text-body1 text-weight-bold text-white"
           >
-            <q-icon class="q-ma-xs" name="home" /> Home
-          </a>
-          <a href="javascript:void(0)" class="text-white"> About </a>
-          <a href="javascript:void(0)" class="text-white"> Shop </a>
-          <a href="javascript:void(0)" class="text-white"> MangoPicking </a>
-          <a href="javascript:void(0)" class="text-white"> Testimonials </a>
-          <a href="javascript:void(0)" class="text-white"> Contact </a>
-        </nav>
+            <a
+              href="javascript:void(0)"
+            >
+              <q-icon name="home" /> Home
+            </a>
+            <a href="javascript:void(0)" class="text-white"> About </a>
+            <a href="javascript:void(0)" class="text-white"> Shop </a>
+            <a href="javascript:void(0)" class="text-white"> MangoPicking </a>
+            <a href="javascript:void(0)" class="text-white"> Testimonials </a>
+            <a href="javascript:void(0)" class="text-white"> Contact </a>
+          </div>
 
-        <!--- Links -->
-        <q-space />
+          <!--- Links -->
+          <q-space/>
+        </div>
+        <div v-if="$q.screen.lt.lg" class="flex-break"></div>
         <!--- Menu -->
         <nav
           class="q-gutter-sm row items-center no-wrap q-pa-xl q-mx-xl text-black"
         >
+          <q-btn v-if="$q.screen.lt.lg" dense flat>
+            <div
+              class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
+            >
+              Navigate
+              <q-icon
+                name="arrow_drop_down"
+                size="16px"
+                style="margin-left: -2px"
+              />
+            </div>
+            <q-menu auto-close>
+              <q-list dense style="min-width: 100px">
+                <q-item clickable class="GL__menu-link">
+                  <q-item-section>About</q-item-section>
+                </q-item>
+                <q-item clickable class="GL__menu-link">
+                  <q-item-section>Shop</q-item-section>
+                </q-item>
+                <q-item clickable class="GL__menu-link">
+                  <q-item-section>Mangopicking</q-item-section>
+                </q-item>
+                <q-item clickable class="GL__menu-link">
+                  <q-item-section>Testimonials</q-item-section>
+                </q-item>
+                <q-item clickable class="GL__menu-link">
+                  <q-item-section>Contact</q-item-section>
+                </q-item>
+              </q-list>
+            </q-menu>
+          </q-btn>
+
           <q-btn dense flat>
             <div
               class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
@@ -76,7 +109,7 @@
           </div>
         </nav>
         <!--- Menu -->
-      </q-toolbar>
+      </div>
       <q-toolbar class="row">
         <q-breadcrumbs>
           <q-breadcrumbs-el label="Farmweb" />
@@ -182,13 +215,20 @@
 
 <script>
 import { ref } from "vue";
+import { useQuasar } from 'quasar'
 
 export default {
     // name: 'LayoutName',
+
     setup() {
         const search = ref("");
+        const $q = useQuasar()
+
+        $q.screen.setSizes({ sm: 300, md: 500, lg: 1500, xl: 1500 })
+
         return {
             search,
+            $q
         };
     },
 };
@@ -198,9 +238,17 @@ export default {
 .GNL
 
   &__toolbar
-    height: 150px
     background-image: url("/background/pexels-kelly-l-4098496.jpg")
 
   &__toolbar-input
     width: 55%
+
+.flex-break
+  flex: 1 0 100% !important
+.row
+  .flex-break
+    height: 0 !important
+.column
+  .flex-break
+    width: 0 !important
 </style>
