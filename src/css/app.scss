@@ -3,6 +3,7 @@
 /* SCSS syntax is similar to css with addition of variables,
 nesting, mixins(@mixin-@include) with arguments, and functions. */
 
+/* header doclayout start */
 .header-image {
   width: 500px;
   height: 600px;
@@ -30,3 +31,11 @@ nesting, mixins(@mixin-@include) with arguments, and functions. */
     }
   }
 }
+/* header doclayout end */
+
+/* Footer doclayout Start*/
+.ms {
+  transform: scale(0.5);
+}
+
+/* Footer doclayout Start*/

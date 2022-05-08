@@ -5,7 +5,7 @@
 ### User stories:
 <--- Header --->
 1. [x] The user should see a header with a background image which shows the green nature of the website and $primary-color.
-2. [ ] The user should see the logo, name of the farm, their moto on the left side of the header.
+2. [x] The user should see the logo, name of the farm, their moto on the left side of the header.
 3. [x] User should see a list of the main webpages as hyperlinks that direct the user to the main pages.(home  with logo instead of words).
 5. [x] User should see a button (menu) with $secondary-color which reveals a list showing the remaining webpages of the website when hovered over.
 6. [ ] User should see a button (cart with logo) with $secondary-color that directs them to their cart.
@@ -15,8 +15,8 @@
 10. [ ] Next to the seach bar is a button $secondary-color for the user to press on and search for item.
 <--- Footer --->
 9. [ ] User sees all elements centered.
-10. [ ] User should see the logo, name, and moto of the company.
-11. [ ] User sees the location of the farm, and google maps for it.
+10. [x] User should see the logo, name, and moto of the company.
+11. [x] User sees the location of the farm, and google maps for it.
 12. [ ] User sees Whatsapp Icon followed by contact number, followed by contact email.
 13. [ ] User sees 2 interactive buttons that redirect to the appstore and google play respectively to download the mobile application.
 14. [ ] User can see icons for the social media that redirect to each.

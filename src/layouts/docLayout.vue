@@ -6,7 +6,7 @@
 
     <!-- (Optional) The Header -->
     <q-header elevated>
-      <q-toolbar class="GNL__toolbar  ">
+      <q-toolbar class="GNL__toolbar">
         <div class="ds">
           <q-btn
             round
@@ -27,16 +27,8 @@
         <q-space />
 
         <!--- Links -->
-        <div
-          class="
-            GL__toolbar-link
-            q-ml-xl q-gutter-lg
-            text-body1 text-weight-bold
-            row
-            items-center
-            no-wrap
-            absolute-center
-          "
+        <nav
+          class="GL__toolbar-link q-ml-xl q-gutter-lg text-body1 text-weight-bold row items-center no-wrap absolute-center"
         >
           <a
             href="javascript:void(0)"
@@ -49,32 +41,17 @@
           <a href="javascript:void(0)" class="text-white"> MangoPicking </a>
           <a href="javascript:void(0)" class="text-white"> Testimonials </a>
           <a href="javascript:void(0)" class="text-white"> Contact </a>
-        </div>
-        <q-space />
-        <!--- Links -->
+        </nav>
 
+        <!--- Links -->
+        <q-space />
         <!--- Menu -->
-        <div
-          class="
-            q-pl-sm q-gutter-sm
-            row
-            items-center
-            no-wrap
-            absolute-right
-            q-mr-xl
-            text-black
-          "
+        <nav
+          class="q-pl-sm q-gutter-sm row items-center no-wrap absolute-right q-mr-xl text-black"
         >
           <q-btn dense flat>
             <div
-              class="
-                row
-                items-center
-                no-wrap
-                bg-warning
-                q-pa-sm
-                rounded-borders
-              "
+              class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
             >
               more
               <q-icon
@@ -111,7 +88,7 @@
             <q-btn dense flat round size="sm" icon="shopping_cart" />
             Cart
           </div>
-        </div>
+        </nav>
         <!--- Menu -->
       </q-toolbar>
       <q-toolbar class="row">
@@ -144,26 +121,40 @@
       </q-toolbar>
     </q-header>
 
-    <!-- (Optional) The Footer -->
+    <!-- The Footer -->
     <q-footer elevated>
       <q-toolbar>
-        <div class="row">
-          <div class="col col-md-auto"><WIcon class="no-wrap" /></div>
-
-          <div class="col column" style="height: 150px" absolute>
-            <div
-              class="col"
-              style="transform: translateY(-75px) translateX(-75px)"
+        <div class="fit column wrap items-center q q-col-gutter-y-md">
+          <div class="ms">
+            <q-btn
+              round
+              dense
+              flat
+              :ripple="false"
+              size="40px"
+              color="black"
+              no-caps
+              style=""
             >
-              <h1>FarmWeb</h1>
-            </div>
-            <div
-              class="col text-no-wrap text-gray"
-              style="transform: translateX(-75px)"
-            >
-              we do mangos you eat them!
-            </div>
+              <WIcon />
+              <WIconName />
+            </q-btn>
           </div>
+          <iframe
+            class="q-my-lg shadow-24 full-width"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15786.75439222384!2d31.02494087802049!3d30.059745364807686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14585b0554c9b7a3%3A0xdb3b24f330c6ae90!2sDandy%20Mega%20Mall!5e0!3m2!1sen!2suk!4v1651997535725!5m2!1sen!2suk"
+            width="900"
+            height="450"
+            style="border-top: 1px solid black; border-bottom: 1px solid black"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <q-btn class="transparent">
+            <q-avatar icon="fa-brands fa-whatsapp"> </q-avatar>
+            0122222234345 | Emailaddress@website.com
+          </q-btn>
+          <div></div>
         </div>
       </q-toolbar>
       <div class="q-pa-md q-gutter-sm">
@@ -178,6 +169,7 @@
         </p>
       </div>
     </q-footer>
+    <!-- /The Footer -->
 
     <!-- (Optional) A Drawer; you can add one more with side="right" or change this one's side -->
 

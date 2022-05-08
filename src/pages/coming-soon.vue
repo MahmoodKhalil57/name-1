@@ -18,9 +18,13 @@
               right: 0,
             }"
           >
-            <WIcon />
-
-            <div class="text-h3 text-white text-center text-bold" size="xl">
+            <WIcon class="q-ma-xl" size="190px" />
+            <q-space />
+            <div
+              class="text-h3 text-white text-center text-bold"
+              size="xl"
+              style="position: relative"
+            >
               Coming Soon!
             </div>
             <br />
@@ -38,7 +42,7 @@
 
 <script>
 export default {
-  // name: 'PageName',
+  name: "ComingSoon",
 };
 </script>
 

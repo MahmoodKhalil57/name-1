@@ -91,12 +91,13 @@
         </div>
         <!--- Menu -->
       </q-toolbar>
-      <q-toolbar class="fit GNL__toolbar" v-else>
-        <q-space />
-        <WIcon class="col q-mx-xl" style="transform: scale(5)">
-          <WIconName class="col q-mx-xl" v-if="$q.screen.gt.sm" />
-        </WIcon>
-        <q-space />
+      <q-toolbar class="column no-wrap items-center fit GNL__toolbar" v-else>
+        <div class="col">
+          <div>
+            <WIcon />
+            <WIconName />
+          </div>
+        </div>
       </q-toolbar>
       <q-toolbar class="row">
         <q-breadcrumbs>
@@ -161,20 +162,17 @@
           </div>
         </div>
       </q-toolbar>
-      <q-toolbar class="no-padding">
-        <q-space />
-        <iframe
-          class="q-my-lg shadow-24 full-width"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15786.75439222384!2d31.02494087802049!3d30.059745364807686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14585b0554c9b7a3%3A0xdb3b24f330c6ae90!2sDandy%20Mega%20Mall!5e0!3m2!1sen!2suk!4v1651997535725!5m2!1sen!2suk"
-          width="900"
-          height="450"
-          style="border-top: 1px solid black; border-bottom: 1px solid black"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-        <q-space />
-      </q-toolbar>
+      <div class="q-pa-md q-gutter-sm">
+        <p>
+          I was gonna take the time to sit down and write you a little letter.
+          But I thought a song would probably be a little better. Instead of a
+          ,letter. That you'd probably just shred up--yeah. I stumbled on your
+          picture yesterday and it made me stop and think of. How much of a
+          waste it'd ,be for me to put some ink to, a stupid piece a. Paper, I'd
+          rather let you see how. Much I fucking hate you in a freestyle.kol
+          5ara
+        </p>
+      </div>
     </q-footer>
 
     <!-- (Optional) A Drawer; you can add one more with side="right" or change this one's side -->
@@ -220,11 +218,9 @@ export default {
 .GNL
 
   &__toolbar
+    height: 150px
     background-image: url("/background/pexels-kelly-l-4098496.jpg")
 
   &__toolbar-input
     width: 55%
-
-.logo
-  transform: scale(0.6)
 </style>

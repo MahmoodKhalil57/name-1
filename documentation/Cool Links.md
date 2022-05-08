@@ -17,3 +17,8 @@ Template code: https://github.com/pratik227/quasar-admin
 
 Template Layout: https://quasar.dev/layout/gallery
 Template code: https://github.com/quasarframework/quasar/blob/dev/docs/src/layouts/gallery/github.vue
+
+Google-Maps vue3: 
+1- https://www.npmjs.com/package/@fawmi/vue-google-maps
+2- https://dev.to/quasar/how-to-use-google-maps-in-a-quasar-project-1c1
+3- https://vue-map.netlify.app/
