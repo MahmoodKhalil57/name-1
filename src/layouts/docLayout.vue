@@ -4,15 +4,16 @@
   <q-layout view="hhh lpr fff">
     <!-- Be sure to play with the Layout demo on docs -->
 
-    <!-- (Optional) The Header -->
+    <!-- The Header -->
     <q-header elevated>
+      <!-- Top-Bar -->
       <div class=" GNL__toolbar row q-pa-md justify-center items-center">
         <div v-if="$q.screen.gt.lg" ><WIconName icon-size="4"/></div>
         <div v-else class="q-ml-md"><WIconName icon-size="5.5"/></div>
 
+        <!--- Links -->
         <div v-if="$q.screen.gt.lg" class="gt-md">
           <q-space/>
-          <!--- Links -->
           <div
             class="inline GL__toolbar-link row no-wrap q-mx-xl q-gutter-lg text-body1 text-weight-bold text-white"
           >
@@ -21,21 +22,23 @@
             >
               <q-icon name="home" /> Home
             </a>
-            <a href="javascript:void(0)" class="text-white"> About </a>
-            <a href="javascript:void(0)" class="text-white"> Shop </a>
-            <a href="javascript:void(0)" class="text-white"> MangoPicking </a>
-            <a href="javascript:void(0)" class="text-white"> Testimonials </a>
-            <a href="javascript:void(0)" class="text-white"> Contact </a>
+            <a href="javascript:void(0)"> About </a>
+            <a href="javascript:void(0)"> Shop </a>
+            <a href="javascript:void(0)"> MangoPicking </a>
+            <a href="javascript:void(0)"> Testimonials </a>
+            <a href="javascript:void(0)"> Contact </a>
           </div>
-
-          <!--- Links -->
           <q-space/>
         </div>
+        <!--- /Links -->
+
         <div v-if="$q.screen.lt.lg" class="flex-break"></div>
-        <!--- Menu -->
+
+        <!--- Buttons -->
         <nav
           class="q-gutter-sm row items-center no-wrap q-pa-xl q-mx-xl text-black"
         >
+          <!-- Navigate -->
           <q-btn v-if="$q.screen.lt.lg" dense flat>
             <div
               class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
@@ -49,25 +52,26 @@
             </div>
             <q-menu auto-close>
               <q-list dense style="min-width: 100px">
-                <q-item clickable class="GL__menu-link">
+                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
                   <q-item-section>About</q-item-section>
                 </q-item>
-                <q-item clickable class="GL__menu-link">
+                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
                   <q-item-section>Shop</q-item-section>
                 </q-item>
-                <q-item clickable class="GL__menu-link">
+                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
                   <q-item-section>Mangopicking</q-item-section>
                 </q-item>
-                <q-item clickable class="GL__menu-link">
+                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
                   <q-item-section>Testimonials</q-item-section>
                 </q-item>
-                <q-item clickable class="GL__menu-link">
+                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
                   <q-item-section>Contact</q-item-section>
                 </q-item>
               </q-list>
             </q-menu>
           </q-btn>
-
+          <!-- /Navigate -->
+          <!-- Menu -->
           <q-btn dense flat>
             <div
               class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
@@ -81,35 +85,40 @@
             </div>
             <q-menu auto-close>
               <q-list dense style="min-width: 100px">
-                <q-item clickable class="GL__menu-link">
+                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
                   <q-item-section>Blog</q-item-section>
                 </q-item>
-                <q-item clickable class="GL__menu-link">
+                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
                   <q-item-section>Gallery</q-item-section>
                 </q-item>
-                <q-item clickable class="GL__menu-link">
+                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
                   <q-item-section>Ripening Tips</q-item-section>
                 </q-item>
-                <q-item clickable class="GL__menu-link">
+                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
                   <q-item-section>Harvesting Process</q-item-section>
                 </q-item>
                 <q-separator />
-                <q-item clickable class="GL__menu-link text-no-wrap">
+                <q-item clickable href="javascript:void(0)" class="GL__menu-link text-no-wrap">
                   <q-item-section><q-icon name="login" />Login</q-item-section>
                 </q-item>
               </q-list>
             </q-menu>
           </q-btn>
+          <!-- /Menu -->
 
+          <!-- Cart -->
           <div
             class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
           >
             <q-btn dense flat round size="sm" icon="shopping_cart" />
             Cart
           </div>
+          <!-- /Cart -->
         </nav>
-        <!--- Menu -->
+        <!--- /Buttons -->
       </div>
+      <!-- /Top-Bar -->
+      <!-- searchBar -->
       <q-toolbar class="row">
         <q-breadcrumbs>
           <q-breadcrumbs-el label="Farmweb" />
@@ -138,7 +147,9 @@
         </q-input>
         <q-space />
       </q-toolbar>
+      <!-- /searchBar -->
     </q-header>
+    <!-- /Header -->
 
     <!-- The Footer -->
     <q-footer elevated>
