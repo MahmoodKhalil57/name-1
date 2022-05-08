@@ -18,8 +18,7 @@
               right: 0,
             }"
           >
-            <WIcon class="q-ma-xl" size="190px" />
-            <q-space />
+            <WIcon icon-size="10" />
             <div
               class="text-h3 text-white text-center text-bold"
               size="xl"

@@ -1,34 +1,40 @@
 <template>
-  <div class="ct">
+  <avatar class="ct no-padding">
     <q-icon
-      v-bind="$attrs"
-      class="ic q-ma-xl"
-      style="transform: translateX(-50%) rotate(-45deg)"
+      :size="addPx"
+      class="ic"
+      style="transform: translateX(50%) rotate(-45deg)"
       name="fa-solid fa-apple-whole"
       color="positive"
     />
     <q-icon
-      v-bind="$attrs"
-      class="ic q-ma-xl"
+      :size="addPx"
+      class="ic"
       style="transform: translateY(-25%)"
       name="fa-solid fa-leaf"
       color="secondary"
     />
     <q-icon
-      v-bind="$attrs"
-      class="ic q-ma-xl"
-      style="transform: translateX(50%)"
+      :size="addPx"
+      class="ic"
+      style="transform: translateX(-50%)"
       name="fa-solid fa-carrot"
       color="warning"
     />
-  </div>
-
-  <slot></slot>
+  </avatar>
 </template>
 
 <script>
 export default {
   name: "WIcon",
+  props: {
+    iconSize: String,
+  },
+  computed: {
+    addPx() {
+      return this.iconSize + "em";
+    },
+  },
   setup() {
     return {};
   },
@@ -42,6 +48,6 @@ export default {
   align-items: center;
 }
 .ic {
-  position: absolute;
+  position: relative;
 }
 </style>

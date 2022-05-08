@@ -7,28 +7,14 @@
     <!-- (Optional) The Header -->
     <q-header elevated>
       <q-toolbar class="GNL__toolbar">
-        <div class="ds">
-          <q-btn
-            round
-            dense
-            flat
-            :ripple="false"
-            size="40px"
-            color="black"
-            no-caps
-            style=""
-          >
-            <WIcon />
-            <WIconName />
-          </q-btn>
-        </div>
+        <WIconName icon-size="4"/>
 
         <br />
         <q-space />
 
         <!--- Links -->
         <nav
-          class="GL__toolbar-link q-ml-xl q-gutter-lg text-body1 text-weight-bold row items-center no-wrap absolute-center"
+          class="GL__toolbar-link q-ml-xl q-gutter-lg text-body1 text-weight-bold row no-wrap"
         >
           <a
             href="javascript:void(0)"
@@ -47,7 +33,7 @@
         <q-space />
         <!--- Menu -->
         <nav
-          class="q-pl-sm q-gutter-sm row items-center no-wrap absolute-right q-mr-xl text-black"
+          class="q-gutter-sm row items-center no-wrap q-pa-xl q-mx-xl text-black"
         >
           <q-btn dense flat>
             <div
@@ -198,15 +184,13 @@
 import { ref } from "vue";
 
 export default {
-  // name: 'LayoutName',
-
-  setup() {
-    const search = ref("");
-
-    return {
-      search,
-    };
-  },
+    // name: 'LayoutName',
+    setup() {
+        const search = ref("");
+        return {
+            search,
+        };
+    },
 };
 </script>
 
