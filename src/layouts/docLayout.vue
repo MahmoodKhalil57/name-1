@@ -2,17 +2,40 @@
 
 <template>
   <q-layout view="hhh lpr fff">
-    <!-- Be sure to play with the Layout demo on docs -->
+        <!-- The Header -->
+      <!-- Top-Bar -->
+
+        <!--- Links -->
+        <!--- /Links -->
+
+        <!--- Buttons -->
+
+          <!-- Navigate -->
+          <!-- /Navigate -->
+
+          <!-- Menu -->
+          <!-- /Menu -->
+
+          <!-- Cart -->
+          <!-- /Cart -->
+
+        <!--- /Buttons -->
+
+      <!-- /Top-Bar -->
+
+      <!-- searchBar -->
+      <!-- /searchBar -->
+    <!-- /The Header -->
 
     <!-- The Header -->
     <q-header elevated>
       <!-- Top-Bar -->
       <div class=" GNL__toolbar row q-pa-md justify-center items-center">
         <div v-if="$q.screen.gt.lg" ><WIconName icon-size="4"/></div>
-        <div v-else class="q-ml-md"><WIconName icon-size="5.5"/></div>
+        <div v-else class="q-ml-xl"><WIconName icon-size="5.5"/></div>
 
         <!--- Links -->
-        <div v-if="$q.screen.gt.lg" class="gt-md">
+        <div v-if="$q.screen.gt.lg">
           <q-space/>
           <div
             class="inline GL__toolbar-link row no-wrap q-mx-xl q-gutter-lg text-body1 text-weight-bold text-white"
