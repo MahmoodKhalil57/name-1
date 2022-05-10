@@ -2,6 +2,7 @@
 const routes = [
   {
     path: '/dev',
+    meta: { root: 'Home', current: 'dev' },
     component: () => import('layouts/docLayout.vue'),
     children: [
       { path: '', component: () => import('pages/about.vue') }
@@ -9,6 +10,7 @@ const routes = [
   },
   {
     path: '/dev2',
+    meta: { root: 'Home', current: 'dev2' },
     component: () => import('layouts/testLayout.vue'),
     children: [
       { path: '', component: () => import('pages/about.vue') }

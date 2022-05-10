@@ -2,7 +2,7 @@
 
 <template>
   <q-layout view="hhh lpr fff">
-        <!-- The Header -->
+    <!-- The Header -->
       <!-- Top-Bar -->
 
         <!--- Links -->
@@ -30,7 +30,7 @@
     <!-- The Header -->
     <q-header elevated>
       <!-- Top-Bar -->
-      <div class=" GNL__toolbar row q-pa-md justify-center items-center">
+      <div class="GNL__toolbar q-pa-md row justify-center items-center">
         <div v-if="$q.screen.gt.lg" ><WIconName icon-size="4"/></div>
         <div v-else class="q-ml-xl"><WIconName icon-size="5.5"/></div>
 
@@ -38,20 +38,21 @@
         <div v-if="$q.screen.gt.lg">
           <q-space/>
           <div
-            class="inline GL__toolbar-link row no-wrap q-mx-xl q-gutter-lg text-body1 text-weight-bold text-white"
+            class="inline GL__toolbar-link row no-wrap text-body1 text-weight-bold text-white"
           >
-            <a
+            <q-btn
+              flat
+              rounded
               href="javascript:void(0)"
             >
               <q-icon name="home" /> Home
-            </a>
-            <a href="javascript:void(0)"> About </a>
-            <a href="javascript:void(0)"> Shop </a>
-            <a href="javascript:void(0)"> MangoPicking </a>
-            <a href="javascript:void(0)"> Testimonials </a>
-            <a href="javascript:void(0)"> Contact </a>
+            </q-btn>
+            <q-btn flat rounded href="javascript:void(0)"> About </q-btn>
+            <q-btn flat rounded href="javascript:void(0)"> Shop </q-btn>
+            <q-btn flat rounded href="javascript:void(0)"> MangoPicking </q-btn>
+            <q-btn flat rounded href="javascript:void(0)"> Testimonials </q-btn>
+            <q-btn flat rounded href="javascript:void(0)"> Contact </q-btn>
           </div>
-          <q-space/>
         </div>
         <!--- /Links -->
 
@@ -144,8 +145,8 @@
       <!-- searchBar -->
       <q-toolbar class="row">
         <q-breadcrumbs>
-          <q-breadcrumbs-el label="Farmweb" />
-          <q-breadcrumbs-el label="About" />
+          <q-breadcrumbs-el :label="$route.meta.root" />
+          <q-breadcrumbs-el :label="$route.meta.current" />
         </q-breadcrumbs>
         <q-space />
         <q-input
@@ -176,40 +177,33 @@
 
     <!-- The Footer -->
     <q-footer elevated>
-      <q-toolbar>
-        <div class="fit column wrap items-center q q-col-gutter-y-md">
-          <div class="ms">
-            <q-btn
-              round
-              dense
-              flat
-              :ripple="false"
-              size="40px"
-              color="black"
-              no-caps
-              style=""
-            >
-              <WIcon />
-              <WIconName />
-            </q-btn>
-          </div>
+
+      <q-toolbar class="ms justify-center">
+        <WIconName icon-size="9"/>
+      </q-toolbar>
+
+      <q-toolbar class="no-padding no-margin">
+        <div class="fit column wrap items-center">
           <iframe
             class="q-my-lg shadow-24 full-width"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15786.75439222384!2d31.02494087802049!3d30.059745364807686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14585b0554c9b7a3%3A0xdb3b24f330c6ae90!2sDandy%20Mega%20Mall!5e0!3m2!1sen!2suk!4v1651997535725!5m2!1sen!2suk"
             width="900"
             height="450"
-            style="border-top: 1px solid black; border-bottom: 1px solid black"
+            style="border-top: 2px solid black; border-bottom: 2px solid black"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-          <q-btn class="transparent">
-            <q-avatar icon="fa-brands fa-whatsapp"> </q-avatar>
-            0122222234345 | Emailaddress@website.com
-          </q-btn>
-          <div></div>
         </div>
       </q-toolbar>
+
+      <q-toolbar>
+        <q-btn class="transparent">
+          <q-avatar icon="fa-brands fa-whatsapp"> </q-avatar>
+          0122222234345 | Emailaddress@website.com
+        </q-btn>
+      </q-toolbar>
+
       <div class="q-pa-md q-gutter-sm">
         <p>
           I was gonna take the time to sit down and write you a little letter.
@@ -237,7 +231,7 @@
       >
         <q-btn push color="green" rounded>
           <q-avatar icon="fa-brands fa-whatsapp"> </q-avatar>
-          Whatsapp Us
+          {{ $route.meta.title }} Whatsapp Us
           <q-badge color="red" rounded floating>
             <q-avatar icon="fa-solid fa-exclamation" size="1.5em"> </q-avatar>
           </q-badge>
@@ -252,7 +246,7 @@ import { ref } from "vue";
 import { useQuasar } from 'quasar'
 
 export default {
-    // name: 'LayoutName',
+    name: 'LayoutName',
 
     setup() {
         const search = ref("");
