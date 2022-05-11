@@ -3,48 +3,44 @@
 <template>
   <q-layout view="hhh lpr fff">
     <!-- The Header -->
-      <!-- Top-Bar -->
+    <!-- Top-Bar -->
 
-        <!--- Links -->
-        <!--- /Links -->
+    <!--- Links -->
+    <!--- /Links -->
 
-        <!--- Buttons -->
+    <!--- Buttons -->
 
-          <!-- Navigate -->
-          <!-- /Navigate -->
+    <!-- Navigate -->
+    <!-- /Navigate -->
 
-          <!-- Menu -->
-          <!-- /Menu -->
+    <!-- Menu -->
+    <!-- /Menu -->
 
-          <!-- Cart -->
-          <!-- /Cart -->
+    <!-- Cart -->
+    <!-- /Cart -->
 
-        <!--- /Buttons -->
+    <!--- /Buttons -->
 
-      <!-- /Top-Bar -->
+    <!-- /Top-Bar -->
 
-      <!-- searchBar -->
-      <!-- /searchBar -->
+    <!-- searchBar -->
+    <!-- /searchBar -->
     <!-- /The Header -->
 
     <!-- The Header -->
     <q-header elevated>
       <!-- Top-Bar -->
       <div class="GNL__toolbar q-pa-md row justify-center items-center">
-        <div v-if="$q.screen.gt.lg" ><WIconName icon-size="4"/></div>
-        <div v-else><WIconName icon-size="5.5"/></div>
+        <div v-if="$q.screen.gt.lg"><WIconName icon-size="4" /></div>
+        <div v-else><WIconName icon-size="5.5" /></div>
 
         <!--- Links -->
         <div v-if="$q.screen.gt.lg">
-          <q-space/>
+          <q-space />
           <div
             class="inline GL__toolbar-link row no-wrap text-body1 text-weight-bold text-white"
           >
-            <q-btn
-              flat
-              rounded
-              href="javascript:void(0)"
-            >
+            <q-btn flat rounded href="javascript:void(0)">
               <q-icon name="home" /> Home
             </q-btn>
             <q-btn flat rounded href="javascript:void(0)"> About </q-btn>
@@ -76,19 +72,39 @@
             </div>
             <q-menu auto-close>
               <q-list dense style="min-width: 100px">
-                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
+                <q-item
+                  clickable
+                  href="javascript:void(0)"
+                  class="GL__menu-link"
+                >
                   <q-item-section>About</q-item-section>
                 </q-item>
-                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
+                <q-item
+                  clickable
+                  href="javascript:void(0)"
+                  class="GL__menu-link"
+                >
                   <q-item-section>Shop</q-item-section>
                 </q-item>
-                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
+                <q-item
+                  clickable
+                  href="javascript:void(0)"
+                  class="GL__menu-link"
+                >
                   <q-item-section>Mangopicking</q-item-section>
                 </q-item>
-                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
+                <q-item
+                  clickable
+                  href="javascript:void(0)"
+                  class="GL__menu-link"
+                >
                   <q-item-section>Testimonials</q-item-section>
                 </q-item>
-                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
+                <q-item
+                  clickable
+                  href="javascript:void(0)"
+                  class="GL__menu-link"
+                >
                   <q-item-section>Contact</q-item-section>
                 </q-item>
               </q-list>
@@ -109,20 +125,40 @@
             </div>
             <q-menu auto-close>
               <q-list dense style="min-width: 100px">
-                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
+                <q-item
+                  clickable
+                  href="javascript:void(0)"
+                  class="GL__menu-link"
+                >
                   <q-item-section>Blog</q-item-section>
                 </q-item>
-                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
+                <q-item
+                  clickable
+                  href="javascript:void(0)"
+                  class="GL__menu-link"
+                >
                   <q-item-section>Gallery</q-item-section>
                 </q-item>
-                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
+                <q-item
+                  clickable
+                  href="javascript:void(0)"
+                  class="GL__menu-link"
+                >
                   <q-item-section>Ripening Tips</q-item-section>
                 </q-item>
-                <q-item clickable href="javascript:void(0)" class="GL__menu-link">
+                <q-item
+                  clickable
+                  href="javascript:void(0)"
+                  class="GL__menu-link"
+                >
                   <q-item-section>Harvesting Process</q-item-section>
                 </q-item>
                 <q-separator />
-                <q-item clickable href="javascript:void(0)" class="GL__menu-link text-no-wrap">
+                <q-item
+                  clickable
+                  href="javascript:void(0)"
+                  class="GL__menu-link text-no-wrap"
+                >
                   <q-item-section><q-icon name="login" />Login</q-item-section>
                 </q-item>
               </q-list>
@@ -177,11 +213,10 @@
 
     <!-- The Footer -->
     <q-footer elevated>
-
       <q-toolbar class="ms justify-center">
-        <WIconName icon-size="9"/>
+        <WIconName icon-size="9" />
       </q-toolbar>
-
+      <!-- Google Maps-->
       <q-toolbar class="no-padding no-margin">
         <div class="fit column wrap items-center">
           <iframe
@@ -196,14 +231,25 @@
           ></iframe>
         </div>
       </q-toolbar>
-
-      <q-toolbar>
-        <q-btn class="transparent">
-          <q-avatar icon="fa-brands fa-whatsapp"> </q-avatar>
-          0122222234345 | Emailaddress@website.com
-        </q-btn>
+      <!-- whatsapp/num/email-->
+      <q-toolbar class="fit row justify-center enlarge q-my-md">
+        <a href="javascript:void(0)" target="_self" class="flinks q-mx-sm">
+          <q-avatar icon="mail" style="text-shadow: none"> </q-avatar>
+          Emailaddress@website.com
+        </a>
+        <q-separator dark vertical class="q-mx-sm" />
+        <a href="javascript:void(0)" target="_self" class="flinks">
+          <q-avatar
+            icon="fa-brands fa-whatsapp"
+            style="text-shadow: none"
+          ></q-avatar>
+          +20122222234345
+        </a>
       </q-toolbar>
-
+      <!-- Appstore / Google play buttons-->
+      <q-toolbar>
+        <q-avatar icon="mail"> </q-avatar>
+      </q-toolbar>
       <div class="q-pa-md q-gutter-sm">
         <p>
           I was gonna take the time to sit down and write you a little letter.
@@ -243,22 +289,22 @@
 
 <script>
 import { ref } from "vue";
-import { useQuasar } from 'quasar'
+import { useQuasar } from "quasar";
 
 export default {
-    name: 'LayoutName',
+  // name: 'LayoutName',
 
-    setup() {
-        const search = ref("");
-        const $q = useQuasar()
+  setup() {
+    const search = ref("");
+    const $q = useQuasar();
 
-        $q.screen.setSizes({ sm: 300, md: 500, lg: 1500, xl: 1500 })
+    $q.screen.setSizes({ sm: 300, md: 500, lg: 1500, xl: 1500 });
 
-        return {
-            search,
-            $q
-        };
-    },
+    return {
+      search,
+      $q,
+    };
+  },
 };
 </script>
 
@@ -279,4 +325,11 @@ export default {
 .column
   .flex-break
     width: 0 !important
+.flinks
+  color: white
+  background-color: transparent
+  text-decoration: none
+.flinks:hover
+  text-shadow: 20px 20px 25px black
+  color:#EEDD82
 </style>

@@ -16,6 +16,10 @@ nesting, mixins(@mixin-@include) with arguments, and functions. */
   transform: scale(0.4) translateX(-50%);
 }
 
+.enlarge {
+  transform: scale(1.45);
+}
+
 .lfls {
   width: fit-content;
 }

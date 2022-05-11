@@ -1,9 +1,9 @@
 <template>
-  <avatar class="ct no-padding">
+  <avatar class="ct">
     <q-icon
       :size="addPx"
       class="ic"
-      style="transform: translateX(50%) rotate(-45deg)"
+      style="transform: translateX(-50%) rotate(-45deg)"
       name="fa-solid fa-apple-whole"
       color="positive"
     />
@@ -17,7 +17,7 @@
     <q-icon
       :size="addPx"
       class="ic"
-      style="transform: translateX(-50%)"
+      style="transform: translateX(50%)"
       name="fa-solid fa-carrot"
       color="warning"
     />
