@@ -1,24 +1,26 @@
 <template>
-  <div class="row no-wrap no-padding no-margin">
+  <div class="q-mx-xl row no-wrap">
+    <div class="ct">
+      <q-icon size="4em" class="ph" name="" />
+    </div>
     <div class="ct">
       <q-icon
         :size="addPx"
         class="ic"
-        style="transform: translateX(-50%) rotate(-45deg)"
+        style="transform: translateX(-100%) rotate(-45deg)"
         name="fa-solid fa-apple-whole"
         color="positive"
       />
       <q-icon
         :size="addPx"
         class="ic"
-        style="transform: translateY(-25%)"
+        style="transform: translateX(-50%) translateY(-25%)"
         name="fa-solid fa-leaf"
         color="secondary"
       />
       <q-icon
         :size="addPx"
         class="ic"
-        style="transform: translateX(50%)"
         name="fa-solid fa-carrot"
         color="warning"
       />
@@ -67,6 +69,9 @@ export default {
 }
 .ic {
   position: absolute;
+}
+.ph {
+  position: relative;
 }
 .title {
   // font size equals --font-multiplier multiplied by 2

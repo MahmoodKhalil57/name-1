@@ -32,7 +32,7 @@
       <!-- Top-Bar -->
       <div class="GNL__toolbar q-pa-md row justify-center items-center">
         <div v-if="$q.screen.gt.lg" ><WIconName icon-size="4"/></div>
-        <div v-else class="q-ml-xl"><WIconName icon-size="5.5"/></div>
+        <div v-else><WIconName icon-size="5.5"/></div>
 
         <!--- Links -->
         <div v-if="$q.screen.gt.lg">
