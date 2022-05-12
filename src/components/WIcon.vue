@@ -1,27 +1,30 @@
 <template>
-  <avatar class="ct">
-    <q-icon
-      :size="addPx"
-      class="ic"
-      style="transform: translateX(-50%) rotate(-45deg)"
-      name="fa-solid fa-apple-whole"
-      color="positive"
-    />
-    <q-icon
-      :size="addPx"
-      class="ic"
-      style="transform: translateY(-25%)"
-      name="fa-solid fa-leaf"
-      color="secondary"
-    />
-    <q-icon
-      :size="addPx"
-      class="ic"
-      style="transform: translateX(50%)"
-      name="fa-solid fa-carrot"
-      color="warning"
-    />
-  </avatar>
+  <div class="col ct">
+    <q-icon :size="multFac" class="ph" name="" />
+    <avatar class="ct">
+      <q-icon
+        :size="addPx"
+        class="ic"
+        style="transform: translateX(-125%) translateY(15%) rotate(-45deg)"
+        name="fa-solid fa-apple-whole"
+        color="positive"
+      />
+      <q-icon
+        :size="addPx"
+        class="ic"
+        style="transform: translateX(-75%) translateY(-15%)"
+        name="fa-solid fa-leaf"
+        color="secondary"
+      />
+      <q-icon
+        :size="addPx"
+        class="ic"
+        style="transform: translateX(-25%) translateY(15%)"
+        name="fa-solid fa-carrot"
+        color="warning"
+      />
+    </avatar>
+  </div>
 </template>
 
 <script>
@@ -34,6 +37,9 @@ export default {
     addPx() {
       return this.iconSize + "em";
     },
+    multFac() {
+      return this.iconSize * 1.4 + "em";
+    },
   },
   setup() {
     return {};
@@ -44,8 +50,6 @@ export default {
 <style lang="scss">
 .ct {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .ic {
   position: relative;

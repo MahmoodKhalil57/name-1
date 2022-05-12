@@ -1,6 +1,10 @@
 <template>
   <div class="fullscreen flex flex-center">
-    <div class="fullscreen bg el" style="z-index: -1"></div>
+    <div class="fullscreen el"></div>
+    <q-img
+      src="~assets\background\pexels-maksim-goncharenok-4597121.jpg"
+      class="header-image absolute-top"
+    />
     <div class="el">
       <WIcon icon-size="10" class="no-filter" />
 
@@ -28,14 +32,12 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.bg {
-  background-image: url("/background/pexels-maksim-goncharenok-4597121.jpg");
-  background-position: 0px -1550px;
-  object-fit: fill;
+.header-image {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+
   filter: blur(3.5px);
-}
-.no-filter {
-  filter: unset !important;
 }
 .el {
   position: absolute;

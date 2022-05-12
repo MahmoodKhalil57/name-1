@@ -30,14 +30,21 @@
     <!-- The Header -->
     <q-header elevated>
       <!-- Top-Bar -->
-      <div class="GNL__toolbar q-pa-md row justify-center items-center">
-        <div v-if="$q.screen.gt.lg"><WIconName icon-size="4" /></div>
-        <div v-else><WIconName icon-size="5.5" /></div>
+      <div class="bg row items-center" :class="scale_stage_1.header">
+        <!-- Logo -->
+        <div :class="scale_stage_3.icon_align">
+          <w-icon class="col" :iconSize="scale_stage_1.icon[0]" />
+          <w-name class="col" :iconSize="scale_stage_1.icon[1]" />
+        </div>
+
+        <q-space v-if="scale_stage_2.logo_space"/>
+
+        <!-- Logo -->
 
         <!--- Links -->
-        <div v-if="$q.screen.gt.lg">
+        <div>
           <q-space />
-          <div
+          <div v-if="scale_stage_1.nav"
             class="inline GL__toolbar-link row no-wrap text-body1 text-weight-bold text-white"
           >
             <q-btn flat rounded href="javascript:void(0)">
@@ -51,15 +58,12 @@
           </div>
         </div>
         <!--- /Links -->
-
-        <div v-if="$q.screen.lt.lg" class="flex-break"></div>
-
         <!--- Buttons -->
         <nav
           class="q-gutter-sm row items-center no-wrap q-pa-xl q-mx-xl text-black"
         >
           <!-- Navigate -->
-          <q-btn v-if="$q.screen.lt.lg" dense flat>
+          <q-btn v-if="!scale_stage_1.nav" dense flat>
             <div
               class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
             >
@@ -111,6 +115,15 @@
             </q-menu>
           </q-btn>
           <!-- /Navigate -->
+          <!-- Cart -->
+          <div
+            class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
+          >
+            <q-btn dense flat round size="sm" icon="shopping_cart" />
+            Cart
+          </div>
+          <!-- /Cart -->
+
           <!-- Menu -->
           <q-btn dense flat>
             <div
@@ -166,17 +179,12 @@
           </q-btn>
           <!-- /Menu -->
 
-          <!-- Cart -->
-          <div
-            class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
-          >
-            <q-btn dense flat round size="sm" icon="shopping_cart" />
-            Cart
-          </div>
-          <!-- /Cart -->
         </nav>
         <!--- /Buttons -->
       </div>
+
+
+
       <!-- /Top-Bar -->
       <!-- searchBar -->
       <q-toolbar class="row">
@@ -207,15 +215,22 @@
         </q-input>
         <q-space />
       </q-toolbar>
+      <q-img
+        src="~assets\background\pexels-kelly-l-4098496.jpg"
+        class="header-image absolute-top"
+      />
       <!-- /searchBar -->
     </q-header>
     <!-- /Header -->
 
     <!-- The Footer -->
     <q-footer elevated>
-      <q-toolbar class="ms justify-center">
-        <WIconName icon-size="9" />
-      </q-toolbar>
+      <div class="justify-center">
+        <div class="row">
+        <w-icon class="col" :iconSize="scale_stage_1.icon[0]" />
+        <w-name class="col" :iconSize="scale_stage_1.icon[1]" />
+        </div>
+      </div>
       <!-- Google Maps-->
       <q-toolbar class="no-padding no-margin">
         <div class="fit column wrap items-center">
@@ -232,7 +247,7 @@
         </div>
       </q-toolbar>
       <!-- whatsapp/num/email-->
-      <q-toolbar class="fit row justify-center enlarge q-my-md">
+      <q-toolbar class="row justify-center q-my-md">
         <a href="javascript:void(0)" target="_self" class="flinks q-mx-sm">
           <q-avatar icon="mail" style="text-shadow: none"> </q-avatar>
           Emailaddress@website.com
@@ -247,9 +262,6 @@
         </a>
       </q-toolbar>
       <!-- Appstore / Google play buttons-->
-      <q-toolbar>
-        <q-avatar icon="mail"> </q-avatar>
-      </q-toolbar>
       <div class="q-pa-md q-gutter-sm">
         <p>
           I was gonna take the time to sit down and write you a little letter.
@@ -293,30 +305,54 @@ import { useQuasar } from "quasar";
 
 export default {
   // name: 'LayoutName',
+  computed: {
+    scale_stage_1()
+    {
+      return this.$q.screen.gt.lg? {
+        header: "justify-between",
+        icon: ["4.4", "4.4"],
+        nav: true
+        } : {
+        header: "justify-center",
+        icon: ["5","6"],
+        nav: false
+        }
+    },
+    scale_stage_3()
+    {
+      return this.$q.screen.lt.md? {icon_align : "column"} : {icon_align : "row"};
+    },
+    scale_stage_2()
+    {
+      return this.$q.screen.gt.sm? {logo_space: true} : {logo_space : false};
+    }
+
+  },
+
 
   setup() {
     const search = ref("");
     const $q = useQuasar();
 
-    $q.screen.setSizes({ sm: 300, md: 500, lg: 1500, xl: 1500 });
+    $q.screen.setSizes({ sm: 300, md: 1000, lg: 1500, xl: 1500 });
 
     return {
       search,
       $q,
     };
   },
+
 };
 </script>
 
 <style lang="sass">
 .GNL
-
-  &__toolbar
-    background-image: url("/background/pexels-kelly-l-4098496.jpg")
-
   &__toolbar-input
     width: 55%
-
+.header-image
+  width: 100%
+  height: 100%
+  opacity: 1
 .flex-break
   flex: 1 0 100% !important
 .row
@@ -330,6 +366,6 @@ export default {
   background-color: transparent
   text-decoration: none
 .flinks:hover
-  text-shadow: 20px 20px 25px black
+  text-shadow: 10px 10px 25px black
   color:#EEDD82
 </style>

@@ -1,32 +1,32 @@
 <template>
-  <div class="q-mx-xl row wrap">
-    <div class="ct">
+  <div class="column">
+    <div class="col ct">
       <q-icon size="4em" class="ph" name="" />
     </div>
-    <avatar class="ct">
+    <div class="col ct">
       <q-icon
         :size="addPx"
         class="ic"
-        style="transform: translateX(-50%) rotate(-45deg)"
+        style="transform: translateX(-100%) rotate(-45deg)"
         name="fa-solid fa-apple-whole"
         color="positive"
       />
       <q-icon
         :size="addPx"
         class="ic"
-        style="transform: translateY(-25%)"
+        style="transform: translateX(-50%) translateY(-25%)"
         name="fa-solid fa-leaf"
         color="secondary"
       />
       <q-icon
         :size="addPx"
         class="ic"
-        style="transform: translateX(50%)"
         name="fa-solid fa-carrot"
         color="warning"
       />
-    </avatar>
-    <div class="">
+    </div>
+    <div style="width: 10px"></div>
+    <div class="col">
       <div class="column items-center" :style="fontMultiplyer" dense>
         <span class="title text-no-wrap text-white"> FarmWeb </span>
         <span class="motto text-no-wrap text-white">
@@ -60,6 +60,7 @@ export default {
 };
 </script>
 
+
 <style lang="scss">
 .ct {
   display: flex;
@@ -80,3 +81,5 @@ export default {
   font-size: var(--motto-size);
 }
 </style>
+
+
