@@ -3,31 +3,6 @@
 <template>
   <q-layout view="hhh lpr fff">
     <!-- The Header -->
-    <!-- Top-Bar -->
-
-    <!--- Links -->
-    <!--- /Links -->
-
-    <!--- Buttons -->
-
-    <!-- Navigate -->
-    <!-- /Navigate -->
-
-    <!-- Menu -->
-    <!-- /Menu -->
-
-    <!-- Cart -->
-    <!-- /Cart -->
-
-    <!--- /Buttons -->
-
-    <!-- /Top-Bar -->
-
-    <!-- searchBar -->
-    <!-- /searchBar -->
-    <!-- /The Header -->
-
-    <!-- The Header -->
     <q-header elevated>
       <!-- Top-Bar -->
       <div class="bg row items-center" :class="scale_stage_1.header">
@@ -266,18 +241,7 @@
         </q-card>
 
       </q-toolbar>
-      <!-- Appstore / Google play buttons-->
-      <!-- <div class="q-pa-md q-gutter-sm">
-        <p>
-          I was gonna take the time to sit down and write you a little letter.
-          But I thought a song would probably be a little better. Instead of a
-          ,letter. That you'd probably just shred up--yeah. I stumbled on your
-          picture yesterday and it made me stop and think of. How much of a
-          waste it'd ,be for me to put some ink to, a stupid piece a. Paper, I'd
-          rather let you see how. Much I fucking hate you in a freestyle.kol
-          5ara
-        </p>
-      </div> -->
+
     </q-footer>
     <!-- /The Footer -->
 
