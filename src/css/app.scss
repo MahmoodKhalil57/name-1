@@ -3,6 +3,27 @@
 /* SCSS syntax is similar to css with addition of variables,
 nesting, mixins(@mixin-@include) with arguments, and functions. */
 
+/* Scroll Bar start*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.162);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $accent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
+/* Scroll Bar end*/
+
 /* header doclayout start */
 .header-image {
   width: 500px;

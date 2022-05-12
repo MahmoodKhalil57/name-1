@@ -32,10 +32,10 @@
       <!-- Top-Bar -->
       <div class="bg row items-center" :class="scale_stage_1.header">
         <!-- Logo -->
-        <div :class="scale_stage_3.icon_align">
+        <a href="#"  :class="scale_stage_3.icon_align" class="rlu">
           <w-icon class="col" :iconSize="scale_stage_1.icon[0]" />
           <w-name class="col" :iconSize="scale_stage_1.icon[1]" />
-        </div>
+        </a>
 
         <q-space v-if="scale_stage_2.logo_space"/>
 
@@ -60,7 +60,7 @@
         <!--- /Links -->
         <!--- Buttons -->
         <nav
-          class="q-gutter-sm row items-center no-wrap q-pa-xl q-mx-xl text-black"
+          class="q-gutter-sm row items-center no-wrap q-mx-xl text-black"
         >
           <!-- Navigate -->
           <q-btn v-if="!scale_stage_1.nav" dense flat>
@@ -225,19 +225,19 @@
 
     <!-- The Footer -->
     <q-footer elevated>
-      <div class="justify-center">
-        <div class="row">
-        <w-icon class="col" :iconSize="scale_stage_1.icon[0]" />
-        <w-name class="col" :iconSize="scale_stage_1.icon[1]" />
-        </div>
-      </div>
+      <q-toolbar class="q-my-lg row justify-center">
+        <a href="#" :class="scale_stage_3.icon_align" class="rlu">
+          <w-icon class="col" :iconSize="scale_stage_1.icon[0]" />
+          <w-name class="col" :iconSize="scale_stage_1.icon[1]" />
+        </a>
+      </q-toolbar>
       <!-- Google Maps-->
       <q-toolbar class="no-padding no-margin">
         <div class="fit column wrap items-center">
           <iframe
+            frameborder="0"
             class="q-my-lg shadow-24 full-width"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15786.75439222384!2d31.02494087802049!3d30.059745364807686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14585b0554c9b7a3%3A0xdb3b24f330c6ae90!2sDandy%20Mega%20Mall!5e0!3m2!1sen!2suk!4v1651997535725!5m2!1sen!2suk"
-            width="900"
             height="450"
             style="border-top: 2px solid black; border-bottom: 2px solid black"
             allowfullscreen=""
@@ -247,22 +247,27 @@
         </div>
       </q-toolbar>
       <!-- whatsapp/num/email-->
-      <q-toolbar class="row justify-center q-my-md">
-        <a href="javascript:void(0)" target="_self" class="flinks q-mx-sm">
-          <q-avatar icon="mail" style="text-shadow: none"> </q-avatar>
-          Emailaddress@website.com
-        </a>
-        <q-separator dark vertical class="q-mx-sm" />
-        <a href="javascript:void(0)" target="_self" class="flinks">
-          <q-avatar
-            icon="fa-brands fa-whatsapp"
-            style="text-shadow: none"
-          ></q-avatar>
-          +20122222234345
-        </a>
+      <q-toolbar class="q-my-md justify-center align-center">
+        <q-card class="bg-primary">
+          <q-card-section :class="scale_stage_4.contact_align">
+            <a href="javascript:void(0)" target="_self" class="flinks">
+              <q-avatar icon="mail" style="text-shadow: none"> </q-avatar>
+              Emailaddress@website.com
+            </a>
+            <q-separator dark vertical class="q-mx-sm" />
+            <a href="javascript:void(0)" target="_self" class="flinks">
+              <q-avatar
+                icon="fa-brands fa-whatsapp"
+                style="text-shadow: none"
+              ></q-avatar>
+              +20122222234345
+            </a>
+          </q-card-section>
+        </q-card>
+
       </q-toolbar>
       <!-- Appstore / Google play buttons-->
-      <div class="q-pa-md q-gutter-sm">
+      <!-- <div class="q-pa-md q-gutter-sm">
         <p>
           I was gonna take the time to sit down and write you a little letter.
           But I thought a song would probably be a little better. Instead of a
@@ -272,7 +277,7 @@
           rather let you see how. Much I fucking hate you in a freestyle.kol
           5ara
         </p>
-      </div>
+      </div> -->
     </q-footer>
     <!-- /The Footer -->
 
@@ -318,13 +323,17 @@ export default {
         nav: false
         }
     },
+    scale_stage_2()
+    {
+      return this.$q.screen.gt.sm? {logo_space: true} : {logo_space : false};
+    },
     scale_stage_3()
     {
       return this.$q.screen.lt.md? {icon_align : "column"} : {icon_align : "row"};
     },
-    scale_stage_2()
+    scale_stage_4()
     {
-      return this.$q.screen.gt.sm? {logo_space: true} : {logo_space : false};
+      return this.$q.screen.lt.md? {contact_align: "column"} : {contact_align : "row"};
     }
 
   },
@@ -349,6 +358,8 @@ export default {
 .GNL
   &__toolbar-input
     width: 55%
+.rlu:link, rlu:visited, rlu:hover, rlu:active
+  text-decoration: none
 .header-image
   width: 100%
   height: 100%
@@ -365,6 +376,7 @@ export default {
   color: white
   background-color: transparent
   text-decoration: none
+  text-align: center
 .flinks:hover
   text-shadow: 10px 10px 25px black
   color:#EEDD82
