@@ -2,7 +2,7 @@
   <q-page padding>
     <!-- content -->
     <h1>hello</h1>
-
+    <WIcon />
     <br />
 
     <p>
@@ -54,6 +54,15 @@
       nostrud do tempor id in eiusmod labore consectetur pariatur magna ullamco
       culpa. Veniam est velit eu velit aute aliqua eu quis Lorem pariatur.
     </p>
+
+    <q-img
+      src="https://cdn.quasar.dev/img/parallax2.jpg"
+      spinner-color="white"
+      style="height: 170px; max-width: 300px"
+      img-class="my-custom-image"
+      class="rounded-borders"
+    >
+    </q-img>
   </q-page>
 </template>
 
