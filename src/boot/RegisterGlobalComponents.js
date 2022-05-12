@@ -1,6 +1,5 @@
 import { boot } from 'quasar/wrappers'
 import WIcon from 'components/WIcon.vue'
-import WIconName from 'components/WIconName.vue'
 import WName from 'components/WName.vue'
 
 // "async" is optional;
@@ -8,6 +7,5 @@ import WName from 'components/WName.vue'
 export default boot(async ({ app }) => {
   // something to do
   app.component('WIcon', WIcon)
-  app.component('WIconName', WIconName)
   app.component('WName', WName)
 })
