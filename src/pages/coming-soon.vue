@@ -3,6 +3,7 @@
     <q-img
       src="~assets\background\coming-soon.jpg"
       class="header-image absolute-top"
+      no-spinner
     />
     <div class="el">
       <a href="/" class="q-my-lg rlu">

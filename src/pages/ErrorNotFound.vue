@@ -22,7 +22,11 @@
         href="/"
       />
     </div>
-    <q-img src="~assets\background\404.jpg" class="header-image absolute-top" />
+    <q-img
+      src="~assets\background\404.jpg"
+      class="header-image absolute-top"
+      no-spinner
+    />
   </div>
 </template>
 
