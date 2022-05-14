@@ -151,8 +151,8 @@
       <!-- searchBar -->
       <q-toolbar class="row">
         <q-breadcrumbs class="gt-sm">
-          <q-breadcrumbs-el :label="$route.meta.root" />
-          <q-breadcrumbs-el :label="$route.meta.current" />
+          <q-breadcrumbs-el :label="$route.meta.root" href="/" />
+          <q-breadcrumbs-el :label="$route.meta.current" :href="'/' + $route.meta.current" />
         </q-breadcrumbs>
         <q-space />
         <q-input
@@ -181,6 +181,7 @@
       <q-img
         src="~assets\background\pexels-kelly-l-4098496.jpg"
         class="header-image absolute-top"
+        no-spinner
       />
     </q-header>
     <!-- /Header -->

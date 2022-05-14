@@ -174,6 +174,7 @@
       <q-img
         src="~assets\background\pexels-tim-mossholder-974314.jpg"
         class="header-image absolute-top"
+        no-spinner
       />
       <!-- /Top-Bar -->
     </q-header>
@@ -318,7 +319,7 @@ export default {
   width: 100%
   height: 100%
   opacity: 1
-  filter: brightness(70%)
+  filter: brightness(60%)
 .flex-break
   flex: 1 0 100% !important
 .row
