@@ -179,7 +179,7 @@
       </q-toolbar>
       <!-- /searchBar -->
       <q-img
-        src="~assets\background\pexels-kelly-l-4098496.jpg"
+        src="~assets\background\doc-layout.jpg"
         class="header-image absolute-top"
         no-spinner
       />

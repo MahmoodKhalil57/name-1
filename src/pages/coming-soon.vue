@@ -1,7 +1,7 @@
 <template>
   <div class="fullscreen flex flex-center">
     <q-img
-      src="~assets\background\pexels-maksim-goncharenok-4597121.jpg"
+      src="~assets\background\coming-soon.jpg"
       class="header-image absolute-top"
     />
     <div class="el">
@@ -26,7 +26,6 @@
           icon="home"
           label="Home"
           href="/"
-          style="z-index: 1"
         />
       </q-toolbar>
     </div>
@@ -49,11 +48,11 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   opacity: 1;
-  z-index: -1;
   filter: blur(3.5px);
 }
 .el {
   position: absolute;
+  top: 0%;
 }
 .rlu:link,
 rlu:visited,

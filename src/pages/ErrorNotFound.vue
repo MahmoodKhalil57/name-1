@@ -1,31 +1,45 @@
 <template>
-  <div class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center">
+  <div
+    class="
+      fullscreen
+      bg-primary
+      text-white text-center
+      q-pa-md
+      flex flex-center
+    "
+  >
     <div>
-      <div style="font-size: 30vh">
-        404
-      </div>
+      <div style="font-size: 30vh">404</div>
 
-      <div class="text-h2" style="opacity:.4">
-        Oops. Nothing here...
-      </div>
+      <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
 
       <q-btn
-        class="q-mt-xl"
-        color="white"
-        text-color="blue"
-        unelevated
-        to="/"
-        label="Go Home"
-        no-caps
+        class="q-ma-xl"
+        color="accent"
+        text-color="black"
+        icon="home"
+        label="Home"
+        href="/"
       />
     </div>
+    <q-img src="~assets\background\404.jpg" class="header-image absolute-top" />
   </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'ErrorNotFound'
-})
+  name: "ErrorNotFound",
+});
 </script>
+
+<style lang="scss">
+.header-image {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: -1;
+  filter: blur(3.5px);
+}
+</style>
