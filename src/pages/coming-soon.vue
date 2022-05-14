@@ -1,12 +1,13 @@
 <template>
   <div class="fullscreen flex flex-center">
-    <div class="fullscreen el"></div>
     <q-img
       src="~assets\background\pexels-maksim-goncharenok-4597121.jpg"
       class="header-image absolute-top"
     />
     <div class="el">
-      <WIcon icon-size="10" class="no-filter logo_offset" />
+      <a href="/" class="q-my-lg rlu">
+        <WIcon icon-size="10" class="no-filter logo_offset q-my-xl" />
+      </a>
 
       <div>
         <div class="q-mt-xl q-pt-xl text-h3 text-white text-center text-bold">
@@ -18,6 +19,16 @@
           possible, stay tuned! -Dev team
         </div>
       </div>
+      <q-toolbar class="q-py-lg row justify-center">
+        <q-btn
+          color="accent"
+          text-color="black"
+          icon="home"
+          label="Home"
+          href="/"
+          style="z-index: 1"
+        />
+      </q-toolbar>
     </div>
   </div>
 </template>
@@ -26,7 +37,7 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "ErrorNotFound",
+  name: "ComingSoon",
 });
 </script>
 
@@ -38,63 +49,17 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   opacity: 1;
-
+  z-index: -1;
   filter: blur(3.5px);
 }
 .el {
   position: absolute;
+}
+.rlu:link,
+rlu:visited,
+rlu:hover,
+rlu:active {
+  text-decoration: none;
 }
 </style>
-<!-- ---------------------------------
 
-<template>
-  <div class="ct">
-    <q-img class="bg my-custom-image el" />
-    <div class="el column">
-      <WIcon class="col" icon-size="10" />
-      <div class="col">
-        <div class="text-h3 text-white text-center text-bold" size="xl">
-          Coming Soon!
-        </div>
-        <br />
-        <div class="text-grey-3 text-center" size="xl">
-          We are working hard to get this webpage running as soon as
-          possible,<br />
-          stay tuned! -Dev team
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
-<script>
-export default {
-  name: "ComingSoon",
-};
-</script>
-
-<style lang="scss">
-.bg {
-  background-image: url("/background/pexels-maksim-goncharenok-4597121.jpg");
-  object-fit: fill;
-  filter: blur(3.5px);
-}
-.ct {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.el {
-  position: absolute;
-}
-.ph {
-  position: relative;
-}
-.title {
-  // font size equals --font-multiplier multiplied by 2
-  font-size: var(--header-size);
-}
-.motto {
-  font-size: var(--motto-size);
-}
-</style> -->

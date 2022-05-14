@@ -3,36 +3,11 @@
 <template>
   <q-layout view="hhh lpr fff">
     <!-- The Header -->
-    <!-- Top-Bar -->
-
-    <!--- Links -->
-    <!--- /Links -->
-
-    <!--- Buttons -->
-
-    <!-- Navigate -->
-    <!-- /Navigate -->
-
-    <!-- Menu -->
-    <!-- /Menu -->
-
-    <!-- Cart -->
-    <!-- /Cart -->
-
-    <!--- /Buttons -->
-
-    <!-- /Top-Bar -->
-
-    <!-- searchBar -->
-    <!-- /searchBar -->
-    <!-- /The Header -->
-
-    <!-- The Header -->
     <q-header elevated>
       <!-- Top-Bar -->
       <div class="bg row items-center" :class="scale_stage_1.header">
         <!-- Logo -->
-        <a href="#"  :class="scale_stage_3.icon_align" class="q-my-lg rlu">
+        <a href="/"  :class="scale_stage_3.icon_align" class="q-my-lg rlu">
           <w-icon class="col" :iconSize="scale_stage_1.icon[0]" :style="scale_stage_3.icon_offset" />
           <w-name class="col" :iconSize="scale_stage_1.icon[1]" :style="scale_stage_3.name_offset" />
         </a>
@@ -47,14 +22,14 @@
           <div v-if="scale_stage_1.nav"
             class="inline GL__toolbar-link row no-wrap text-body1 text-weight-bold text-white"
           >
-            <q-btn flat rounded href="javascript:void(0)">
+            <q-btn flat rounded href="/">
               <q-icon name="home" /> Home
             </q-btn>
-            <q-btn flat rounded href="javascript:void(0)"> About </q-btn>
-            <q-btn flat rounded href="javascript:void(0)"> Shop </q-btn>
-            <q-btn flat rounded href="javascript:void(0)"> MangoPicking </q-btn>
-            <q-btn flat rounded href="javascript:void(0)"> Testimonials </q-btn>
-            <q-btn flat rounded href="javascript:void(0)"> Contact </q-btn>
+            <q-btn flat rounded href="/about"> About </q-btn>
+            <q-btn flat rounded href="/shop"> Shop </q-btn>
+            <q-btn flat rounded href="/mango-picking"> MangoPicking </q-btn>
+            <q-btn flat rounded href="/your-reviews"> Testimonials </q-btn>
+            <q-btn flat rounded href="/contact"> Contact </q-btn>
           </div>
         </div>
         <!--- /Links -->
@@ -65,7 +40,7 @@
           <!-- Navigate -->
           <q-btn v-if="!scale_stage_1.nav" dense flat>
             <div
-              class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
+              class="row items-center no-wrap bg-accent q-pa-sm rounded-borders"
             >
               Navigate
               <q-icon
@@ -116,18 +91,13 @@
           </q-btn>
           <!-- /Navigate -->
           <!-- Cart -->
-          <div
-            class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
-          >
-            <q-btn dense flat round size="sm" icon="shopping_cart" />
-            Cart
-          </div>
+          <q-btn color="accent" text-color="black" icon="shopping_cart" label="cart" href="/cart  " />
           <!-- /Cart -->
 
           <!-- Menu -->
           <q-btn dense flat>
             <div
-              class="row items-center no-wrap bg-warning q-pa-sm rounded-borders"
+              class="row items-center no-wrap bg-accent q-pa-sm rounded-borders shadow-3"
             >
               more
               <q-icon
@@ -140,37 +110,32 @@
               <q-list dense style="min-width: 100px">
                 <q-item
                   clickable
-                  href="javascript:void(0)"
-                  class="GL__menu-link"
+                  href="/blog"
                 >
                   <q-item-section>Blog</q-item-section>
                 </q-item>
                 <q-item
                   clickable
-                  href="javascript:void(0)"
-                  class="GL__menu-link"
+                  href="/gallery"
                 >
                   <q-item-section>Gallery</q-item-section>
                 </q-item>
                 <q-item
                   clickable
-                  href="javascript:void(0)"
-                  class="GL__menu-link"
+                  href="/tips"
                 >
                   <q-item-section>Ripening Tips</q-item-section>
                 </q-item>
                 <q-item
                   clickable
-                  href="javascript:void(0)"
-                  class="GL__menu-link"
+                  href="/harvesting-process"
                 >
                   <q-item-section>Harvesting Process</q-item-section>
                 </q-item>
                 <q-separator />
                 <q-item
                   clickable
-                  href="javascript:void(0)"
-                  class="GL__menu-link text-no-wrap"
+                  href="/login"
                 >
                   <q-item-section><q-icon name="login" />Login</q-item-section>
                 </q-item>
@@ -182,9 +147,6 @@
         </nav>
         <!--- /Buttons -->
       </div>
-
-
-
       <!-- /Top-Bar -->
       <!-- searchBar -->
       <q-toolbar class="row">
@@ -215,21 +177,18 @@
         </q-input>
         <q-space />
       </q-toolbar>
+      <!-- /searchBar -->
       <q-img
         src="~assets\background\pexels-kelly-l-4098496.jpg"
         class="header-image absolute-top"
       />
-      <!-- /searchBar -->
     </q-header>
     <!-- /Header -->
 
     <!-- The Footer -->
     <q-footer class="bg-dark" elevated>
       <q-toolbar class="bg-primary q-py-lg row justify-center">
-        <a href="#" :class="scale_stage_3.icon_align" class="rlu">
-          <w-icon class="col self-center" :iconSize="scale_stage_1.icon[0]" :style="scale_stage_3.icon_offset" />
-          <w-name class="col self-center" :iconSize="scale_stage_1.icon[1]" :style="scale_stage_3.name_offset" />
-        </a>
+        <q-btn class="text-h3" color="accent" text-color="black" icon="shopping_cart" label="Shop Now" @click="onClick" rounded/>
       </q-toolbar>
       <!-- Google Maps-->
       <q-toolbar class="no-padding no-margin">
@@ -245,6 +204,13 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+      </q-toolbar>
+      <!-- Icon-->
+      <q-toolbar class="q-py-lg row justify-center">
+        <a href="#" :class="scale_stage_3.icon_align" class="rlu">
+          <w-icon class="col self-center" :iconSize="scale_stage_1.icon[0]" :style="scale_stage_3.icon_offset" />
+          <w-name class="col self-center" :iconSize="scale_stage_1.icon[1]" :style="scale_stage_3.name_offset" />
+        </a>
       </q-toolbar>
       <!-- whatsapp/num/email-->
       <q-toolbar class="q-my-md justify-center align-center">
@@ -283,9 +249,13 @@
 
     <!-- (Optional) A Drawer; you can add one more with side="right" or change this one's side -->
 
-    <q-page-container>
+    <q-page-container class="bg-secondary">
       <!-- This is where pages get injected -->
-      <router-view />
+      <q-card class="my-card bg-info q-ma-md shadow-24" >
+        <q-card-section>
+          <router-view />
+        </q-card-section>
+      </q-card>
       <q-page-scroller
         position="bottom-left"
         :scroll-offset="10"

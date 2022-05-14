@@ -14,7 +14,7 @@
         class="ic"
         style="transform: translateX(-75%)"
         name="fa-solid fa-leaf"
-        color="secondary"
+        color="light-green-14"
       />
       <q-icon
         :size="addPx"
