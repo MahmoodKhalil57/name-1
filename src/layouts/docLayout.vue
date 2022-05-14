@@ -179,7 +179,7 @@
       </q-toolbar>
       <!-- /searchBar -->
       <q-img
-        src="\background\pexels-kelly-l-4098496.jpg"
+        src="~assets\background\pexels-kelly-l-4098496.jpg"
         class="header-image absolute-top"
       />
     </q-header>
@@ -207,7 +207,7 @@
       </q-toolbar>
       <!-- Icon-->
       <q-toolbar class="q-py-lg row justify-center">
-        <a href="#" :class="scale_stage_3.icon_align" class="rlu">
+        <a href="/" :class="scale_stage_3.icon_align" class="rlu">
           <w-icon class="col self-center" :iconSize="scale_stage_1.icon[0]" :style="scale_stage_3.icon_offset" />
           <w-name class="col self-center" :iconSize="scale_stage_1.icon[1]" :style="scale_stage_3.name_offset" />
         </a>

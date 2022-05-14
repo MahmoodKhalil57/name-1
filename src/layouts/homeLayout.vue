@@ -172,7 +172,7 @@
 
 
       <q-img
-        src="\background\pexels-tim-mossholder-974314.jpg"
+        src="~assets\background\pexels-tim-mossholder-974314.jpg"
         class="header-image absolute-top"
       />
       <!-- /Top-Bar -->
