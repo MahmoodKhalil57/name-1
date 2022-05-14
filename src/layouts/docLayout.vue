@@ -53,36 +53,31 @@
               <q-list dense style="min-width: 100px">
                 <q-item
                   clickable
-                  href="javascript:void(0)"
-                  class="GL__menu-link"
+                  href="/about"
                 >
                   <q-item-section>About</q-item-section>
                 </q-item>
                 <q-item
                   clickable
-                  href="javascript:void(0)"
-                  class="GL__menu-link"
+                  href="/shop"
                 >
                   <q-item-section>Shop</q-item-section>
                 </q-item>
                 <q-item
                   clickable
-                  href="javascript:void(0)"
-                  class="GL__menu-link"
+                  href="/mango-picking"
                 >
                   <q-item-section>Mangopicking</q-item-section>
                 </q-item>
                 <q-item
                   clickable
-                  href="javascript:void(0)"
-                  class="GL__menu-link"
+                  href="your-reviews"
                 >
                   <q-item-section>Testimonials</q-item-section>
                 </q-item>
                 <q-item
                   clickable
-                  href="javascript:void(0)"
-                  class="GL__menu-link"
+                  href="contact"
                 >
                   <q-item-section>Contact</q-item-section>
                 </q-item>
