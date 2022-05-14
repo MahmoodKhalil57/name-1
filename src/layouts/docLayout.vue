@@ -32,9 +32,9 @@
       <!-- Top-Bar -->
       <div class="bg row items-center" :class="scale_stage_1.header">
         <!-- Logo -->
-        <a href="#"  :class="scale_stage_3.icon_align" class="rlu">
-          <w-icon class="col" :iconSize="scale_stage_1.icon[0]" />
-          <w-name class="col" :iconSize="scale_stage_1.icon[1]" />
+        <a href="#"  :class="scale_stage_3.icon_align" class="q-my-lg rlu">
+          <w-icon class="col" :iconSize="scale_stage_1.icon[0]" :style="scale_stage_3.icon_offset" />
+          <w-name class="col" :iconSize="scale_stage_1.icon[1]" :style="scale_stage_3.name_offset" />
         </a>
 
         <q-space v-if="scale_stage_2.logo_space"/>
@@ -188,7 +188,7 @@
       <!-- /Top-Bar -->
       <!-- searchBar -->
       <q-toolbar class="row">
-        <q-breadcrumbs>
+        <q-breadcrumbs class="gt-sm">
           <q-breadcrumbs-el :label="$route.meta.root" />
           <q-breadcrumbs-el :label="$route.meta.current" />
         </q-breadcrumbs>
@@ -224,22 +224,22 @@
     <!-- /Header -->
 
     <!-- The Footer -->
-    <q-footer elevated>
-      <q-toolbar class="q-my-lg row justify-center">
+    <q-footer class="bg-dark" elevated>
+      <q-toolbar class="bg-primary q-py-lg row justify-center">
         <a href="#" :class="scale_stage_3.icon_align" class="rlu">
-          <w-icon class="col" :iconSize="scale_stage_1.icon[0]" />
-          <w-name class="col" :iconSize="scale_stage_1.icon[1]" />
+          <w-icon class="col self-center" :iconSize="scale_stage_1.icon[0]" :style="scale_stage_3.icon_offset" />
+          <w-name class="col self-center" :iconSize="scale_stage_1.icon[1]" :style="scale_stage_3.name_offset" />
         </a>
       </q-toolbar>
       <!-- Google Maps-->
       <q-toolbar class="no-padding no-margin">
         <div class="fit column wrap items-center">
           <iframe
-            frameborder="0"
-            class="q-my-lg shadow-24 full-width"
+            frameBorder="0"
+            class="full-width"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15786.75439222384!2d31.02494087802049!3d30.059745364807686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14585b0554c9b7a3%3A0xdb3b24f330c6ae90!2sDandy%20Mega%20Mall!5e0!3m2!1sen!2suk!4v1651997535725!5m2!1sen!2suk"
             height="450"
-            style="border-top: 2px solid black; border-bottom: 2px solid black"
+            style="border-top: 3px solid black; border-bottom: 3px solid black; box-shadow: -4px -3px 45px 21px rgba(0,0,0,0.35);"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -249,17 +249,17 @@
       <!-- whatsapp/num/email-->
       <q-toolbar class="q-my-md justify-center align-center">
         <q-card class="bg-primary">
-          <q-card-section :class="scale_stage_4.contact_align">
+          <q-card-section :class="scale_stage_3.icon_align">
             <a href="javascript:void(0)" target="_self" class="flinks">
-              <q-avatar icon="mail" style="text-shadow: none"> </q-avatar>
+              <q-icon name="mail" > </q-icon>
               Emailaddress@website.com
             </a>
             <q-separator dark vertical class="q-mx-sm" />
             <a href="javascript:void(0)" target="_self" class="flinks">
-              <q-avatar
-                icon="fa-brands fa-whatsapp"
-                style="text-shadow: none"
-              ></q-avatar>
+              <q-icon
+                name="fa-brands fa-whatsapp"
+
+              ></q-icon>
               +20122222234345
             </a>
           </q-card-section>
@@ -315,27 +315,31 @@ export default {
     {
       return this.$q.screen.gt.lg? {
         header: "justify-between",
+
         icon: ["4.4", "4.4"],
         nav: true
         } : {
         header: "justify-center",
+
         icon: ["5","6"],
         nav: false
         }
     },
     scale_stage_2()
     {
-      return this.$q.screen.gt.sm? {logo_space: true} : {logo_space : false};
+      return this.$q.screen.gt.sm? {logo_space: true } : {logo_space : false };
     },
     scale_stage_3()
     {
-      return this.$q.screen.lt.md? {icon_align : "column"} : {icon_align : "row"};
-    },
-    scale_stage_4()
-    {
-      return this.$q.screen.lt.md? {contact_align: "column"} : {contact_align : "row"};
+      return this.$q.screen.lt.md? {
+        icon_align : "column",
+        name_offset: "transform: translateX(0%) translateY(15%)",
+        icon_offset: "transform: translateX(0%) translateY(15%)",
+        } : {
+        icon_align : "row",
+        name_offset: "transform: translateX(-30%) translateY(0%)",
+        icon_offset: "transform: translateX(10%) translateY(0%)",};
     }
-
   },
 
 
@@ -357,7 +361,7 @@ export default {
 <style lang="sass">
 .GNL
   &__toolbar-input
-    width: 55%
+    width: 50%
 .rlu:link, rlu:visited, rlu:hover, rlu:active
   text-decoration: none
 .header-image
