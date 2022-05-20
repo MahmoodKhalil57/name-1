@@ -144,7 +144,7 @@
       </div>
       <!-- /Top-Bar -->
       <!-- searchBar -->
-      <q-toolbar class="row">
+      <q-toolbar class="row bg-primary">
         <q-breadcrumbs class="gt-sm">
           <q-breadcrumbs-el :label="$route.meta.root" href="/" />
           <q-breadcrumbs-el :label="$route.meta.current" :href="'/' + $route.meta.current" />
@@ -184,7 +184,7 @@
     <!-- The Footer -->
     <q-footer class="bg-dark" elevated>
       <q-toolbar class="bg-primary q-py-lg row justify-center">
-        <q-btn class="text-h3" color="accent" text-color="black" icon="shopping_cart" label="Shop Now" @click="onClick" rounded/>
+        <q-btn class="text-h3" color="accent" text-color="black" icon="shopping_cart" label="Shop Now" href="/shop" rounded/>
       </q-toolbar>
       <!-- Google Maps-->
       <q-toolbar class="no-padding no-margin">

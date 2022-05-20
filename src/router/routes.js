@@ -19,9 +19,9 @@ const routes = [
   {
     path: '/dev',
     meta: { root: 'Home', current: 'dev' },
-    component: () => import('layouts/docLayout.vue'),
+    component: () => import('layouts/testLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/about.vue') }
+      { path: '', component: () => import('pages/home.vue') }
     ]
   },
   {
