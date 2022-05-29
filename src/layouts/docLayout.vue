@@ -228,7 +228,9 @@
         </q-card>
       </q-toolbar>
       <!-- Appstore / Google play buttons-->
-      <q-toolbar class="q-pa-lg q-gutter-md justify-center">
+      <q-toolbar
+        class="q-pa-lg q-gutter-lg justify-center align-center no-margin"
+      >
         <q-btn color="deep-orange" push>
           <div class="row items-center no-wrap">
             <div class="text-center">
