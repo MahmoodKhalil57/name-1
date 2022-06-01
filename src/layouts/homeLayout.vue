@@ -200,9 +200,7 @@
 
     <q-page-container class="bg-secondary">
       <!-- This is where pages get injected -->
-      <q-card>
-        <router-view />
-      </q-card>
+      <router-view />
       <q-page-scroller
         position="bottom-left"
         :scroll-offset="800"
