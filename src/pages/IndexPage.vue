@@ -1,17 +1,43 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    />
+  <q-page>
+    <div class="parallax_wrapper">
+      <div class="parallax_group intro_screen" id="intro">
+        <section-one></section-one>
+      </div>
+      <div class="space"></div>
+      <div class="parallax_group" id="group-1">
+        <section-two></section-two>
+      </div>
+      <div class="space"></div>
+      <div class="parallax_group" id="group-2">
+        <section-three></section-three>
+      </div>
+      <div class="space"></div>
+      <div class="parallax_group" id="group-3">
+        <section-four></section-four>
+      </div>
+      <div class="space"></div>
+      <div class="parallax_group" id="group-4">
+        <section-five></section-five>
+      </div>
+    </div>
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import SectionOne from "src/components/SectionOne.vue";
+import SectionTwo from "src/components/SectionTwo.vue";
+import SectionThree from "src/components/SectionThree.vue";
+import SectionFour from "src/components/SectionFour.vue";
+import SectionFive from "src/components/SectionFive.vue";
 
-export default defineComponent({
-  name: "IndexPage",
-});
+export default {
+  components: {
+    SectionOne,
+    SectionTwo,
+    SectionThree,
+    SectionFour,
+    SectionFive,
+  },
+};
 </script>
