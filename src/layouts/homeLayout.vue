@@ -3,7 +3,7 @@
 <template>
   <q-layout view="hhh lpr fff">
     <!-- The Header -->
-    <q-header class="transparent" style="height:0">
+    <q-header  style="height:0">
       <!-- Top-Bar -->
       <div class="row items-center" :class="scale_stage_1.header">
         <!-- Logo -->
