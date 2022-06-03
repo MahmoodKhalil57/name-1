@@ -98,25 +98,9 @@ body {
     overflow-y: auto;
     perspective: 300px;
 
-    scroll-snap-type: y mandatory;
-
-    .intro_screen {
-      height: 100vh;
-      background-color: $secondary;
-      @include align-center();
-    }
-    .outro_screen {
-      height: 100vh;
-      background-color: $secondary;
-      @include align-center();
-    }
-
     .parallax_group {
       height: 100vh;
       transform-style: preserve-3d;
-
-      scroll-snap-align: center;
-      scroll-snap-stop: always;
     }
 
     .parallax_layer {
@@ -124,8 +108,21 @@ body {
       inset: 0;
       @include align-center();
     }
+
+    .intro_screen {
+      height: 100vh;
+      background-color: $secondary;
+      @include align-center();
+      transform: translateZ(-18000px) scale(64);
+    }
+    .outro_screen {
+      height: 100vh;
+      background-color: $secondary;
+      @include align-center();
+    }
+
     .base_layer {
-      transform: translateZ(-300px) scale(2);
+      transform: translateY(9vh) translateZ(-300px) scale(2);
       z-index: 1;
 
       .my-card:hover {
