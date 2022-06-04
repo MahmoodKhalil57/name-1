@@ -228,35 +228,83 @@
         </q-card>
       </q-toolbar>
       <!-- Appstore / Google play buttons-->
-      <q-toolbar
-        class="q-pa-lg justify-center align-center no-margin"
-      >
-        <q-btn class="q-ma-md" color="deep-orange" push>
+      <q-toolbar class="q-pa-lg justify-center align-center no-margin">
+        <q-btn
+          class="q-ma-md"
+          color="deep-orange"
+          href="javascript:void(0)"
+          target="_self"
+          push
+        >
           <q-card flat class="flat transparent">
             <q-card-section horizontal>
               <q-card-section class="q-pa-sm">
                 <q-icon left name="fa-brands fa-apple" />
               </q-card-section>
               <q-separator vertical />
-              <q-card-section  class="q-py-none q-px-sm ">
-                Available at the<br /> App Store
+              <q-card-section class="q-py-none q-px-sm">
+                Available at the<br />
+                App Store
               </q-card-section>
             </q-card-section>
           </q-card>
         </q-btn>
-        <q-btn class="q-ma-md" color="deep-orange" push>
+        <q-btn
+          class="q-ma-md"
+          color="deep-orange"
+          href="javascript:void(0)"
+          target="_self"
+          push
+        >
           <q-card flat class="flat transparent">
             <q-card-section horizontal>
               <q-card-section class="q-pa-sm">
                 <q-icon left name="fa-brands fa-google-play scl-dw" />
               </q-card-section>
               <q-separator vertical />
-              <q-card-section  class="q-py-none q-px-sm ">
-                Get it on<br /> Google play
+              <q-card-section class="q-py-none q-px-sm">
+                Get it on<br />
+                Google play
               </q-card-section>
             </q-card-section>
           </q-card>
         </q-btn>
+      </q-toolbar>
+      <!--Social media platforms icons-->
+      <q-toolbar class="justify-between q-pb-xl">
+        <q-space />
+        <a
+          href="javascript:void(0)"
+          target="_self"
+          class="flinks scl-x4 q-mx-xl"
+        >
+          <q-icon class="fa-brands fa-facebook-square" color="blue-9" />
+        </a>
+
+        <a
+          href="javascript:void(0)"
+          target="_self"
+          class="flinks scl-x4 q-mx-xl"
+        >
+          <q-icon class="fa-brands fa-instagram-square flinks" color="pink-7" />
+        </a>
+
+        <a
+          href="javascript:void(0)"
+          target="_self"
+          class="flinks scl-x4 q-mx-xl"
+        >
+          <q-icon class="fa-brands fa-twitter-square" color="light-blue-5" />
+        </a>
+
+        <a
+          href="javascript:void(0)"
+          target="_self"
+          class="flinks scl-x4 q-mx-xl"
+        >
+          <q-icon class="fa-brands fa-youtube-square" color="red-9" />
+        </a>
+        <q-space />
       </q-toolbar>
     </q-footer>
     <!-- /The Footer -->
@@ -276,7 +324,7 @@
       >
         <q-btn push color="green" rounded>
           <q-avatar icon="fa-brands fa-whatsapp"> </q-avatar>
-          {{ $route.meta.title }} Whatsapp Us
+          Whatsapp Us
           <q-badge color="red" rounded floating>
             <q-avatar icon="fa-solid fa-exclamation" size="1.5em"> </q-avatar>
           </q-badge>
@@ -370,4 +418,6 @@ export default {
   color:#EEDD82
 .scl-dw
   transform: scale(0.8)
+.scl-x4
+  transform: scale(4)
 </style>

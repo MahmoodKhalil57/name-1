@@ -10,7 +10,7 @@ nesting, mixins(@mixin-@include) with arguments, and functions. */
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.162);
+  background: rgba(121, 190, 139, 0.9);
 }
 
 /* Handle */
@@ -69,10 +69,6 @@ nesting, mixins(@mixin-@include) with arguments, and functions. */
 * {
   margin: 0;
   padding: 0;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 @mixin align-center {
