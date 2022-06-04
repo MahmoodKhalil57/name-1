@@ -166,7 +166,7 @@
 
     <!-- The Footer -->
     <q-footer class="bg-dark" elevated>
-      <q-toolbar class="bg-primary q-py-lg row justify-center">
+      <q-toolbar class="q-py-lg row justify-center">
         <q-btn
           class="text-h3"
           color="accent"
@@ -229,23 +229,33 @@
       </q-toolbar>
       <!-- Appstore / Google play buttons-->
       <q-toolbar
-        class="q-pa-lg q-gutter-lg justify-center align-center no-margin"
+        class="q-pa-lg justify-center align-center no-margin"
       >
-        <q-btn color="deep-orange" push>
-          <div class="row items-center no-wrap">
-            <div class="text-center">
-              Available at the<br />
-              <q-icon left name="fa-brands fa-apple" />App Store
-            </div>
-          </div>
+        <q-btn class="q-ma-md" color="deep-orange" push>
+          <q-card flat class="flat transparent">
+            <q-card-section horizontal>
+              <q-card-section class="q-pa-sm">
+                <q-icon left name="fa-brands fa-apple" />
+              </q-card-section>
+              <q-separator vertical />
+              <q-card-section  class="q-py-none q-px-sm ">
+                Available at the<br /> App Store
+              </q-card-section>
+            </q-card-section>
+          </q-card>
         </q-btn>
-        <q-btn color="deep-orange" push>
-          <div class="row items-center no-wrap">
-            <div class="text-center">
-              Get it on<br />
-              <q-icon left name="fa-brands fa-google-play scl-dw" />Google play
-            </div>
-          </div>
+        <q-btn class="q-ma-md" color="deep-orange" push>
+          <q-card flat class="flat transparent">
+            <q-card-section horizontal>
+              <q-card-section class="q-pa-sm">
+                <q-icon left name="fa-brands fa-google-play scl-dw" />
+              </q-card-section>
+              <q-separator vertical />
+              <q-card-section  class="q-py-none q-px-sm ">
+                Get it on<br /> Google play
+              </q-card-section>
+            </q-card-section>
+          </q-card>
         </q-btn>
       </q-toolbar>
     </q-footer>

@@ -151,7 +151,7 @@
             </nav>
             <!--- /Buttons -->
           </q-toolbar>
-          <q-toolbar class="q-py-lg">
+          <q-toolbar>
             <q-card class="transparent no-shadow row justify-center">
               <q-card-section
                 class="my-text"
