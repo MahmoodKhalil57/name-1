@@ -113,7 +113,12 @@
                 </q-item>
                 <q-separator />
                 <q-item clickable href="/login">
-                  <q-item-section><q-icon name="login" />Login</q-item-section>
+                  <q-item-section transition-show="slide-down">
+                    <div>
+                      <q-icon name="login"/>
+                      <span class="q-mx-sm">Login</span>
+                    </div>
+                  </q-item-section>
                 </q-item>
               </q-list>
             </q-menu>
@@ -331,6 +336,12 @@
         </q-btn>
       </q-page-scroller>
     </q-page-container>
+    <q-page-scroller position="bottom-right"
+      :scroll-offset="10"
+      :offset="[30, 30]"
+    >
+      <q-btn fab icon="keyboard_arrow_up" color="accent" />
+    </q-page-scroller>
   </q-layout>
 </template>
 

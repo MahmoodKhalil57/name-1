@@ -20,4 +20,4 @@ Authors: Mahmood Khalil, Omar Khorshid
 Repository URL: https://github.com/MahmoodKhalil57/name-1
 Website URL: https://farmweb.netlify.app/
 Framework docs: https://quasar.dev/
-Tags: #Page, #Empty
+Tags: #Page, #Empty, #WIP

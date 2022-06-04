@@ -16,7 +16,7 @@
 8. [ ] ~~User should see a search bar that~~ redirects to the shop webpage which shows the searched items if available (dont forget 2 placeholders).
 9. [ ] ~~Next to the seach bar is a button $secondary-color for the user to press on and search for item.~~
        <--- Footer --->
-10. [ ] User sees all elements centered.
+10. [x] User sees all elements centered.
 11. [x] User should see the logo, name, and moto of the company.
 12. [x] User sees the location of the farm, and google maps for it.
 13. [x] User sees Whatsapp Icon followed by contact number, followed by contact email.
@@ -25,8 +25,8 @@
 16. [ ] User can see a small list of strings next to each other with the first four as hyper links indicating [terms - privacy - refund - shipping policy] and then copy right of website, and then a link to the developer info. With a vertical line dividing each item from the following.
 17. [ ] User can see text where the website was made.
         <--- Fixed --->
-18. [ ] User should see a green button with a whatsapp logo saying whatsapp us, and redirects to whatsapp contact].
-19. [ ] User should see on the bottom right of the screen a $secondary-color with an icon of an arrow ponting up, that takes them to the top of the same webpage they are on.
+18. [ ] ~User should see a green button with a whatsapp logo saying whatsapp us,~ and redirects to whatsapp contact.
+19. [x] User should see on the bottom right of the screen a $secondary-color with an icon of an arrow ponting up, that takes them to the top of the same webpage they are on.
 
 ### Goals:
 
@@ -35,6 +35,7 @@
 ### Features:
 
 1. [ ] Add the number of items selected from the shop next to the cart button.
+2. [ ] Add the search functionality.
 
 ### Meta
 
