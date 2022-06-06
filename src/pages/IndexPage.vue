@@ -4,7 +4,7 @@
       <div class="parallax_group intro_screen" id="intro">
         <q-card-section>
           <q-toolbar
-            class="row items-center"
+            class="row items-center invisible"
             style="z-index: 10; transform: translateY(10vh)"
           >
             <!-- Logo -->
@@ -203,7 +203,7 @@
           />
         </q-card-section>
       </div>
-      <div class="parallax_group" id="group-1">
+      <div id="group-1">
         <q-card-section class="bg-info q-pa-xl">
           <!-- content -->
           <h1>About FarmWeb</h1>
@@ -268,7 +268,7 @@
           </p>
         </q-card-section>
       </div>
-      <div class="parallax_group" id="group-2">
+      <div id="group-2">
         <q-card-section class="bg-green text-white">
           <!-- content -->
           <h1>About FarmWeb</h1>
@@ -333,7 +333,7 @@
           </p>
         </q-card-section>
       </div>
-      <div class="parallax_group" id="group-3">
+      <div id="group-3">
         <q-card-section class="bg-info">
           <!-- content -->
           <h1>About FarmWeb</h1>

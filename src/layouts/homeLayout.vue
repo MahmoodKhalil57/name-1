@@ -238,7 +238,7 @@
       <router-view />
       <q-page-scroller
         position="bottom-left"
-        :scroll-offset="800"
+        :scroll-offset="100"
         :offset="[30, 30]"
         expand
       >
@@ -251,7 +251,7 @@
         </q-btn>
       </q-page-scroller>
       <q-page-scroller position="bottom-right"
-        :scroll-offset="10"
+        :scroll-offset="100"
         :offset="[30, 30]"
       >
         <q-btn fab icon="keyboard_arrow_up" color="accent" />
