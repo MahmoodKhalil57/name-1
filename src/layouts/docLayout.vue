@@ -171,6 +171,7 @@
 
     <!-- The Footer -->
     <q-footer class="bg-dark" elevated>
+
       <q-toolbar class="q-py-lg row justify-center">
         <q-btn
           class="text-h3"
@@ -182,18 +183,20 @@
           rounded
         />
       </q-toolbar>
+
       <!-- Google Maps-->
-      <q-toolbar class="no-padding no-margin">
-        <div class="fit column wrap items-center">
+      <q-toolbar class="no-margin">
+        <div class="bg-yellow-10 q-pa-md fit column wrap items-center" style="border-radius: 10px;">
           <iframe
             frameBorder="0"
             class="full-width"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15786.75439222384!2d31.02494087802049!3d30.059745364807686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14585b0554c9b7a3%3A0xdb3b24f330c6ae90!2sDandy%20Mega%20Mall!5e0!3m2!1sen!2suk!4v1651997535725!5m2!1sen!2suk"
             height="450"
             style="
-              border-top: 3px solid black;
-              border-bottom: 3px solid black;
+              border-radius: 10px;
+              border: 0px solid black;
               box-shadow: -4px -3px 45px 21px rgba(0, 0, 0, 0.35);
+              max-width: 85%;
             "
             allowfullscreen=""
             loading="lazy"
@@ -216,67 +219,7 @@
           />
         </a>
       </q-toolbar>
-      <!-- whatsapp/num/email-->
-      <q-toolbar class="q-my-md justify-center">
-        <q-card class="bg-primary">
-          <q-card-section :class="scale_stage_3.icon_align">
-            <a href="javascript:void(0)" target="_self" class="flinks">
-              <q-icon name="mail"> </q-icon>
-              Emailaddress@website.com
-            </a>
-            <q-separator dark vertical class="q-mx-sm" />
-            <a href="javascript:void(0)" target="_self" class="flinks">
-              <q-icon name="fa-brands fa-whatsapp"></q-icon>
-              +20122222234345
-            </a>
-          </q-card-section>
-        </q-card>
-      </q-toolbar>
-      <!-- Appstore / Google play buttons-->
-      <q-toolbar class="q-pa-lg justify-center align-center no-margin">
-        <q-btn
-          class="q-ma-md"
-          color="deep-orange"
-          href="javascript:void(0)"
-          target="_self"
-          push
-        >
-          <q-card flat class="flat transparent">
-            <q-card-section horizontal>
-              <q-card-section class="q-pa-sm">
-                <q-icon left name="fa-brands fa-apple" />
-              </q-card-section>
-              <q-separator vertical />
-              <q-card-section class="q-py-none q-px-sm">
-                Available at the<br />
-                App Store
-              </q-card-section>
-            </q-card-section>
-          </q-card>
-        </q-btn>
-        <q-btn
-          class="q-ma-md"
-          color="deep-orange"
-          href="javascript:void(0)"
-          target="_self"
-          push
-        >
-          <q-card flat class="flat transparent">
-            <q-card-section horizontal>
-              <q-card-section class="q-pa-sm">
-                <q-icon left name="fa-brands fa-google-play scl-dw" />
-              </q-card-section>
-              <q-separator vertical />
-              <q-card-section class="q-py-none q-px-sm">
-                Get it on<br />
-                Google play
-              </q-card-section>
-            </q-card-section>
-          </q-card>
-        </q-btn>
-      </q-toolbar>
-      <!--Social media platforms icons-->
-      <q-toolbar class="justify-between q-pb-xl">
+            <q-toolbar class="justify-between q-pb-xl">
         <q-space />
         <a
           href="javascript:void(0)"
@@ -310,6 +253,80 @@
           <q-icon class="fa-brands fa-youtube-square" color="red-9" />
         </a>
         <q-space />
+      </q-toolbar>
+      <!-- whatsapp/num/email-->
+      <q-toolbar class="q-my-md justify-center align-center">
+        <q-card class="bg-primary">
+          <q-card-section :class="scale_stage_3.icon_align">
+            <a href="javascript:void(0)" target="_self" class="flinks">
+              <q-icon name="mail"> </q-icon>
+              Emailaddress@website.com
+            </a>
+            <q-separator dark vertical class="q-mx-sm" />
+            <a href="/" class="flinks">
+              <q-icon name="fa-brands fa-whatsapp"></q-icon>
+              +20122222234345
+            </a>
+          </q-card-section>
+        </q-card>
+      </q-toolbar>
+      <!-- Appstore / Google play buttons-->
+      <q-toolbar class="q-pa-lg justify-center align-center no-margin">
+        <q-btn class="q-ma-md" color="deep-orange" push>
+          <q-card flat class="flat transparent">
+            <q-card-section horizontal>
+              <q-card-section class="q-pa-sm">
+                <q-icon left name="fa-brands fa-apple" />
+              </q-card-section>
+              <q-separator vertical />
+              <q-card-section class="q-py-none q-px-sm">
+                Available at the<br />
+                App Store
+              </q-card-section>
+            </q-card-section>
+          </q-card>
+        </q-btn>
+        <q-btn class="q-ma-md" color="deep-orange" push>
+          <q-card flat class="flat transparent">
+            <q-card-section horizontal>
+              <q-card-section class="q-pa-sm">
+                <q-icon left name="fa-brands fa-google-play scl-dw" />
+              </q-card-section>
+              <q-separator vertical />
+              <q-card-section class="q-py-none q-px-sm">
+                Get it on<br />
+                Google play
+              </q-card-section>
+            </q-card-section>
+          </q-card>
+        </q-btn>
+      </q-toolbar>
+      <!--[terms - privacy - refund - shipping policy]-->
+
+      <!-- User can see a small list of strings next to each other with the first four as hyper links indicating
+      [terms - privacy - refund - shipping policy] and then copy right of website, and then a link to the developer info.
+      With a vertical line dividing each item from the following. -->
+      <q-toolbar class="q-pt-lg justify-center align-center no-margin">
+        <span><a href="javascript:void(0)" target="_self" class="flinks">Terms</a></span>
+        <div class="vl q-mx-sm"></div>
+        <span><a href="javascript:void(0)" target="_self" class="flinks">privacy</a></span>
+        <div class="vl q-mx-sm"></div>
+        <span><a href="javascript:void(0)" target="_self" class="flinks">refund</a></span>
+        <div class="vl q-mx-sm"></div>
+        <span><a href="javascript:void(0)" target="_self" class="flinks">shipping policy</a></span>
+
+      </q-toolbar>
+
+      <q-toolbar class="q-pa-lg justify-center align-center no-margin">
+        <a href="javascript:void(0)" target="_self" class="flinks">
+          <span>Powered by
+              <strong>SupaDevs</strong> in Egypt.
+          </span>
+        </a>
+        <div class="vl q-mx-sm"></div>
+        <a href="javascript:void(0)" target="_self" class="flinks">
+          <span>All rights reserved © 2022 <strong>SupaDevs.</strong> </span>
+        </a>
       </q-toolbar>
     </q-footer>
     <!-- /The Footer -->
@@ -402,33 +419,5 @@ export default {
 </script>
 
 <style lang="sass">
-.GNL
-  &__toolbar-input
-    width: 50%
-.rlu:link, rlu:visited, rlu:hover, rlu:active
-  text-decoration: none
-.header-image
-  width: 100%
-  height: 100%
-  opacity: 1
-.flex-break
-  flex: 1 0 100% !important
-.row
-  .flex-break
-    height: 0 !important
-.column
-  .flex-break
-    width: 0 !important
-.flinks
-  color: white
-  background-color: transparent
-  text-decoration: none
-  text-align: center
-.flinks:hover
-  text-shadow: 10px 10px 25px black
-  color:#EEDD82
-.scl-dw
-  transform: scale(0.8)
-.scl-x4
-  transform: scale(4)
+
 </style>
