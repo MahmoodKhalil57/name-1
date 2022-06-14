@@ -23,18 +23,29 @@ nesting, mixins(@mixin-@include) with arguments, and functions. */
   background: #000;
 }
 /* Scroll Bar end*/
+.vl {
+  background-color: green;
+  width: 3px;
+  height: 2rem;
+  border-radius: 10px;
+}
 
 /* header doclayout start */
 .header-image {
-  width: 500px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  display: block;
-  opacity: 1;
 }
 
 .ds {
   transform: scale(0.4) translateX(-50%);
+}
+
+.scl-dw {
+  transform: scale(0.8);
+}
+.scl-x4 {
+  transform: scale(4);
 }
 
 .enlarge {
@@ -44,17 +55,26 @@ nesting, mixins(@mixin-@include) with arguments, and functions. */
 .lfls {
   width: fit-content;
 }
+.rlu:link,
+rlu:visited,
+rlu:hover,
+rlu:active {
+  text-decoration: none;
+}
 
-.GL {
-  &__toolbar-link {
-    a {
-      color: white;
-      text-decoration: none;
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-  }
+.flinks {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: center;
+}
+.flinks:hover {
+  text-shadow: 10px 10px 25px black;
+  color: #eedd82;
+}
+
+.GNL__toolbar-input {
+  width: 50%;
 }
 /* header doclayout end */
 
