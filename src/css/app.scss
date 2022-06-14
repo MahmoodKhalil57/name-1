@@ -83,7 +83,34 @@ rlu:active {
   transform: scale(0.5);
 }
 
-/* Footer doclayout Start*/
+/* Footer doclayout End*/
+
+/*Home Page start*/
+.ycircle {
+  border-radius: 100%;
+  background: $Soopergreen;
+  width: 20px;
+  transform: scale(1.5);
+}
+
+.gridcontainer {
+  display: grid;
+  font-size: 20px;
+  min-height: 300px;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  grid-gap: 50px;
+}
+
+.item1 {
+}
+.item2 {
+}
+.item3 {
+}
+item4 {
+}
+/*Home page end*/
 
 // app global css in SCSS form
 * {
