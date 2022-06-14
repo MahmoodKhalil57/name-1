@@ -7,8 +7,8 @@
 2. [ ] Goal2
 
 ### User stories:
-1. [ ] Story1
-2. [ ] Story2
+1. [ ] user can see H1  "about Farmweb"
+2. [ ] user can see copy
 
 
 ### Features:

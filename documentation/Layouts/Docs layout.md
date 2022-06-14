@@ -22,8 +22,8 @@
 13. [x] User sees Whatsapp Icon followed by contact number, followed by contact email.
 14. [x] User sees 2 interactive buttons that redirect to the appstore and google play respectively to download the mobile application.
 15. [x] User can see icons for the social media that redirect to each.
-16. [ ] User can see a small list of strings next to each other with the first four as hyper links indicating [terms - privacy - refund - shipping policy] and then copy right of website, and then a link to the developer info. With a vertical line dividing each item from the following.
-17. [ ] User can see text where the website was made.
+16. [x] User can see a small list of strings next to each other with the first four as hyper links indicating [terms - privacy - refund - shipping policy] and then copy right of website, and then a link to the developer info. With a vertical line dividing each item from the following.
+17. [x] User can see text where the website was made.
         <--- Fixed --->
 18. [ ] ~User should see a green button with a whatsapp logo saying whatsapp us,~ and redirects to whatsapp contact.
 19. [x] User should see on the bottom right of the screen a $secondary-color with an icon of an arrow ponting up, that takes them to the top of the same webpage they are on.
