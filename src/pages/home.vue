@@ -51,8 +51,8 @@
           no-spinner
         />
       </q-card-section>
-      <!--Second Section-->
 
+      <!--Second Section-->
       <!-- flexbox gowah 2 children 1 3ady w el wa7da menhom grid -->
       <q-card-section class="q-pa-xl sectionContainer">
         <!-- content -->
@@ -111,12 +111,13 @@
         <br /><br />
       </q-card-section>
 
+      <!--Third Section-->
       <!-- ana 7aramy w sara2t this part from above -->
       <q-card-section class="q-pa-xl bg-green sectionContainer">
         <!-- content -->
         <div id="child1" class="q-mt-md">
           <br /><br />
-          <h4 class="sectionHeader2">Reservoir of Vitamins</h4>
+          <h4 class="sectionHeader2">Why Choose Us</h4>
         </div>
         <div id="child2" class="gridContainer q-mt-xl">
           <!--item-1-->
@@ -171,6 +172,39 @@
               Our work team uses eco-friendly tools to protect the environment.
               All of our produce is grown in a manner that optimizes the health
               of the farm's ecosystem
+            </p>
+          </div>
+        </div>
+        <br /><br />
+      </q-card-section>
+      <!-- Fourth Section -->
+      <q-card-section class="q-pa-xl sectionContainer">
+        <!-- content -->
+        <div id="child1" class="q-mt-md">
+          <br /><br />
+          <h4 class="sectionHeader1">Our Core Values</h4>
+        </div>
+        <div id="child2" class="gridContainer q-mt-xl">
+          <!--item-1-->
+          <div id="item1">
+            <q-img
+              class="q-my-sm"
+              src="~assets\home\section_four.jpg"
+              spinner-color="primary"
+              spinner-size="82px"
+            />
+          </div>
+          <!--item-2-->
+          <div id="item2" style="text-align: left">
+            <h4 class="gridHeader1">
+              IMPROVING AGRICULTURE, IMPROVING LIVES, CULTIVATING NEW CROPS
+              THROUGH INNOVATION.
+            </h4>
+            <p>
+              At Pavana Vatika, we are a mindful bunch of agri enthusiasts who
+              never lose touch with the impact our business creates as we walk
+              our journey. From the soil we work on, to the people we work with,
+              we account for every detail we encounter and create.
             </p>
           </div>
         </div>

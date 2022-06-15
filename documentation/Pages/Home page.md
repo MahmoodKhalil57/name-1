@@ -12,9 +12,9 @@
 6. [ ] User can see a button that redirects to [[Visit-us page]].
 7. [x] User can see a button that redirects to [[Shop page]].
 <---other panels--->
-8. [ ] User can see a title and a summary of why mangos are good for you, including some icons.
-9. [ ] User can see a title and a summary of why our farm is superior, including some icons.
-10. [ ] User can see a title and summary about our core values, and a picture.
+8. [x] User can see a title and a summary of why mangos are good for you, including some icons.
+9. [x] User can see a title and a summary of why our farm is superior, including some icons.
+10. [x] User can see a title and summary about our core values, and a picture.
 11. [ ] User can see a title and a summary about why buying from us = healthy. and two buttons for [[Contact-us page]] and [[Shop page]]
 12. [ ] User can see some of our accreditation and certications, title and summary and icons.
 13. [ ] User can see some simple stats (customer count, tree count, land size, etc..).
