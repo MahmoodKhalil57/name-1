@@ -52,24 +52,87 @@
         />
       </q-card-section>
       <!--Second Section-->
-      <q-card-section class="bg-info q-pa-xl">
+
+      <!-- flexbox gowah 2 children 1 3ady w el wa7da menhom grid -->
+      <q-card-section
+        id="flexContainer"
+        class="q-pa-xl"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: #707579;
+          font-weight: 100;
+          font-family: 'Verdana';
+          font-size: 17px;
+          line-height: 1.9;
+        "
+      >
         <!-- content -->
-        <br />
-        <h2>But Why Mangoes</h2>
-        <br />
+        <div id="child1" class="q-mt-md">
+          <br /><br />
+          <h4
+            style="
+              color: #323648;
+              font-size: 30px;
+              font-family: 'Thasadith', sans-serif;
+              font-weight: normal;
+            "
+          >
+            Reservoir of Vitamins
+          </h4>
 
-        <p class="q-mx-xl text-left text-h6">
-          A slice of FarmWeb's Mangoes fulfills 100% requirement of your daily
-          dose of Vitamin C. Besides, Mangoes are also rich in Vitamin A,
-          Vitamin B, and other antioxidants, which helps in keeping your immune
-          system strong, fights against cancerous cells, controls cholesterol,
-          and also cares and improves vision. [Copied] <br /><br />
-        </p>
-
-        <div class="gridcontainer">
-          <div class="item1">
-            <q-icon class="fa-brands fa-envira" />
-            <h4>ALPHONSO</h4>
+          <p
+            class="q-my-md text-h6"
+            style="max-width: 900px; line-height: 2.1; font-size: 17px"
+          >
+            A slice of FarmWeb's Mangoes fulfills 100% requirement of your daily
+            dose of Vitamin C. Besides, Mangoes are also rich in Vitamin A,
+            Vitamin B, and other antioxidants, which helps in keeping your
+            immune system strong, fights against cancerous cells, controls
+            cholesterol, and also cares and improves vision. [Copied]
+          </p>
+        </div>
+        <div id="child2" class="gridcontainer q-mt-xl">
+          <!--item-1-->
+          <div
+            class="item1"
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              align-items: center;
+            "
+          >
+            <q-icon class="fa-brands fa-envira gcircle" style="color: white" />
+            <h4 class="q-my-lg" style="font-size: 20px; color: #323648">
+              ALPHONSO
+            </h4>
+            <p>
+              Alphonso at SooperMango is known as King of Kings and is not just
+              a fruit but an emotion. These mangoes are famous for their
+              sweetness and pulp, the richness in their flavour, aroma and color
+              makes the fruit everyone's favourite. An Alphonso mango is the
+              most premium variety of mangoes especially due to high content of
+              beta-carotene and a precursor of vitamin A and vitamin B complex.
+            </p>
+          </div>
+          <!--item-2-->
+          <div
+            class="item2"
+            style="
+              max-width: 900px;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: center;
+            "
+          >
+            <q-icon class="fa-brands fa-envira gcircle" style="color: white" />
+            <h4 class="q-my-lg" style="font-size: 20px; color: #323648">
+              3EWEES
+            </h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
               repellendus accusamus vel hic iusto ab adipisci maiores neque
@@ -78,8 +141,30 @@
               quisquam sint! Explicabo, totam porro!
             </p>
           </div>
-          <div class="item2"></div>
-          <div class="item3"></div>
+          <!--item-3-->
+          <div
+            class="item3"
+            style="
+              max-width: 900px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              align-items: center;
+            "
+          >
+            <q-icon class="fa-brands fa-envira gcircle" style="color: white" />
+            <h4 class="q-my-lg" style="font-size: 20px; color: #323648">
+              MALLIKA
+            </h4>
+            <p>
+              Alphonso at SooperMango is known as King of Kings and is not just
+              a fruit but an emotion. These mangoes are famous for their
+              sweetness and pulp, the richness in their flavour, aroma and color
+              makes the fruit everyone's favourite. An Alphonso mango is the
+              most premium variety of mangoes especially due to high content of
+              beta-carotene and a precursor of vitamin A and vitamin B complex.
+            </p>
+          </div>
         </div>
         <br /><br />
       </q-card-section>

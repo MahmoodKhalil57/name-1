@@ -86,11 +86,11 @@ rlu:active {
 /* Footer doclayout End*/
 
 /*Home Page start*/
-.ycircle {
+.gcircle {
   border-radius: 100%;
   background: $Soopergreen;
-  width: 20px;
-  transform: scale(1.5);
+  width: 70px;
+  height: 70px;
 }
 
 .gridcontainer {
@@ -98,8 +98,9 @@ rlu:active {
   font-size: 20px;
   min-height: 300px;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 35px;
+  max-width: 1000px;
 }
 
 .item1 {

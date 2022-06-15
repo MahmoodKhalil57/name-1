@@ -22,3 +22,6 @@ Google-Maps vue3:
 1- https://www.npmjs.com/package/@fawmi/vue-google-maps
 2- https://dev.to/quasar/how-to-use-google-maps-in-a-quasar-project-1c1
 3- https://vue-map.netlify.app/
+
+css-flexbox:
+1- https://www.freecodecamp.org/learn/responsive-web-design/css-flexbox/align-elements-using-the-justify-content-property
