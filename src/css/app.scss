@@ -37,6 +37,38 @@ nesting, mixins(@mixin-@include) with arguments, and functions. */
   z-index: -1;
 }
 
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #707579;
+  font-weight: 100;
+  font-family: "Verdana";
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.sectionHeader1 {
+  color: #323648;
+  font-size: 30px;
+  font-family: "Thasadith", sans-serif;
+  font-weight: normal;
+}
+
+.sectionHeader2 {
+  color: white;
+  font-size: 30px;
+  font-family: "Thasadith", sans-serif;
+  font-weight: normal;
+}
+
+.sectionContent {
+  max-width: 800px;
+  line-height: 2.1;
+  font-size: 17px;
+}
+
 .ds {
   transform: scale(0.4) translateX(-50%);
 }
@@ -88,28 +120,36 @@ rlu:active {
 /*Home Page start*/
 .gcircle {
   border-radius: 100%;
-  background: $Soopergreen;
+  background: $soopergreen;
   width: 70px;
   height: 70px;
 }
 
-.gridcontainer {
+.gridContainer {
   display: grid;
   font-size: 20px;
   min-height: 300px;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 35px;
   max-width: 1000px;
 }
 
-.item1 {
+.gridHeader1 {
+  font-size: 20px;
+  color: #323648;
 }
-.item2 {
+.gridHeader2 {
+  font-size: 20px;
+  color: white;
 }
-.item3 {
+.gridContent2 {
+  font-size: 14px;
+  color: rgb(211, 211, 211);
 }
-item4 {
+.gridIcon2 {
+  color: yellow;
+  font-size: 50px;
 }
 /*Home page end*/
 

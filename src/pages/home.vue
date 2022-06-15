@@ -54,39 +54,13 @@
       <!--Second Section-->
 
       <!-- flexbox gowah 2 children 1 3ady w el wa7da menhom grid -->
-      <q-card-section
-        id="flexContainer"
-        class="q-pa-xl"
-        style="
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          color: #707579;
-          font-weight: 100;
-          font-family: 'Verdana';
-          font-size: 17px;
-          line-height: 1.9;
-        "
-      >
+      <q-card-section class="q-pa-xl sectionContainer">
         <!-- content -->
         <div id="child1" class="q-mt-md">
           <br /><br />
-          <h4
-            style="
-              color: #323648;
-              font-size: 30px;
-              font-family: 'Thasadith', sans-serif;
-              font-weight: normal;
-            "
-          >
-            Reservoir of Vitamins
-          </h4>
+          <h4 class="sectionHeader1">Reservoir of Vitamins</h4>
 
-          <p
-            class="q-my-md text-h6"
-            style="max-width: 900px; line-height: 2.1; font-size: 17px"
-          >
+          <p class="q-my-md text-h6 sectionContent">
             A slice of FarmWeb's Mangoes fulfills 100% requirement of your daily
             dose of Vitamin C. Besides, Mangoes are also rich in Vitamin A,
             Vitamin B, and other antioxidants, which helps in keeping your
@@ -94,21 +68,11 @@
             cholesterol, and also cares and improves vision. [Copied]
           </p>
         </div>
-        <div id="child2" class="gridcontainer q-mt-xl">
+        <div id="child2" class="gridContainer q-mt-xl">
           <!--item-1-->
-          <div
-            class="item1"
-            style="
-              display: flex;
-              flex-direction: column;
-              justify-content: space-around;
-              align-items: center;
-            "
-          >
+          <div id="item1">
             <q-icon class="fa-brands fa-envira gcircle" style="color: white" />
-            <h4 class="q-my-lg" style="font-size: 20px; color: #323648">
-              ALPHONSO
-            </h4>
+            <h4 class="q-my-lg gridHeader1">ALPHONSO</h4>
             <p>
               Alphonso at SooperMango is known as King of Kings and is not just
               a fruit but an emotion. These mangoes are famous for their
@@ -119,20 +83,9 @@
             </p>
           </div>
           <!--item-2-->
-          <div
-            class="item2"
-            style="
-              max-width: 900px;
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-start;
-              align-items: center;
-            "
-          >
+          <div id="item2">
             <q-icon class="fa-brands fa-envira gcircle" style="color: white" />
-            <h4 class="q-my-lg" style="font-size: 20px; color: #323648">
-              3EWEES
-            </h4>
+            <h4 class="q-my-lg gridHeader1">3EWEES</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
               repellendus accusamus vel hic iusto ab adipisci maiores neque
@@ -142,20 +95,9 @@
             </p>
           </div>
           <!--item-3-->
-          <div
-            class="item3"
-            style="
-              max-width: 900px;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-around;
-              align-items: center;
-            "
-          >
+          <div id="item3">
             <q-icon class="fa-brands fa-envira gcircle" style="color: white" />
-            <h4 class="q-my-lg" style="font-size: 20px; color: #323648">
-              MALLIKA
-            </h4>
+            <h4 class="q-my-lg gridHeader1">MALLIKA</h4>
             <p>
               Alphonso at SooperMango is known as King of Kings and is not just
               a fruit but an emotion. These mangoes are famous for their
@@ -163,6 +105,72 @@
               makes the fruit everyone's favourite. An Alphonso mango is the
               most premium variety of mangoes especially due to high content of
               beta-carotene and a precursor of vitamin A and vitamin B complex.
+            </p>
+          </div>
+        </div>
+        <br /><br />
+      </q-card-section>
+
+      <!-- ana 7aramy w sara2t this part from above -->
+      <q-card-section class="q-pa-xl bg-green sectionContainer">
+        <!-- content -->
+        <div id="child1" class="q-mt-md">
+          <br /><br />
+          <h4 class="sectionHeader2">Reservoir of Vitamins</h4>
+        </div>
+        <div id="child2" class="gridContainer q-mt-xl">
+          <!--item-1-->
+          <div id="item1">
+            <q-icon class="fa-brands fa-pagelines gridIcon2" />
+            <h4 class="q-my-lg gridHeader2">NATURAL</h4>
+            <p class="gridContent2">
+              Only the best farming methods, including vermin-composts, mulching
+              Processing, organic herbicides and modern drip irrigation
+              techniques are used to manage our farms that offer chemical-free
+              crops.
+            </p>
+          </div>
+          <!--item-2-->
+          <div id="item2">
+            <q-icon class="fa-solid fa-hand-back-fist gridIcon2" />
+            <h4 class="q-my-lg gridHeader2">HAND PICKED</h4>
+            <p class="gridContent2">
+              Our Mangoes are handpicked and are safely packed in an eco
+              friendly box. They are carefully wrapped in natural hay to avoid
+              spoilage in transit. We bring the best quality Indian mangoes
+              providing all types of mangoes to your door step.
+            </p>
+          </div>
+          <!--item-3-->
+          <div id="item3">
+            <q-icon class="fa-solid fa-lightbulb gridIcon2" />
+            <h4 class="q-my-lg gridHeader2">INNOVATION</h4>
+            <p class="gridContent2">
+              Our work team follows standard scientific norms for plant
+              cultivation, manuring, plucking, grading, packaging and dispatch.
+              All of our produce is grown organically, in a manner that
+              optimizes the health of the farm's ecosystem
+            </p>
+          </div>
+          <!--item-4-->
+          <div id="item4">
+            <q-icon class="fa-solid fa-earth-europe gridIcon2" />
+            <h4 class="q-my-lg gridHeader2">SOOPER SOIL</h4>
+            <p class="gridContent2">
+              Our mango orchard is self-sustained by using latest practices for
+              maintaining soil fertility by the manure production of livestock
+              inside the farm. We also practice crop rotation which helps in
+              reducing soil erosion and increases soil fertility and crop yield.
+            </p>
+          </div>
+          <!--item-5-->
+          <div id="item5">
+            <q-icon class="fa-solid fa-seedling gridIcon2" />
+            <h4 class="q-my-lg gridHeader2">ENVIRONMENT</h4>
+            <p class="gridContent2">
+              Our work team uses eco-friendly tools to protect the environment.
+              All of our produce is grown in a manner that optimizes the health
+              of the farm's ecosystem
             </p>
           </div>
         </div>
