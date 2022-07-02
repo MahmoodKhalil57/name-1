@@ -243,8 +243,10 @@
           style="z-index: -1"
         />
         <div class="sectionContainer2 q-mx-md">
-          <q-btn>Shop now</q-btn>
-          <q-btn>Contact us</q-btn>
+          <q-btn class="text-grey" style="background: #e8cd30">Shop now</q-btn>
+          <q-btn class="text-white" style="background: #009f4d"
+            >Contact us</q-btn
+          >
         </div>
       </q-card-section>
       <!--Fourth Section-->
