@@ -3,6 +3,21 @@
 /* SCSS syntax is similar to css with addition of variables,
 nesting, mixins(@mixin-@include) with arguments, and functions. */
 
+/*Mixins*/
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Scroll Bar start*/
 ::-webkit-scrollbar {
   width: 10px;
@@ -38,10 +53,16 @@ nesting, mixins(@mixin-@include) with arguments, and functions. */
 }
 
 .sectionContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-col-center;
+  color: #707579;
+  font-weight: 100;
+  font-family: "Verdana";
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.sectionContainer2 {
+  @include flex-row-center;
   color: #707579;
   font-weight: 100;
   font-family: "Verdana";
@@ -150,6 +171,10 @@ rlu:active {
 .gridIcon2 {
   color: yellow;
   font-size: 50px;
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
 }
 /*Home page end*/
 

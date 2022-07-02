@@ -53,7 +53,7 @@
       </q-card-section>
 
       <!--Second Section-->
-      <!-- flexbox gowah 2 children 1 3ady w el wa7da menhom grid -->
+      <!-- flexbox gowah 2 children 1 div 3ady w el tany 3obar 3an gridcontainer bel items beta3to  -->
       <q-card-section class="q-pa-xl sectionContainer">
         <!-- content -->
         <div id="child1" class="q-mt-md">
