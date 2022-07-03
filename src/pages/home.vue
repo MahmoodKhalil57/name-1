@@ -186,23 +186,25 @@
         </div>
         <div
           id="child2"
-          class="gridContainer q-mt-xl"
+          class="row q-mt-xl"
           style="
             max-width: 1300px;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            align-items: center;
+            justify-content: center;
           "
         >
           <!--item-1-->
           <div id="item1">
             <q-img
-              class="q-my-sm annoying-image-1"
+              class="q-my-sm q-px-md annoying-image-1"
               src="~assets\home\section_four.jpg"
               spinner-color="primary"
               spinner-size="82px"
             />
           </div>
           <!--item-2-->
-          <div id="item2" class="annoying-text-1">
+          <div id="item2" class="annoying-text-1 q-px-md">
             <h4 class="gridHeader1">
               IMPROVING AGRICULTURE, IMPROVING LIVES, CULTIVATING NEW CROPS
               THROUGH INNOVATION.
