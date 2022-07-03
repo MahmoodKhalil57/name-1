@@ -272,10 +272,15 @@
             </li>
           </ul>
         </div>
-        <div id="child2" class="gridContainer q-mt-xl">
+        <div
+          id="child2"
+          class="row q-mt-xl"
+          style="align-items: center; justify-content: center"
+        >
           <!--item-1-->
           <div id="item1">
             <q-img
+              class="q-px-md"
               src="~assets/certifications/apeda.svg"
               style="height: 100px; width: 100px"
             />
@@ -283,6 +288,7 @@
           <!--item-2-->
           <div id="item2">
             <img
+              class="q-px-md"
               src="~assets/certifications/section_6_2.png"
               style="height: 100px; object-fit: cover"
             />
@@ -290,6 +296,7 @@
           <!--item-3-->
           <div id="item3">
             <img
+              class="q-px-md"
               src="~assets/certifications/section_6_1.jpg"
               style="height: 100px; object-fit: cover"
             />
