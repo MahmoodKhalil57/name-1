@@ -255,12 +255,7 @@
         <div class="sectionContainer2 q-mb-md q-mt-sm">
           <q-btn
             class="q-mr-md"
-            style="
-              background: #e8cd30;
-              color: $charcoal;
-              height: 7vh;
-              width: 20vh;
-            "
+            style="background: #e8cd30; color: #333; height: 7vh; width: 20vh"
             >Shop now</q-btn
           >
           <q-btn
