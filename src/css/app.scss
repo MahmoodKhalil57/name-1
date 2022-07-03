@@ -1,1 +1,319 @@
 // app global css in SCSS form
+
+/* SCSS syntax is similar to css with addition of variables,
+nesting, mixins(@mixin-@include) with arguments, and functions. */
+
+/*Mixins*/
+@mixin flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Scroll Bar start*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(121, 190, 139, 0.9);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $contrast;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
+.annoying-image-1 {
+  height: 20vw;
+  width: 40vw;
+  @media only screen and (max-width: 876px) {
+    height: 30vw;
+    width: 60vw;
+    min-height: 50px;
+    min-width: 100px;
+  }
+  @media only screen and (max-width: 425px) {
+    height: 40vw;
+    width: 80vw;
+    min-height: 50px;
+    min-width: 100px;
+  }
+}
+.annoying-text-1 {
+  text-align: left;
+  max-width: 500px;
+}
+/* Scroll Bar end*/
+.vl {
+  background-color: green;
+  width: 3px;
+  height: 2rem;
+  border-radius: 10px;
+}
+
+/* header doclayout start */
+.header-image {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.sectionHeader1 {
+  color: #323648;
+  font-size: 30px;
+  font-family: "Thasadith", sans-serif;
+  font-weight: normal;
+}
+
+.sectionHeader2 {
+  color: white;
+  font-size: 30px;
+  font-family: "Thasadith", sans-serif;
+  font-weight: normal;
+}
+
+.sectionContent {
+  max-width: 800px;
+  line-height: 2.1;
+  font-size: 17px;
+}
+
+.ds {
+  transform: scale(0.4) translateX(-50%);
+}
+
+.scl-dw {
+  transform: scale(0.8);
+}
+.scl-x4 {
+  transform: scale(4);
+}
+
+.enlarge {
+  transform: scale(1.45);
+}
+
+.lfls {
+  width: fit-content;
+}
+.rlu:link,
+rlu:visited,
+rlu:hover,
+rlu:active {
+  text-decoration: none;
+}
+
+.flinks {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: center;
+}
+.flinks:hover {
+  text-shadow: 10px 10px 25px black;
+  color: #eedd82;
+}
+
+.GNL__toolbar-input {
+  width: 50%;
+}
+/* header doclayout end */
+
+/* Footer doclayout Start*/
+.ms {
+  transform: scale(0.5);
+}
+
+/* Footer doclayout End*/
+
+/*Home Page start*/
+.willo {
+  color: $willo;
+}
+.gcircle {
+  border-radius: 100%;
+  background: $soopergreen;
+  width: 70px;
+  height: 70px;
+}
+
+.sectionContainer {
+  @include flex-col-center;
+  color: #707579;
+  font-weight: 100;
+  font-family: "Verdana";
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.sectionContainer2 {
+  @include flex-row-center;
+  color: #707579;
+  font-weight: 100;
+  font-family: "Verdana";
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.sectionContainer3 {
+  @include flex-row-center;
+}
+
+.gridContainer {
+  display: grid;
+  font-size: 20px;
+  min-height: 300px;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 35px;
+  max-width: 1000px;
+}
+
+.gridHeader1 {
+  font-size: 20px;
+  color: #323648;
+}
+.gridHeader2 {
+  font-size: 20px;
+  color: white;
+}
+.gridContent2 {
+  font-size: 14px;
+  color: rgb(211, 211, 211);
+}
+.gridIcon2 {
+  color: yellow;
+  font-size: 50px;
+}
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Home page end*/
+
+// app global css in SCSS form
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: $secondary;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+
+  .space {
+    height: 100vh;
+    background-color: $secondary;
+  }
+
+  .parallax_wrapper {
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px;
+
+    .parallax_group {
+      height: 100vh;
+      transform-style: preserve-3d;
+    }
+
+    .parallax_layer {
+      position: absolute;
+      inset: 0;
+      @include align-center();
+    }
+
+    .intro_screen {
+      height: 100vh;
+      background-color: $secondary;
+      @include align-center();
+      transform: translateZ(-18000px) scale(64);
+    }
+    .outro_screen {
+      height: 100vh;
+      background-color: $secondary;
+      @include align-center();
+    }
+
+    .base_layer {
+      transform: translateY(9vh) translateZ(-300px) scale(2);
+      z-index: 1;
+
+      .my-card:hover {
+        transform: scale(1.1);
+        border: 7px solid rgb(24, 24, 24);
+        border-radius: 20px;
+      }
+    }
+    .bot_layer {
+      transform: translateZ(-150px) scale(1.5);
+      color: yellow;
+      z-index: 2;
+    }
+    .mid_layer {
+      transform: translateZ(0);
+      color: yellow;
+      z-index: 3;
+    }
+    .top_layer {
+      transform: translateZ(150px) scale(0.5);
+      color: blue;
+      z-index: 4;
+    }
+    .final_layer {
+      transform: translateZ(200px) scale(0.33);
+      color: yellow;
+      z-index: 5;
+    }
+  }
+
+  #intro {
+  }
+  #group-1 {
+  }
+  #group-1 > .base_layer {
+    background-color: $primary;
+  }
+  #group-2 {
+  }
+  #group-2 > .base_layer {
+    background-color: $secondary;
+  }
+  #group-3 {
+  }
+  #group-3 > .base_layer {
+    background-color: $primary;
+  }
+  #group-4 {
+  }
+  #group-4 > .base_layer {
+    background-color: $secondary;
+  }
+  #outro {
+  }
+}

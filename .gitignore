@@ -3,7 +3,6 @@
 node_modules
 
 # Quasar core related directories
-.quasar
 /dist
 
 # Cordova related directories and files
@@ -15,10 +14,6 @@ node_modules
 # Capacitor related directories and files
 /src-capacitor/www
 /src-capacitor/node_modules
-
-# BEX related directories and files
-/src-bex/www
-/src-bex/js/core
 
 # Log files
 npm-debug.log*
@@ -32,5 +27,3 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-# Stashes
-/stashes
