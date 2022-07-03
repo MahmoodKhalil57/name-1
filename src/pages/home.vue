@@ -220,22 +220,30 @@
         <br /><br />
       </q-card-section>
       <!--Fifth Section-->
-      <q-card-section class="text-white sectionContainer" style="z-index: 0">
+      <q-card-section
+        class="text-white sectionContainer responsive"
+        style="z-index: 0"
+      >
         <!-- content -->
-        <h4 class="my-text" style="z-index: 1">
+        <h4
+          class="responsive my-text sectionContainer3 q-mt-xl q-mb-md"
+          style="z-index: 1"
+        >
           The Best Time To
-          <p class="text-yellow">Get Healthy</p>
+          <span class="willo q-mx-sm">Get Healthy</span>
           is Now.
         </h4>
-        <br />
 
-        <p class="q-mx-xl text-left text-h6" style="z-index: 1">
-          Cillum et deserunt esse labore in culpa exercitation ea laboris.
-          Adipisicing consectetur cillum adipisicing ullamco duis ea. Consequat
-          minim nulla magna aliqua aute. Dolor velit fugiat reprehenderit cillum
-          excepteur pariatur voluptate duis qui aliqua mollit tempor. Tempor
-          amet minim minim irure esse exercitation duis excepteur mollit
-          adipisicing, YABNI BA2A.
+        <p
+          class="q-mx-xl text-center text-h6"
+          style="z-index: 1; color: #ccc; line-height: 2; width: 55vw"
+        >
+          The aim of PavanaVatika's innovation in agriculture is to produce high
+          quality, nutritious crop that contributes to preventive health care
+          and well-being. With improved taste, flavour and nourishment, the
+          benefits of healthy crops are multipronged. It's a natural complement
+          to a healthier life-style, and builds a stronger immunity to prevent
+          health complications caused by chemically grown crops.
         </p>
         <q-img
           class="q-my-sm header-image absolute-top"
@@ -244,9 +252,20 @@
           spinner-size="82px"
           style="z-index: -1"
         />
-        <div class="sectionContainer2 q-mx-md">
-          <q-btn class="text-grey" style="background: #e8cd30">Shop now</q-btn>
-          <q-btn class="text-white" style="background: #009f4d"
+        <div class="sectionContainer2 q-mb-md q-mt-sm">
+          <q-btn
+            class="q-mr-md"
+            style="
+              background: #e8cd30;
+              color: $charcoal;
+              height: 7vh;
+              width: 20vh;
+            "
+            >Shop now</q-btn
+          >
+          <q-btn
+            class="text-white q-ml-md"
+            style="background: #009f4d; height: 7vh; width: 20vh"
             >Contact us</q-btn
           >
         </div>

@@ -9,13 +9,15 @@ nesting, mixins(@mixin-@include) with arguments, and functions. */
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 @mixin flex-row-center {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /* Scroll Bar start*/
@@ -70,24 +72,6 @@ nesting, mixins(@mixin-@include) with arguments, and functions. */
   width: 100%;
   height: 100%;
   z-index: -1;
-}
-
-.sectionContainer {
-  @include flex-col-center;
-  color: #707579;
-  font-weight: 100;
-  font-family: "Verdana";
-  font-size: 17px;
-  line-height: 1.9;
-}
-
-.sectionContainer2 {
-  @include flex-row-center;
-  color: #707579;
-  font-weight: 100;
-  font-family: "Verdana";
-  font-size: 17px;
-  line-height: 1.9;
 }
 
 .sectionHeader1 {
@@ -159,11 +143,36 @@ rlu:active {
 /* Footer doclayout End*/
 
 /*Home Page start*/
+.willo {
+  color: $willo;
+}
 .gcircle {
   border-radius: 100%;
   background: $soopergreen;
   width: 70px;
   height: 70px;
+}
+
+.sectionContainer {
+  @include flex-col-center;
+  color: #707579;
+  font-weight: 100;
+  font-family: "Verdana";
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.sectionContainer2 {
+  @include flex-row-center;
+  color: #707579;
+  font-weight: 100;
+  font-family: "Verdana";
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.sectionContainer3 {
+  @include flex-row-center;
 }
 
 .gridContainer {
