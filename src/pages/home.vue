@@ -236,7 +236,7 @@
 
         <p
           class="q-mx-xl text-center text-h6"
-          style="z-index: 1; color: #ccc; line-height: 2; width: 55vw"
+          style="z-index: 1; color: #707579; line-height: 2; width: 55vw"
         >
           The aim of PavanaVatika's innovation in agriculture is to produce high
           quality, nutritious crop that contributes to preventive health care
