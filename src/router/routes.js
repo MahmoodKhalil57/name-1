@@ -2,7 +2,7 @@ const routes = [
   {
     path: "/",
     meta: { root: "Home" },
-    component: () => import("layouts/homeLayout.vue"),
+    component: () => import("layouts/defaultHome.vue"),
     children: [{ path: "", component: () => import("pages/home.vue") }],
   },
   {
@@ -14,7 +14,7 @@ const routes = [
   {
     path: "/dev",
     meta: { root: "Home", current: "dev" },
-    component: () => import("layouts/testLayout.vue"),
+    component: () => import("layouts/defaultHome.vue"),
     children: [{ path: "", component: () => import("pages/home.vue") }],
   },
   {
