@@ -236,7 +236,7 @@
 
         <p
           class="q-mx-xl text-center text-h6"
-          style="z-index: 1; color: #707579; line-height: 2; width: 55vw"
+          style="z-index: 1; color: #ccc; line-height: 2; width: 55vw"
         >
           The aim of PavanaVatika's innovation in agriculture is to produce high
           quality, nutritious crop that contributes to preventive health care
@@ -265,7 +265,7 @@
           >
         </div>
       </q-card-section>
-      <!--Fourth Section-->
+      <!--Section 6-->
       <q-card-section class="q-pa-xl sectionContainer">
         <!-- content -->
 
@@ -319,7 +319,94 @@
           </div>
         </div>
       </q-card-section>
-
+      <!--section 7-->
+      <q-card-section class="text-white" style="z-index: 0">
+        <q-img
+          class="q-my-sm header-image absolute-top"
+          src="~assets\background\pexels-james-wheeler-1592461.jpg"
+          spinner-color="primary"
+          spinner-size="82px"
+          style="z-index: -1"
+        />
+        <!--flex container-->
+        <div
+          class="sectionContainer3 text-white q-my-xl q-pt-lg responsive"
+          style="flex-wrap: wrap; justify-content: space-around"
+        >
+          <!--gridcontainer1-->
+          <div
+            class="text-white q-mr-xl"
+            style="
+              display: grid;
+              grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
+              grid-row-gap: 1.5vh;
+            "
+          >
+            <div style="justify-self: start">
+              <q-icon
+                class="fa-regular fa-face-smile q-pt-md"
+                style="transform: scale(2.5); left: 1.2vw"
+              />
+            </div>
+            <h4 style="justify-self: start">5000</h4>
+            <h5 style="justify-self: start">HAPPY CUSTOMERS</h5>
+          </div>
+          <!--gridcontainer2-->
+          <div
+            class="text-white q-mr-xl"
+            style="
+              display: grid;
+              grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
+              grid-row-gap: 1.5vh;
+            "
+          >
+            <div style="justify-self: start">
+              <q-icon
+                class="fa-tree fa-solid q-pt-md"
+                style="transform: scale(2.5); left: 1.2vw"
+              />
+            </div>
+            <h4 style="justify-self: start">1000</h4>
+            <h5 style="justify-self: start">MANGO TREES</h5>
+          </div>
+          <!--gridcontainer3-->
+          <div
+            class="text-white q-mr-xl"
+            style="
+              display: grid;
+              grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
+              grid-row-gap: 1.5vh;
+            "
+          >
+            <div style="justify-self: start">
+              <q-icon
+                class="fa-solid fa-earth-africa q-pt-md"
+                style="transform: scale(2.5); left: 1.2vw"
+              />
+            </div>
+            <h4 style="justify-self: start">14</h4>
+            <h5 style="justify-self: start">ACRES</h5>
+          </div>
+          <!--gridcontainer4-->
+          <div
+            class="text-white q-mr-xl"
+            style="
+              display: grid;
+              grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
+              grid-row-gap: 1.5vh;
+            "
+          >
+            <div style="justify-self: start">
+              <q-icon
+                class="fa-brands fa-pagelines q-pt-md"
+                style="transform: scale(2.5); left: 1.2vw"
+              />
+            </div>
+            <h4 style="justify-self: start">100%</h4>
+            <h5 style="justify-self: start">CHEMICAL FREE</h5>
+          </div>
+        </div>
+      </q-card-section>
       <!-- Eighth section -->
       <q-card-section class="q-py-xl sectionContainer">
         <div id="child1" class="q-mt-md">
