@@ -410,7 +410,6 @@
       <!-- Eighth section -->
       <q-card-section class="q-py-xl sectionContainer">
         <div id="child1" class="q-mt-md">
-          <br /><br />
           <h4 class="sectionHeader1 q-pb-lg">Testimonials</h4>
           <q-carousel
             v-model="slide"
