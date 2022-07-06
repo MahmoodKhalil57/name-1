@@ -12,6 +12,12 @@ const routes = [
     children: [{ path: "", component: () => import("pages/about.vue") }],
   },
   {
+    path: "/mango-picking",
+    meta: { root: "Home", current: "mango-picking" },
+    component: () => import("layouts/docLayout.vue"),
+    children: [{ path: "", component: () => import("pages/mangoPicking.vue") }],
+  },
+  {
     path: "/dev",
     meta: { root: "Home", current: "dev" },
     component: () => import("layouts/defaultHome.vue"),
@@ -40,10 +46,6 @@ const routes = [
   // but you can also remove it
   {
     path: "/shop",
-    component: () => import("pages/coming-soon.vue"),
-  },
-  {
-    path: "/mango-picking",
     component: () => import("pages/coming-soon.vue"),
   },
   {
