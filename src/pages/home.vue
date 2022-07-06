@@ -290,7 +290,7 @@
         </div>
         <div
           id="child2"
-          class="row q-mt-xl"
+          class="row q-mt-xl q-mb-xl"
           style="align-items: center; justify-content: center"
         >
           <!--item-1-->
@@ -331,7 +331,7 @@
         <!--flex container-->
         <div
           class="sectionContainer3 text-white q-my-xl q-pt-lg responsive"
-          style="flex-wrap: wrap; justify-content: space-around"
+          style="flex-wrap: wrap; justify-content: center"
         >
           <!--gridcontainer1-->
           <div
@@ -345,11 +345,21 @@
             <div style="justify-self: start">
               <q-icon
                 class="fa-regular fa-face-smile q-pt-md"
-                style="transform: scale(2.5); left: 1.2vw"
+                style="transform: scale(3); left: 0.8vw"
               />
             </div>
-            <h4 style="justify-self: start">5000</h4>
-            <h5 style="justify-self: start">HAPPY CUSTOMERS</h5>
+            <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
+              5000
+            </h4>
+            <h5
+              style="
+                justify-self: start;
+                font: size 17px;
+                font-family: 'Verdana';
+              "
+            >
+              HAPPY CUSTOMERS
+            </h5>
           </div>
           <!--gridcontainer2-->
           <div
@@ -363,11 +373,21 @@
             <div style="justify-self: start">
               <q-icon
                 class="fa-tree fa-solid q-pt-md"
-                style="transform: scale(2.5); left: 1.2vw"
+                style="transform: scale(3); left: 0.8vw"
               />
             </div>
-            <h4 style="justify-self: start">1000</h4>
-            <h5 style="justify-self: start">MANGO TREES</h5>
+            <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
+              1000
+            </h4>
+            <h5
+              style="
+                justify-self: start;
+                font: size 17px;
+                font-family: 'Verdana';
+              "
+            >
+              MANGO TREES
+            </h5>
           </div>
           <!--gridcontainer3-->
           <div
@@ -381,11 +401,21 @@
             <div style="justify-self: start">
               <q-icon
                 class="fa-solid fa-earth-africa q-pt-md"
-                style="transform: scale(2.5); left: 1.2vw"
+                style="transform: scale(3); left: 0.8vw"
               />
             </div>
-            <h4 style="justify-self: start">14</h4>
-            <h5 style="justify-self: start">ACRES</h5>
+            <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
+              14
+            </h4>
+            <h5
+              style="
+                justify-self: start;
+                font: size 17px;
+                font-family: 'Verdana';
+              "
+            >
+              ACRES
+            </h5>
           </div>
           <!--gridcontainer4-->
           <div
@@ -399,11 +429,21 @@
             <div style="justify-self: start">
               <q-icon
                 class="fa-brands fa-pagelines q-pt-md"
-                style="transform: scale(2.5); left: 1.2vw"
+                style="transform: scale(3); left: 0.8vw"
               />
             </div>
-            <h4 style="justify-self: start">100%</h4>
-            <h5 style="justify-self: start">CHEMICAL FREE</h5>
+            <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
+              100%
+            </h4>
+            <h5
+              style="
+                justify-self: start;
+                font: size 17px;
+                font-family: 'Verdana';
+              "
+            >
+              CHEMICAL FREE
+            </h5>
           </div>
         </div>
       </q-card-section>
