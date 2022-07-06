@@ -536,33 +536,38 @@ export default {
   setup() {
     return {
       slide: ref(1),
-      lorem:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatem totam, architecto cupiditate officia rerum, error dignissimos praesentium libero ab nemo.",
     };
   },
 };
 </script>
 
-<style lang="sass">
-.testimonial-carousel
-  min-height: 400px
-  max-height: 1250px
-  height: 400px
-  @media screen and (max-width: 1100px)
-    height: 700px
-  @media screen and (max-width: 780px)
-    height: 1250px
-.gutter-slide
-  align-items: center
-  justify-content: center
-.my-text
-  z-index: 2
-.my-btn
-  z-index: 2
-.header-image
-  width: 100%
-  height: 105%
-  opacity: 1
-  filter: brightness(60%)
-  z-index: 0
+<style lang="scss">
+.testimonial-carousel {
+  min-height: 400px;
+  max-height: 1250px;
+  height: 400px;
+  @media screen and (max-width: 1100px) {
+    height: 700px;
+  }
+  @media screen and (max-width: 780px) {
+    height: 1250px;
+  }
+}
+.gutter-slide {
+  align-items: center;
+  justify-content: center;
+}
+.my-text {
+  z-index: 2;
+}
+.my-btn {
+  z-index: 2;
+}
+.header-image {
+  width: 100%;
+  height: 105%;
+  opacity: 1;
+  filter: brightness(60%);
+  z-index: 0;
+}
 </style>
