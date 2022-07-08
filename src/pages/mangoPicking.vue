@@ -14,35 +14,34 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
-      <br />
-      <span class="default-content">
-        <q-icon
-          name="fa-solid fa-quote-left"
-          style="padding-bottom: 2px"
-        ></q-icon>
-        Wish to get out and do something over a weekend ? Looking at getting
-        fresh air in the country side ? Well, this is just for you. Here is a
-        chance to step back from hectic city routines and immerse yourself in
-        the tranquillity of lush mango grove on our 14 acre orchard, keeping the
-        fun element and spending an experiential day
-        <q-icon
-          name="fa-solid fa-quote-right"
-          style="padding-bottom: 2px"
-        ></q-icon>
-      </span>
+      <div class="q-pa-md">
+        <br />
+        <span class="default-content">
+          <q-icon
+            name="fa-solid fa-quote-left"
+            style="padding-bottom: 2px"
+          ></q-icon>
+          Wish to get out and do something over a weekend ? Looking at getting
+          fresh air in the country side ? Well, this is just for you. Here is a
+          chance to step back from hectic city routines and immerse yourself in
+          the tranquillity of lush mango grove on our 14 acre orchard, keeping
+          the fun element and spending an experiential day
+          <q-icon
+            name="fa-solid fa-quote-right"
+            style="padding-bottom: 2px"
+          ></q-icon>
+        </span>
 
-      <br /><br />
+        <br /><br />
 
-      <span>
         <span class="content-header">Who can come</span>
         <br />
         <span class="default-content">
           All ages are welcome, You can park your cars inside our orchard.
         </span>
-      </span>
-      <br /><br />
 
-      <span>
+        <br /><br />
+
         <span class="content-header">Mango Picking (Seasonal)</span>
         <br />
         <span class="default-content">
@@ -60,10 +59,9 @@
           accordingly to get to the orchard early, so you can fully utilize your
           visit.
         </span>
-      </span>
-      <br /><br />
 
-      <span>
+        <br /><br />
+
         <span class="content-header">Kindly Note</span>
         <br />
         <span class="default-content">
@@ -74,19 +72,8 @@
           enjoy your picnic. Since our orchard is plastic free zone, avoid
           plastic. No Alcohol , No smoking, No Non-Veg Food.
         </span>
-      </span>
-      <br /><br />
-    </div>
-    <br />
-    <hr />
-    <br />
-    <div class="quote-content">
-      <q-icon
-        name="fa-solid fa-quote-left"
-        style="padding-bottom: 2px"
-      ></q-icon>
-      We at Pavana Vatika sell all varieties of mangoes like Totapuri, Mallika,
-      Neelam, Mulgoa, Aphonso, Sendhoora.
+        <br /><br />
+      </div>
     </div>
   </q-page>
 </template>
@@ -98,9 +85,6 @@ export default {
 </script>
 
 <style lang="scss">
-hr {
-  height: 50%;
-}
 .content-header {
   font-size: 1.25rem;
   font-weight: 700;
