@@ -5,19 +5,16 @@
       Drive straight into a tropical mango haven!
     </div>
     <br />
-    <div class="q-mx-xl row" style="max-width: 1100px">
-      <div>
-        <iframe
-          width="430"
-          height="430"
-          src="https://www.youtube.com/embed/_CpEdlOZLvk"
-          title="SooperMango - Driving straight into a tropical mango haven!"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-
+    <div class="q-mx-xl" style="max-width: 1100px">
+      <iframe
+        class="video-iframe"
+        src="https://www.youtube.com/embed/_CpEdlOZLvk"
+        title="SooperMango - Driving straight into a tropical mango haven!"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <br />
       <span class="default-content">
         <q-icon
           name="fa-solid fa-quote-left"
@@ -126,6 +123,7 @@ hr {
   justify-content: center;
 }
 .default-header {
+  text-align: center;
   font-family: thasadith, sans-serif;
   color: #323648;
   line-height: 1.2;
@@ -133,7 +131,6 @@ hr {
   font-size: 2.5rem;
 }
 .default-content {
-  margin: 0;
   text-align: left;
   font-size: 17px;
   line-height: 2em;
@@ -147,5 +144,20 @@ hr {
   font-size: 20px;
   color: #009f4d;
   font-family: "Times New Roman", serif;
+}
+.video-iframe {
+  float: right;
+  width: 430px;
+  height: 430px;
+  padding: 20px;
+  @media only screen and (max-width: 876px) {
+    float: none;
+    width: 100%;
+  }
+  @media only screen and (max-width: 600px) {
+    float: none;
+    width: 90vw;
+    height: 90vw;
+  }
 }
 </style>
