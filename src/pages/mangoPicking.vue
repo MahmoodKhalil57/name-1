@@ -1,13 +1,13 @@
 <template>
-  <q-page class="q-mb-xl default-page" padding>
+  <q-page class="q-mb-xl q-mx-xl default-page" padding>
     <!-- content -->
-    <div class="default-header">
-      Drive straight into a tropical mango haven!
-    </div>
-    <br />
-    <div class="q-mx-xl" style="max-width: 1100px">
+    <div class="text-section">
+      <span class="default-header">
+        Drive straight into a tropical mango haven!
+      </span>
+      <br />
       <iframe
-        class="video-iframe"
+        class="floating-video"
         src="https://www.youtube.com/embed/_CpEdlOZLvk"
         title="SooperMango - Driving straight into a tropical mango haven!"
         frameborder="0"
@@ -75,6 +75,105 @@
         <br /><br />
       </div>
     </div>
+    <div class="form-section">
+      <span class="default-header"> MangoPicking - Registration Form </span>
+      <br />
+      <div class="form-gutter row q-gutter-sm">
+        <div class="default-form">
+          <!-- q-input name-->
+          <q-input
+            v-model="name"
+            label="Name"
+            placeholder="Enter your name"
+            :error="nameError"
+            :error-message="nameErrorMessage"
+            :rules="nameRules"
+            :clearable="true"
+            :autofocus="true"
+            @input="nameInput"
+          ></q-input>
+          <!-- q-input email-->
+          <q-input
+            v-model="email"
+            label="Email"
+            placeholder="Enter your email"
+            :error="emailError"
+            :error-message="emailErrorMessage"
+            :rules="emailRules"
+            :clearable="true"
+            @input="emailInput"
+          ></q-input>
+          <!-- q-input phone-->
+          <q-input
+            v-model="phone"
+            label="Phone"
+            placeholder="Enter your phone"
+            :error="phoneError"
+            :error-message="phoneErrorMessage"
+            :rules="phoneRules"
+            :clearable="true"
+            @input="phoneInput"
+          ></q-input>
+          <!-- q-input number of people -->
+          <q-input
+            v-model="people"
+            label="Number of People"
+            placeholder="Enter number of people"
+            :error="peopleError"
+            :error-message="peopleErrorMessage"
+            :rules="peopleRules"
+            :clearable="true"
+            @input="peopleInput"
+          ></q-input>
+          <div class="row q-gutter-md">
+            <!-- q-input date -->
+            <q-input
+              v-model="date"
+              label="Date"
+              placeholder="Enter date"
+              :error="dateError"
+              :error-message="dateErrorMessage"
+              :rules="dateRules"
+              :clearable="true"
+              @input="dateInput"
+            >
+            </q-input>
+            <!-- q-input time -->
+            <q-input
+              v-model="time"
+              label="Time"
+              placeholder="Enter time"
+              :error="timeError"
+              :error-message="timeErrorMessage"
+              :rules="timeRules"
+              :clearable="true"
+              @input="timeInput"
+            >
+            </q-input>
+          </div>
+          <span>
+            *You will receive an email from SooperMango confirming your slot.<br />
+          </span>
+          <!-- q-submit -->
+          <q-btn
+            @click="submit"
+            :loading="loading"
+            :disabled="disabled"
+            color="primary"
+            label="Submit"
+          >
+          </q-btn>
+        </div>
+        <iframe
+          frameBorder="0"
+          class="default-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15786.75439222384!2d31.02494087802049!3d30.059745364807686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14585b0554c9b7a3%3A0xdb3b24f330c6ae90!2sDandy%20Mega%20Mall!5e0!3m2!1sen!2suk!4v1651997535725!5m2!1sen!2suk"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
   </q-page>
 </template>
 
@@ -85,6 +184,12 @@ export default {
 </script>
 
 <style lang="scss">
+.forn-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .content-header {
   font-size: 1.25rem;
   font-weight: 700;
@@ -107,6 +212,7 @@ export default {
   justify-content: center;
 }
 .default-header {
+  display: block;
   text-align: center;
   font-family: thasadith, sans-serif;
   color: #323648;
@@ -129,7 +235,7 @@ export default {
   color: #009f4d;
   font-family: "Times New Roman", serif;
 }
-.video-iframe {
+.floating-video {
   float: right;
   width: 430px;
   height: 430px;
@@ -143,5 +249,26 @@ export default {
     width: 90vw;
     height: 90vw;
   }
+}
+.default-map {
+  height: 450px;
+  border-radius: 10px;
+  border: 0px solid black;
+  box-shadow: -4px -3px 45px 21px rgba(0, 0, 0, 0.35);
+  width: 35vw;
+  @media only screen and (max-width: 980px) {
+    width: 70vw;
+  }
+}
+.default-form {
+  width: 35vw;
+  @media only screen and (max-width: 980px) {
+    width: 70vw;
+  }
+}
+
+.text-section,
+.form-section {
+  max-width: 90%;
 }
 </style>
