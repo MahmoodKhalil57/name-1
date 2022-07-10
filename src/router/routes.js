@@ -3,7 +3,7 @@ const routes = [
     path: "/",
     meta: { root: "Home" },
     component: () => import("layouts/defaultLayout.vue"),
-    children: [{ path: "", component: () => import("src/pages/home/index.vue") }],
+    children: [{ path: "", component: () => import("src/pages/home/homeWrapper.vue") }],
   },
   {
     path: "/about",
@@ -27,7 +27,7 @@ const routes = [
     path: "/dev",
     meta: { root: "Home", current: "dev" },
     component: () => import("layouts/defaultLayout.vue"),
-    children: [{ path: "", component: () => import("src/pages/home/home.vue") }],
+    children: [{ path: "", component: () => import("src/pages/home/homeWrapper.vue") }],
   },
   {
     path: "/dev2",
