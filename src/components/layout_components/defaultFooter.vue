@@ -12,7 +12,7 @@
     />
   </q-toolbar>
   <!-- /Shop now -->
-  <!-- Google Maps-->
+  <!-- Google Maps
   <q-toolbar class="no-margin">
     <div
       class="bg-yellow-10 q-pa-md fit column wrap items-center"
@@ -35,7 +35,7 @@
       ></iframe>
     </div>
   </q-toolbar>
-  <!-- /Google Maps-->
+   /Google Maps-->
   <!-- Icon  -->
   <q-toolbar class="q-py-lg row justify-center">
     <a href="/" :class="scale_stage_2[fw_gt_sm].icon_align" class="rlu">
@@ -122,7 +122,12 @@
     </q-btn>
   </q-toolbar>
   <!-- /Appstore / Google play buttons-->
-
+  <q-toolbar class="q-pt-lg justify-center align-center no-margin">
+    <span>
+      <q-icon name="fa-solid fa-location-dot" /> 28 Cairo - Alexandria Desert
+      Rd, Al Giza Desert, Giza Governorate 12677, Egypt</span
+    >
+  </q-toolbar>
   <!--[terms - privacy - refund - shipping policy]-->
 
   <!-- User can see a small list of strings next to each other with the first four as hyper links indicating

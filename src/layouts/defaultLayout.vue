@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hhh lpr fff">
     <!-- The Header -->
-    <q-header class="home-header">
+    <q-header elevated :class="!$route.meta.current ? 'home-header' : ''">
       <default-header />
     </q-header>
 
@@ -9,9 +9,16 @@
       <default-footer />
     </q-footer>
 
-    <q-page-container>
+    <q-page-container v-if="!$route.meta.current">
       <!-- This is where pages get injected -->
       <router-view />
+    </q-page-container>
+
+    <q-page-container class="bg-secondary" v-else>
+      <!-- This is where pages get injected -->
+      <q-card class="my-card bg-info q-ma-md shadow-24">
+        <router-view />
+      </q-card>
     </q-page-container>
 
     <default-floatie />
