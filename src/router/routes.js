@@ -2,7 +2,7 @@ const routes = [
   {
     path: "/",
     meta: { root: "Home" },
-    component: () => import("layouts/homeLayout.vue"),
+    component: () => import("layouts/defaultHome.vue"),
     children: [{ path: "", component: () => import("pages/home.vue") }],
   },
   {
@@ -12,9 +12,21 @@ const routes = [
     children: [{ path: "", component: () => import("pages/about.vue") }],
   },
   {
+    path: "/mango-picking",
+    meta: { root: "Home", current: "mango-picking" },
+    component: () => import("layouts/docLayout.vue"),
+    children: [{ path: "", component: () => import("pages/mangoPicking.vue") }],
+  },
+  {
+    path: "/your-reviews",
+    meta: { root: "Home", current: "testimonials" },
+    component: () => import("layouts/docLayout.vue"),
+    children: [{ path: "", component: () => import("pages/yourReviews.vue") }],
+  },
+  {
     path: "/dev",
     meta: { root: "Home", current: "dev" },
-    component: () => import("layouts/testLayout.vue"),
+    component: () => import("layouts/defaultHome.vue"),
     children: [{ path: "", component: () => import("pages/home.vue") }],
   },
   {
@@ -40,10 +52,6 @@ const routes = [
   // but you can also remove it
   {
     path: "/shop",
-    component: () => import("pages/coming-soon.vue"),
-  },
-  {
-    path: "/mango-picking",
     component: () => import("pages/coming-soon.vue"),
   },
   {

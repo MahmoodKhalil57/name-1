@@ -53,7 +53,7 @@
       </q-card-section>
 
       <!--Second Section-->
-      <!-- flexbox gowah 2 children 1 3ady w el wa7da menhom grid -->
+      <!-- flexbox gowah 2 children 1 div 3ady w el tany 3obar 3an gridcontainer bel items beta3to  -->
       <q-card-section class="q-pa-xl sectionContainer">
         <!-- content -->
         <div id="child1" class="q-mt-md">
@@ -178,24 +178,33 @@
         <br /><br />
       </q-card-section>
       <!-- Fourth Section -->
-      <q-card-section class="q-pa-xl sectionContainer">
+      <q-card-section class="sectionContainer">
         <!-- content -->
         <div id="child1" class="q-mt-md">
           <br /><br />
           <h4 class="sectionHeader1">Our Core Values</h4>
         </div>
-        <div id="child2" class="gridContainer q-mt-xl">
+        <div
+          id="child2"
+          class="row q-mt-xl"
+          style="
+            max-width: 1300px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            align-items: center;
+            justify-content: center;
+          "
+        >
           <!--item-1-->
           <div id="item1">
             <q-img
-              class="q-my-sm"
+              class="q-my-sm q-px-md annoying-image-1"
               src="~assets\home\section_four.jpg"
               spinner-color="primary"
               spinner-size="82px"
             />
           </div>
           <!--item-2-->
-          <div id="item2" style="text-align: left">
+          <div id="item2" class="annoying-text-1 q-px-md">
             <h4 class="gridHeader1">
               IMPROVING AGRICULTURE, IMPROVING LIVES, CULTIVATING NEW CROPS
               THROUGH INNOVATION.
@@ -210,149 +219,408 @@
         </div>
         <br /><br />
       </q-card-section>
-      <!--Third Section-->
-      <q-card-section class="bg-green text-white">
+      <!--Fifth Section-->
+      <q-card-section
+        class="text-white sectionContainer responsive"
+        style="z-index: 0"
+      >
         <!-- content -->
-        <h1>About FarmWeb</h1>
-        <br />
+        <h4
+          class="responsive my-text sectionContainer3 q-mt-xl q-mb-md"
+          style="z-index: 1"
+        >
+          The Best Time To
+          <span class="willo q-mx-sm">Get Healthy</span>
+          is Now.
+        </h4>
 
-        <p class="q-mx-xl text-left text-h6">
-          Cillum et deserunt esse labore in culpa exercitation ea laboris.
-          Adipisicing consectetur cillum adipisicing ullamco duis ea. Consequat
-          minim nulla magna aliqua aute. Dolor velit fugiat reprehenderit cillum
-          excepteur pariatur voluptate duis qui aliqua mollit tempor. Tempor
-          amet minim minim irure esse exercitation duis excepteur mollit
-          adipisicing. Laborum adipisicing pariatur proident nisi ut cillum. Non
-          Lorem ipsum minim officia nostrud Lorem cillum est proident eiusmod
-          elit. Minim nisi sint culpa in. Id consectetur minim tempor sint
-          aliqua eu minim qui dolor fugiat et excepteur in cupidatat.
-          Adipisicing enim et quis mollit esse. Nulla ea esse nisi tempor
-          nostrud ipsum incididunt ullamco labore dolore eiusmod consectetur
-          irure ad. Reprehenderit pariatur anim reprehenderit voluptate
-          reprehenderit minim. Aliquip esse ullamco ea aliquip qui irure quis
-          elit ut ex dolore dolor.
-          <br /><br />
-          Occaecat quis sit non ex ullamco officia. Non fugiat laboris aliqua
-          officia ea cillum cupidatat commodo id magna. Voluptate incididunt sit
-          sit cupidatat. Velit occaecat aute tempor Lorem officia nisi ut.
-          Ullamco qui voluptate sint nostrud officia excepteur mollit magna
-          Lorem in culpa non et. Voluptate dolore aute nostrud qui exercitation.
-          Eiusmod velit consequat ullamco adipisicing. Aute occaecat laboris
-          proident labore dolore et quis pariatur reprehenderit. Reprehenderit
-          Lorem in aliquip id. Nulla amet eiusmod minim aliquip et amet
-          voluptate labore consectetur. Eu eu elit id deserunt aliqua nostrud ex
-          cupidatat dolore nisi veniam cillum esse aute. Exercitation enim duis
-          sunt magna enim dolor quis ullamco. Occaecat enim fugiat sunt quis
-          dolor veniam esse exercitation esse ad cupidatat irure. Eiusmod fugiat
-          exercitation magna cillum ut qui dolor enim eu quis officia. Labore
-          minim ullamco consequat Lorem culpa et sit ex incididunt incididunt
-          mollit. Ipsum aliquip aute quis consectetur occaecat laboris eu.
-          Occaecat officia adipisicing do Lorem aute adipisicing consectetur non
-          voluptate proident nostrud aute. Occaecat velit velit qui qui quis
-          aliqua mollit ex. Sint irure aliquip qui dolore excepteur nisi.
-          <br /><br />
-          Officia pariatur elit laboris non reprehenderit nulla nulla id
-          reprehenderit. Id labore veniam magna do consectetur anim adipisicing
-          nostrud occaecat deserunt. Ut proident deserunt ex quis enim est
-          voluptate ullamco. Veniam exercitation est elit ut anim voluptate
-          adipisicing esse amet adipisicing officia aliquip. Deserunt dolor
-          pariatur ipsum sint occaecat sint magna duis qui tempor. Minim eu qui
-          nisi dolor amet cillum. Quis quis dolor sint elit deserunt est
-          pariatur in nostrud ut consequat magna amet. In quis fugiat occaecat
-          aliqua velit laboris cupidatat aute ullamco commodo culpa veniam
-          fugiat mollit. Aliqua excepteur veniam commodo esse do et irure. Lorem
-          et aute non in quis quis adipisicing dolor consectetur id voluptate
-          eiusmod in quis. Velit occaecat reprehenderit commodo ex voluptate
-          elit officia culpa incididunt ullamco eu tempor sit ex. Nostrud
-          consectetur non consequat sint cupidatat ipsum do. Aliqua mollit
-          voluptate tempor dolor sunt labore sit. Dolor qui occaecat consequat
-          proident nostrud quis anim occaecat esse. Ex exercitation deserunt
-          anim ut est ullamco deserunt. Nisi dolore nostrud do tempor id in
-          eiusmod labore consectetur pariatur magna ullamco culpa. Veniam est
-          velit eu velit aute aliqua eu quis Lorem YABNI BA2A.
+        <p
+          class="q-mx-xl text-center text-h6"
+          style="z-index: 1; color: #ccc; line-height: 2; width: 55vw"
+        >
+          The aim of PavanaVatika's innovation in agriculture is to produce high
+          quality, nutritious crop that contributes to preventive health care
+          and well-being. With improved taste, flavour and nourishment, the
+          benefits of healthy crops are multipronged. It's a natural complement
+          to a healthier life-style, and builds a stronger immunity to prevent
+          health complications caused by chemically grown crops.
         </p>
+        <q-img
+          class="q-my-sm header-image absolute-top"
+          src="~assets\home\section_5.jpg"
+          spinner-color="primary"
+          spinner-size="82px"
+          style="z-index: -1"
+        />
+        <div class="sectionContainer2 q-mb-md q-mt-sm">
+          <q-btn
+            class="q-mr-md"
+            style="background: #e8cd30; color: #333; height: 7vh; width: 20vh"
+            >Shop now</q-btn
+          >
+          <q-btn
+            class="text-white q-ml-md"
+            style="background: #009f4d; height: 7vh; width: 20vh"
+            >Contact us</q-btn
+          >
+        </div>
       </q-card-section>
-      <!--Fourth Section-->
-      <q-card-section class="bg-info">
+      <!--Section 6-->
+      <q-card-section class="q-pa-xl sectionContainer">
         <!-- content -->
-        <h1>About FarmWeb</h1>
-        <br />
 
-        <p class="q-mx-xl text-left text-h6">
-          Cillum et deserunt esse labore in culpa exercitation ea laboris.
-          Adipisicing consectetur cillum adipisicing ullamco duis ea. Consequat
-          minim nulla magna aliqua aute. Dolor velit fugiat reprehenderit cillum
-          excepteur pariatur voluptate duis qui aliqua mollit tempor. Tempor
-          amet minim minim irure esse exercitation duis excepteur mollit
-          adipisicing. Laborum adipisicing pariatur proident nisi ut cillum. Non
-          Lorem ipsum minim officia nostrud Lorem cillum est proident eiusmod
-          elit. Minim nisi sint culpa in. Id consectetur minim tempor sint
-          aliqua eu minim qui dolor fugiat et excepteur in cupidatat.
-          Adipisicing enim et quis mollit esse. Nulla ea esse nisi tempor
-          nostrud ipsum incididunt ullamco labore dolore eiusmod consectetur
-          irure ad. Reprehenderit pariatur anim reprehenderit voluptate
-          reprehenderit minim. Aliquip esse ullamco ea aliquip qui irure quis
-          elit ut ex dolore dolor.
+        <div id="child1" class="q-mt-md">
           <br /><br />
-          Occaecat quis sit non ex ullamco officia. Non fugiat laboris aliqua
-          officia ea cillum cupidatat commodo id magna. Voluptate incididunt sit
-          sit cupidatat. Velit occaecat aute tempor Lorem officia nisi ut.
-          Ullamco qui voluptate sint nostrud officia excepteur mollit magna
-          Lorem in culpa non et. Voluptate dolore aute nostrud qui exercitation.
-          Eiusmod velit consequat ullamco adipisicing. Aute occaecat laboris
-          proident labore dolore et quis pariatur reprehenderit. Reprehenderit
-          Lorem in aliquip id. Nulla amet eiusmod minim aliquip et amet
-          voluptate labore consectetur. Eu eu elit id deserunt aliqua nostrud ex
-          cupidatat dolore nisi veniam cillum esse aute. Exercitation enim duis
-          sunt magna enim dolor quis ullamco. Occaecat enim fugiat sunt quis
-          dolor veniam esse exercitation esse ad cupidatat irure. Eiusmod fugiat
-          exercitation magna cillum ut qui dolor enim eu quis officia. Labore
-          minim ullamco consequat Lorem culpa et sit ex incididunt incididunt
-          mollit. Ipsum aliquip aute quis consectetur occaecat laboris eu.
-          Occaecat officia adipisicing do Lorem aute adipisicing consectetur non
-          voluptate proident nostrud aute. Occaecat velit velit qui qui quis
-          aliqua mollit ex. Sint irure aliquip qui dolore excepteur nisi.
-          <br /><br />
-          Officia pariatur elit laboris non reprehenderit nulla nulla id
-          reprehenderit. Id labore veniam magna do consectetur anim adipisicing
-          nostrud occaecat deserunt. Ut proident deserunt ex quis enim est
-          voluptate ullamco. Veniam exercitation est elit ut anim voluptate
-          adipisicing esse amet adipisicing officia aliquip. Deserunt dolor
-          pariatur ipsum sint occaecat sint magna duis qui tempor. Minim eu qui
-          nisi dolor amet cillum. Quis quis dolor sint elit deserunt est
-          pariatur in nostrud ut consequat magna amet. In quis fugiat occaecat
-          aliqua velit laboris cupidatat aute ullamco commodo culpa veniam
-          fugiat mollit. Aliqua excepteur veniam commodo esse do et irure. Lorem
-          et aute non in quis quis adipisicing dolor consectetur id voluptate
-          eiusmod in quis. Velit occaecat reprehenderit commodo ex voluptate
-          elit officia culpa incididunt ullamco eu tempor sit ex. Nostrud
-          consectetur non consequat sint cupidatat ipsum do. Aliqua mollit
-          voluptate tempor dolor sunt labore sit. Dolor qui occaecat consequat
-          proident nostrud quis anim occaecat esse. Ex exercitation deserunt
-          anim ut est ullamco deserunt. Nisi dolore nostrud do tempor id in
-          eiusmod labore consectetur pariatur magna ullamco culpa. Veniam est
-          velit eu velit aute aliqua eu quis Lorem YABNI BA2A.
-        </p>
+          <h4 class="sectionHeader1">Accreditation & Certifications</h4>
+
+          <ul
+            class="q-my-md text-h6 text-left sectionContent"
+            style="max-width: 1200px"
+          >
+            <li>
+              Registered in APEDA (Govt. of India) Horti-Net Farm Registration
+              Number: KA2901186103,101,102,104,202
+            </li>
+            <li>Certified under Global - Good Agricultural Practice (G.A.P)</li>
+            <li>
+              CERTIFICATE OF IMPORTER-EXPORTER CODE from Ministry of Commerce &
+              Industry - DGFT - Govt. Of Indian
+            </li>
+          </ul>
+        </div>
+        <div
+          id="child2"
+          class="row q-mt-xl q-mb-xl"
+          style="align-items: center; justify-content: center"
+        >
+          <!--item-1-->
+          <div id="item1">
+            <q-img
+              class="q-px-md"
+              src="~assets/certifications/apeda.svg"
+              style="height: 100px; width: 100px"
+            />
+          </div>
+          <!--item-2-->
+          <div id="item2">
+            <img
+              class="q-px-md"
+              src="~assets/certifications/section_6_2.png"
+              style="height: 100px; object-fit: cover"
+            />
+          </div>
+          <!--item-3-->
+          <div id="item3">
+            <img
+              class="q-px-md"
+              src="~assets/certifications/section_6_1.jpg"
+              style="height: 100px; object-fit: cover"
+            />
+          </div>
+        </div>
+      </q-card-section>
+      <!--section 7-->
+      <q-card-section class="text-white" style="z-index: 0">
+        <q-img
+          class="q-my-sm header-image absolute-top"
+          src="~assets\background\pexels-james-wheeler-1592461.jpg"
+          spinner-color="primary"
+          spinner-size="82px"
+          style="z-index: -1"
+        />
+        <!--flex container-->
+        <div
+          class="sectionContainer3 text-white q-my-xl q-pt-lg responsive"
+          style="flex-wrap: wrap; justify-content: center"
+        >
+          <div class="sectionContainer3">
+            <!--gridcontainer1-->
+            <div
+              class="text-white q-mr-xl default-grid"
+              style="
+                display: grid;
+                grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
+                grid-row-gap: 1.5vh;
+              "
+            >
+              <div style="justify-self: start">
+                <q-icon
+                  class="fa-regular fa-face-smile q-pt-md"
+                  style="transform: scale(3); left: 0.8vw"
+                />
+              </div>
+              <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
+                5000
+              </h4>
+              <h5
+                style="
+                  justify-self: start;
+                  font: size 17px;
+                  font-family: 'Verdana';
+                "
+              >
+                HAPPY CUSTOMERS
+              </h5>
+            </div>
+            <!--gridcontainer2-->
+            <div
+              class="text-white q-mr-xl default-grid"
+              style="
+                display: grid;
+                grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
+                grid-row-gap: 1.5vh;
+              "
+            >
+              <div style="justify-self: start">
+                <q-icon
+                  class="fa-tree fa-solid q-pt-md"
+                  style="transform: scale(3); left: 0.8vw"
+                />
+              </div>
+              <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
+                1000
+              </h4>
+              <h5
+                style="
+                  justify-self: start;
+                  font: size 17px;
+                  font-family: 'Verdana';
+                "
+              >
+                MANGO TREES
+              </h5>
+            </div>
+          </div>
+
+          <div class="sectionContainer3">
+            <!--gridcontainer3-->
+            <div
+              class="text-white q-mr-xl default-grid"
+              style="
+                display: grid;
+                grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
+                grid-row-gap: 1.5vh;
+              "
+            >
+              <div style="justify-self: start">
+                <q-icon
+                  class="fa-solid fa-earth-africa q-pt-md"
+                  style="transform: scale(3); left: 0.8vw"
+                />
+              </div>
+              <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
+                14
+              </h4>
+              <h5
+                style="
+                  justify-self: start;
+                  font: size 17px;
+                  font-family: 'Verdana';
+                "
+              >
+                ACRES
+              </h5>
+            </div>
+            <!--gridcontainer4-->
+            <div
+              class="text-white q-mr-xl default-grid"
+              style="
+                display: grid;
+                grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
+                grid-row-gap: 1.5vh;
+              "
+            >
+              <div style="justify-self: start">
+                <q-icon
+                  class="fa-brands fa-pagelines q-pt-md"
+                  style="transform: scale(3); left: 0.8vw"
+                />
+              </div>
+              <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
+                100%
+              </h4>
+              <h5
+                style="
+                  justify-self: start;
+                  font: size 17px;
+                  font-family: 'Verdana';
+                "
+              >
+                CHEMICAL FREE
+              </h5>
+            </div>
+          </div>
+        </div>
+      </q-card-section>
+      <!-- Eighth section -->
+      <q-card-section class="q-py-xl sectionContainer">
+        <div id="child1" class="q-mt-md">
+          <h4 class="sectionHeader1 q-pb-lg">Testimonials</h4>
+          <q-carousel
+            v-model="slide"
+            class="testimonial-carousel shadow-1 rounded-borders"
+            control-color="black"
+            padding
+            navigation
+            arrows
+            infinite
+            animated
+            transition-prev="slide-right"
+            transition-next="slide-left"
+          >
+            <q-carousel-slide
+              :name="testimonial_group.id"
+              class="column no-wrap flex-center"
+              v-for="testimonial_group in testimonials"
+              :key="testimonial_group.id"
+            >
+              <div class="row q-gutter-lg gutter-slide">
+                <q-card
+                  class="my-card"
+                  style="height: 274px; max-width: 300px; text-align: left"
+                  v-for="testimonial in testimonial_group.elements"
+                  :key="testimonial.id"
+                >
+                  <q-card-section>
+                    <div class="text-h6" style="height: 64px">
+                      {{ testimonial.title }}
+                    </div>
+                  </q-card-section>
+
+                  <q-card-section>
+                    <div class="text-subtitle2" style="height: 66px">
+                      <q-icon name="fa-solid fa-quote-left"></q-icon>
+                      {{ testimonial.content }}
+                    </div>
+                  </q-card-section>
+                  <q-card-section>
+                    <q-avatar>
+                      <img :src="testimonial.image" />
+                    </q-avatar>
+                    {{ testimonial.name }}
+                  </q-card-section>
+                </q-card>
+              </div>
+            </q-carousel-slide>
+          </q-carousel>
+        </div>
       </q-card-section>
     </q-card>
   </q-page>
 </template>
 
 <script>
+import { ref } from "vue";
+
 export default {
   name: "PageName",
+  data: function () {
+    return {
+      testimonials: [
+        {
+          id: 1,
+          elements: [
+            {
+              id: 1,
+              title: "WANT TO ORDER AGAIN",
+              content:
+                "Very sweet and high quality mangoes. Wanted to order again but got disappointed to see as Sold out.",
+              name: "Lakshmiprasad G V",
+              image:
+                "https://soopermango.com/images/customers/raghavendra_kiran.jpg",
+            },
+            {
+              id: 2,
+              title: "WORTH THE PRICE!",
+              content: "Top quality. Totally worth the price!",
+              name: "Divij Bhat",
+              image:
+                "https://soopermango.com/images/customers/adithya_radhakrishna.jpg",
+            },
+            {
+              id: 3,
+              title: "NEAT PACKAGING",
+              content:
+                "Delicious, fresh mangoes delivered to home with neat packaging and within time.",
+              name: "C R Anjana Devi",
+              image: "https://soopermango.com/images/customers/hariprasad.jpg",
+            },
+          ],
+        },
+        {
+          id: 2,
+          elements: [
+            {
+              id: 1,
+              title: "BEST SATVIK MANGOES",
+              content:
+                "The best satvik mangoes from the most pious and divine thota!!!",
+              name: "Raghavendra Kiran",
+              image:
+                "https://soopermango.com/images/customers/raghavendra_kiran.jpg",
+            },
+            {
+              id: 2,
+              title: "MANGOES ARE DELICIOUS",
+              content:
+                "The mangoes are delicious and we relished it. Thanks for delivering it on time.",
+              name: "Adithya Radhakrishna",
+              image:
+                "https://soopermango.com/images/customers/adithya_radhakrishna.jpg",
+            },
+            {
+              id: 3,
+              title: "DIVINE TASTE",
+              content:
+                "Mango was excellent, Sweetest ever, Looking forward for more.",
+              name: "Hariprasad",
+              image: "https://soopermango.com/images/customers/hariprasad.jpg",
+            },
+          ],
+        },
+      ],
+    };
+  },
+
+  setup() {
+    return {
+      slide: ref(1),
+    };
+  },
 };
 </script>
 
-<style lang="sass">
-.my-text
-  z-index: 2
-.my-btn
-  z-index: 2
-.header-image
-  width: 100%
-  height: 105%
-  opacity: 1
-  filter: brightness(60%)
-  z-index: 1
+<style lang="scss">
+.testimonial-carousel {
+  min-height: 400px;
+  max-height: 1250px;
+  height: 400px;
+  @media screen and (max-width: 1100px) {
+    height: 700px;
+  }
+  @media screen and (max-width: 780px) {
+    height: 1250px;
+  }
+}
+.gutter-slide {
+  align-items: center;
+  justify-content: center;
+}
+.my-text {
+  z-index: 2;
+}
+.my-btn {
+  z-index: 2;
+}
+.header-image {
+  width: 100%;
+  height: 105%;
+  opacity: 1;
+  filter: brightness(60%);
+  z-index: 0;
+}
+.default-grid {
+  text-align: left;
+  width: 250px;
+}
 </style>

@@ -1,6 +1,6 @@
 import { boot } from 'quasar/wrappers'
-import WIcon from 'components/WIcon.vue'
-import WName from 'components/WName.vue'
+import WIcon from 'src/components/icon_components/WIcon.vue'
+import WName from 'src/components/icon_components/WName.vue'
 
 // "async" is optional;
 // more info on params: https://v2.quasar.dev/quasar-cli/boot-files

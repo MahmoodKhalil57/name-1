@@ -4,8 +4,8 @@
 2. Change the theme to fit our customization
 
 ### Layouts:
-1. [ ] Layout for the home page: [[Layouts/Main layout|Main]]
-2. [ ] Layout for the doc pages: [[Layouts/Docs layout|Docs]]
+1. [x] Layout for the home page: [[Layouts/Main layout|Main]]
+2. [x] Layout for the doc pages: [[Layouts/Docs layout|Docs]]
 3. [ ] Layout for the blog pages: [[Layouts/Blog layout|Blog]]
 ### Pages:
 
