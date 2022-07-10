@@ -24,6 +24,12 @@ const routes = [
     children: [{ path: "", component: () => import("pages/yourReviews.vue") }],
   },
   {
+    path: "/contact",
+    meta: { root: "Home", current: "contact" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [{ path: "", component: () => import("pages/contactUs.vue") }],
+  },
+  {
     path: "/dev",
     meta: { root: "Home", current: "dev" },
     component: () => import("layouts/defaultLayout.vue"),
@@ -50,10 +56,6 @@ const routes = [
   },
   {
     path: "/your-responses",
-    component: () => import("pages/coming-soon.vue"),
-  },
-  {
-    path: "/contact",
     component: () => import("pages/coming-soon.vue"),
   },
   {

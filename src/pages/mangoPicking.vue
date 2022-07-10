@@ -242,6 +242,7 @@ export default {
   }
 }
 .default-form {
+  max-width: 1000px;
   width: 35vw;
   @media only screen and (max-width: 980px) {
     width: 70vw;
@@ -253,9 +254,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
-.default-form {
-  max-width: 1000px;
-}
+
 .text-section,
 .form-section {
   max-width: 90%;
