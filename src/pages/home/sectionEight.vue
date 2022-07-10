@@ -134,3 +134,21 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.testimonial-carousel {
+  min-height: 400px;
+  max-height: 1250px;
+  height: 400px;
+  @media screen and (max-width: 1100px) {
+    height: 700px;
+  }
+  @media screen and (max-width: 780px) {
+    height: 1250px;
+  }
+}
+.gutter-slide {
+  align-items: center;
+  justify-content: center;
+}
+</style>

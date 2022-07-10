@@ -126,3 +126,18 @@ export default {
   },
 };
 </script>
+
+
+<style lang="scss">
+.header-image {
+  width: 100%;
+  height: 105%;
+  opacity: 1;
+  filter: brightness(60%);
+  z-index: 0;
+}
+.default-grid {
+  text-align: left;
+  width: 250px;
+}
+</style>

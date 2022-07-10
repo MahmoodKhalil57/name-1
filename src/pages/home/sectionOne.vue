@@ -53,3 +53,20 @@ export default {
   },
 };
 </script>
+
+
+<style lang="scss">
+.my-text {
+  z-index: 2;
+}
+.my-btn {
+  z-index: 2;
+}
+.header-image {
+  width: 100%;
+  height: 105%;
+  opacity: 1;
+  filter: brightness(60%);
+  z-index: 0;
+}
+</style>
