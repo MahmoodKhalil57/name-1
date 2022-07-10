@@ -122,6 +122,47 @@
     </q-btn>
   </q-toolbar>
   <!-- /Appstore / Google play buttons-->
+
+  <!--[terms - privacy - refund - shipping policy]-->
+
+  <!-- User can see a small list of strings next to each other with the first four as hyper links indicating
+      [terms - privacy - refund - shipping policy] and then copy right of website, and then a link to the developer info.
+      With a vertical line dividing each item from the following. -->
+  <q-toolbar class="q-pt-lg justify-center align-center no-margin">
+    <span
+      ><a href="javascript:void(0)" target="_self" class="flinks"
+        >Terms</a
+      ></span
+    >
+    <div class="vl q-mx-sm"></div>
+    <span
+      ><a href="javascript:void(0)" target="_self" class="flinks"
+        >privacy</a
+      ></span
+    >
+    <div class="vl q-mx-sm"></div>
+    <span
+      ><a href="javascript:void(0)" target="_self" class="flinks"
+        >refund</a
+      ></span
+    >
+    <div class="vl q-mx-sm"></div>
+    <span
+      ><a href="javascript:void(0)" target="_self" class="flinks"
+        >shipping policy</a
+      ></span
+    >
+  </q-toolbar>
+
+  <q-toolbar class="q-pa-lg justify-center align-center no-margin">
+    <a href="javascript:void(0)" target="_self" class="flinks">
+      <span>Powered by <strong>SupaDevs</strong> in Egypt. </span>
+    </a>
+    <div class="vl q-mx-sm"></div>
+    <a href="javascript:void(0)" target="_self" class="flinks">
+      <span>All rights reserved © 2022 <strong>SupaDevs.</strong> </span>
+    </a>
+  </q-toolbar>
 </template>
 
 <script>
