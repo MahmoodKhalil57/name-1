@@ -21,14 +21,14 @@
 </template>
 
 <script>
-import SectionOne from "src/pages/home/sectionOne.vue";
-import SectionTwo from "src/pages/home/sectionTwo.vue";
-import SectionThree from "src/pages/home/sectionThree.vue";
-import SectionFour from "src/pages/home/sectionFour.vue";
-import SectionFive from "src/pages/home/sectionFive.vue";
-import SectionSix from "src/pages/home/sectionSix.vue";
-import SectionSeven from "src/pages/home/sectionSeven.vue";
-import SectionEight from "src/pages/home/sectionEight.vue";
+import SectionOne from "src/pages/homePage/sectionOne.vue";
+import SectionTwo from "src/pages/homePage/sectionTwo.vue";
+import SectionThree from "src/pages/homePage/sectionThree.vue";
+import SectionFour from "src/pages/homePage/sectionFour.vue";
+import SectionFive from "src/pages/homePage/sectionFive.vue";
+import SectionSix from "src/pages/homePage/sectionSix.vue";
+import SectionSeven from "src/pages/homePage/sectionSeven.vue";
+import SectionEight from "src/pages/homePage/sectionEight.vue";
 
 export default {
   name: "PageName",
