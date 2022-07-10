@@ -79,91 +79,62 @@
       <span class="default-header"> MangoPicking - Registration Form </span>
       <br />
       <div class="form-gutter row q-gutter-sm">
-        <div class="default-form">
-          <!-- q-input name-->
+        <q-form
+          @submit="onSubmit"
+          @reset="onReset"
+          class="default-form q-gutter-md"
+        >
           <q-input
+            filled
             v-model="name"
-            label="Name"
-            placeholder="Enter your name"
-            :error="nameError"
-            :error-message="nameErrorMessage"
-            :rules="nameRules"
-            :clearable="true"
-            :autofocus="true"
-            @input="nameInput"
-          ></q-input>
-          <!-- q-input email-->
+            label="Your name *"
+            hint="Name and surname"
+            lazy-rules="ondemand"
+            :rules="[
+              (val) => (val && val.length > 0) || 'Please type something',
+            ]"
+          />
           <q-input
+            filled
             v-model="email"
-            label="Email"
-            placeholder="Enter your email"
-            :error="emailError"
-            :error-message="emailErrorMessage"
-            :rules="emailRules"
-            :clearable="true"
-            @input="emailInput"
-          ></q-input>
-          <!-- q-input phone-->
+            label="Your email *"
+            hint="Enter your email"
+            lazy-rules="ondemand"
+            :rules="[
+              (val) => (val && val.length > 0) || 'Please type something',
+              (val) =>
+                (val && /^.+@.+\..+$/.test(val)) ||
+                'Please enter a valid email',
+            ]"
+          />
+
           <q-input
-            v-model="phone"
-            label="Phone"
-            placeholder="Enter your phone"
-            :error="phoneError"
-            :error-message="phoneErrorMessage"
-            :rules="phoneRules"
-            :clearable="true"
-            @input="phoneInput"
-          ></q-input>
-          <!-- q-input number of people -->
-          <q-input
-            v-model="people"
-            label="Number of People"
-            placeholder="Enter number of people"
-            :error="peopleError"
-            :error-message="peopleErrorMessage"
-            :rules="peopleRules"
-            :clearable="true"
-            @input="peopleInput"
-          ></q-input>
-          <div class="row q-gutter-md">
-            <!-- q-input date -->
-            <q-input
-              v-model="date"
-              label="Date"
-              placeholder="Enter date"
-              :error="dateError"
-              :error-message="dateErrorMessage"
-              :rules="dateRules"
-              :clearable="true"
-              @input="dateInput"
-            >
-            </q-input>
-            <!-- q-input time -->
-            <q-input
-              v-model="time"
-              label="Time"
-              placeholder="Enter time"
-              :error="timeError"
-              :error-message="timeErrorMessage"
-              :rules="timeRules"
-              :clearable="true"
-              @input="timeInput"
-            >
-            </q-input>
+            filled
+            type="number"
+            v-model="persons"
+            label="N. of persons (max 10) *"
+            hint="Enter number of persons"
+            lazy-rules="ondemand"
+            :rules="[
+              (val) =>
+                (val !== null && val !== '') ||
+                'Please type number of people in the group',
+              (val) => (val > 0 && val < 11) || 'Please type a valid number',
+            ]"
+          />
+          <default-date-time hint="When are you planning the visit" />
+          <div>
+            <q-btn label="Submit" type="submit" color="primary" />
+            <q-btn
+              label="Reset"
+              type="reset"
+              color="primary"
+              flat
+              class="q-ml-sm"
+            />
           </div>
-          <span>
-            *You will receive an email from SooperMango confirming your slot.<br />
-          </span>
-          <!-- q-submit -->
-          <q-btn
-            @click="submit"
-            :loading="loading"
-            :disabled="disabled"
-            color="primary"
-            label="Submit"
-          >
-          </q-btn>
-        </div>
+        </q-form>
+
         <iframe
           frameBorder="0"
           class="default-map"
@@ -178,8 +149,18 @@
 </template>
 
 <script>
+import DefaultDateTime from "src/components/defaultDateTime.vue";
+
 export default {
   name: "PageName",
+  data: function () {
+    return {
+      name: "",
+      email: "",
+      persons: "",
+    };
+  },
+  components: { DefaultDateTime },
 };
 </script>
 
@@ -266,7 +247,15 @@ export default {
     width: 70vw;
   }
 }
-
+.form-gutter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.default-form {
+  max-width: 1000px;
+}
 .text-section,
 .form-section {
   max-width: 90%;

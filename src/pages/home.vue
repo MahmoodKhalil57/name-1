@@ -464,6 +464,9 @@
             navigation
             arrows
             infinite
+            animated
+            transition-prev="slide-right"
+            transition-next="slide-left"
           >
             <q-carousel-slide
               :name="testimonial_group.id"
@@ -508,6 +511,7 @@
 
 <script>
 import { ref } from "vue";
+
 export default {
   name: "PageName",
   data: function () {
