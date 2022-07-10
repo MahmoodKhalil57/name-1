@@ -31,7 +31,7 @@
         <q-btn flat rounded href="/about"> About </q-btn>
         <q-btn flat rounded href="/shop"> Shop </q-btn>
         <q-btn flat rounded href="/mango-picking"> MangoPicking </q-btn>
-        <q-btn flat rounded href="/your-responses"> Testimonials </q-btn>
+        <q-btn flat rounded href="/your-reviews"> Testimonials </q-btn>
         <q-btn flat rounded href="/contact"> Contact </q-btn>
       </div>
     </div>
@@ -59,7 +59,7 @@
             <q-item clickable href="/mango-picking">
               <q-item-section>Mangopicking</q-item-section>
             </q-item>
-            <q-item clickable href="/your-responses">
+            <q-item clickable href="/your-reviews">
               <q-item-section>Testimonials</q-item-section>
             </q-item>
             <q-item clickable href="contact">

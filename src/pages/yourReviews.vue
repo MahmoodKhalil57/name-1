@@ -29,17 +29,17 @@
         :key="instapost"
         :src="instapost"
       ></iframe>
+      <iframe
+        class="default-testimanial-face"
+        scrolling="no"
+        frameborder="0"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        v-for="facepost in testimonial.facebook"
+        :key="facepost"
+        :src="facepost"
+      ></iframe>
     </div>
-    <iframe
-      src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmadhusudan.vasudevarao%2Fposts%2Fpfbid06Ma5KKSUutK23dhZyz8CitP2vJonEHZj2WrAY1Vwv16BW9oqX4jjsz6KtnL4exvsl&width=500&show_text=true&height=723&appId"
-      width="500"
-      height="723"
-      style="border: none; overflow: hidden"
-      scrolling="no"
-      frameborder="0"
-      allowfullscreen="true"
-      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-    ></iframe>
   </q-page>
 </template>
 
@@ -126,9 +126,9 @@ export default {
             "https://www.instagram.com/p/CBDz2cwpmIa/embed",
           ],
           facebook: [
-            "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkaranamkiran%2Fposts%2Fpfbid0iCAeEhJxa8pGRAQadf3DcsKXRBygyvJTKAtRY2TWhfyZfC88m71dthLUzDnXVwzpl&width=500&show_text=true&height=703&appId",
-            "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpallavi.kasbe.39%2Fposts%2Fpfbid05VmgkuHFaWJREEDeqVWwcUrhmBKt2rWZvdUbX8Mn33EbC9PrkNvg5vUUrAc4rG96l&width=500&show_text=true&height=610&appId",
-            "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmadhusudan.vasudevarao%2Fposts%2Fpfbid06Ma5KKSUutK23dhZyz8CitP2vJonEHZj2WrAY1Vwv16BW9oqX4jjsz6KtnL4exvsl&width=500&show_text=true&height=723&appId",
+            "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FMenofManual%2Fphotos%2Fa.340287219905378%2F1031637437437016%2F&show_text=true&width=500",
+            "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FMenofManual%2Fphotos%2Fa.340287219905378%2F1031637437437016%2F&show_text=true&width=500",
+            "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FMenofManual%2Fphotos%2Fa.340287219905378%2F1031637437437016%2F&show_text=true&width=500",
           ],
         },
       ],
@@ -173,6 +173,10 @@ hr {
 }
 .default-testimanial-insta {
   height: 70vw;
+  width: 42vw;
+}
+.default-testimanial-face {
+  height: 40vw;
   width: 42vw;
 }
 </style>
