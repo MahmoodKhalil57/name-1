@@ -333,117 +333,122 @@
           class="sectionContainer3 text-white q-my-xl q-pt-lg responsive"
           style="flex-wrap: wrap; justify-content: center"
         >
-          <!--gridcontainer1-->
-          <div
-            class="text-white q-mr-xl"
-            style="
-              display: grid;
-              grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
-              grid-row-gap: 1.5vh;
-            "
-          >
-            <div style="justify-self: start">
-              <q-icon
-                class="fa-regular fa-face-smile q-pt-md"
-                style="transform: scale(3); left: 0.8vw"
-              />
-            </div>
-            <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
-              5000
-            </h4>
-            <h5
+          <div class="sectionContainer3">
+            <!--gridcontainer1-->
+            <div
+              class="text-white q-mr-xl default-grid"
               style="
-                justify-self: start;
-                font: size 17px;
-                font-family: 'Verdana';
+                display: grid;
+                grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
+                grid-row-gap: 1.5vh;
               "
             >
-              HAPPY CUSTOMERS
-            </h5>
+              <div style="justify-self: start">
+                <q-icon
+                  class="fa-regular fa-face-smile q-pt-md"
+                  style="transform: scale(3); left: 0.8vw"
+                />
+              </div>
+              <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
+                5000
+              </h4>
+              <h5
+                style="
+                  justify-self: start;
+                  font: size 17px;
+                  font-family: 'Verdana';
+                "
+              >
+                HAPPY CUSTOMERS
+              </h5>
+            </div>
+            <!--gridcontainer2-->
+            <div
+              class="text-white q-mr-xl default-grid"
+              style="
+                display: grid;
+                grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
+                grid-row-gap: 1.5vh;
+              "
+            >
+              <div style="justify-self: start">
+                <q-icon
+                  class="fa-tree fa-solid q-pt-md"
+                  style="transform: scale(3); left: 0.8vw"
+                />
+              </div>
+              <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
+                1000
+              </h4>
+              <h5
+                style="
+                  justify-self: start;
+                  font: size 17px;
+                  font-family: 'Verdana';
+                "
+              >
+                MANGO TREES
+              </h5>
+            </div>
           </div>
-          <!--gridcontainer2-->
-          <div
-            class="text-white q-mr-xl"
-            style="
-              display: grid;
-              grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
-              grid-row-gap: 1.5vh;
-            "
-          >
-            <div style="justify-self: start">
-              <q-icon
-                class="fa-tree fa-solid q-pt-md"
-                style="transform: scale(3); left: 0.8vw"
-              />
-            </div>
-            <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
-              1000
-            </h4>
-            <h5
+
+          <div class="sectionContainer3">
+            <!--gridcontainer3-->
+            <div
+              class="text-white q-mr-xl default-grid"
               style="
-                justify-self: start;
-                font: size 17px;
-                font-family: 'Verdana';
+                display: grid;
+                grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
+                grid-row-gap: 1.5vh;
               "
             >
-              MANGO TREES
-            </h5>
-          </div>
-          <!--gridcontainer3-->
-          <div
-            class="text-white q-mr-xl"
-            style="
-              display: grid;
-              grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
-              grid-row-gap: 1.5vh;
-            "
-          >
-            <div style="justify-self: start">
-              <q-icon
-                class="fa-solid fa-earth-africa q-pt-md"
-                style="transform: scale(3); left: 0.8vw"
-              />
+              <div style="justify-self: start">
+                <q-icon
+                  class="fa-solid fa-earth-africa q-pt-md"
+                  style="transform: scale(3); left: 0.8vw"
+                />
+              </div>
+              <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
+                14
+              </h4>
+              <h5
+                style="
+                  justify-self: start;
+                  font: size 17px;
+                  font-family: 'Verdana';
+                "
+              >
+                ACRES
+              </h5>
             </div>
-            <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
-              14
-            </h4>
-            <h5
+            <!--gridcontainer4-->
+            <div
+              class="text-white q-mr-xl default-grid"
               style="
-                justify-self: start;
-                font: size 17px;
-                font-family: 'Verdana';
+                display: grid;
+                grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
+                grid-row-gap: 1.5vh;
               "
             >
-              ACRES
-            </h5>
-          </div>
-          <!--gridcontainer4-->
-          <div
-            class="text-white q-mr-xl"
-            style="
-              display: grid;
-              grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
-              grid-row-gap: 1.5vh;
-            "
-          >
-            <div style="justify-self: start">
-              <q-icon
-                class="fa-brands fa-pagelines q-pt-md"
-                style="transform: scale(3); left: 0.8vw"
-              />
+              <div style="justify-self: start">
+                <q-icon
+                  class="fa-brands fa-pagelines q-pt-md"
+                  style="transform: scale(3); left: 0.8vw"
+                />
+              </div>
+              <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
+                100%
+              </h4>
+              <h5
+                style="
+                  justify-self: start;
+                  font: size 17px;
+                  font-family: 'Verdana';
+                "
+              >
+                CHEMICAL FREE
+              </h5>
             </div>
-            <h4 class="q-mt-sm" style="justify-self: start; font-size: 40px">
-              100%
-            </h4>
-            <h5
-              style="
-                justify-self: start;
-                font: size 17px;
-                font-family: 'Verdana';
-              "
-            >
-              CHEMICAL FREE
-            </h5>
           </div>
         </div>
       </q-card-section>
@@ -609,5 +614,9 @@ export default {
   opacity: 1;
   filter: brightness(60%);
   z-index: 0;
+}
+.default-grid {
+  text-align: left;
+  width: 250px;
 }
 </style>
