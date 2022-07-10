@@ -18,6 +18,12 @@ const routes = [
     children: [{ path: "", component: () => import("pages/mangoPicking.vue") }],
   },
   {
+    path: "/your-reviews",
+    meta: { root: "Home", current: "testimonials" },
+    component: () => import("layouts/docLayout.vue"),
+    children: [{ path: "", component: () => import("pages/yourReviews.vue") }],
+  },
+  {
     path: "/dev",
     meta: { root: "Home", current: "dev" },
     component: () => import("layouts/defaultHome.vue"),
