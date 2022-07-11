@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-mb-xl default-page" padding>
+  <q-page class="q-mb-xl column items-center" padding>
     <!-- content -->
     <div class="default-header">About FarmWeb</div>
     <br />
@@ -95,14 +95,9 @@ hr {
 .default-link:hover {
   color: #0056b3;
 }
-.default-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 .default-header {
   font-size: 2.5rem;
+  font-family: "Thasadith", sans-serif;
 }
 .default-content {
   margin: 0;

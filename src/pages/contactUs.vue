@@ -119,6 +119,7 @@ export default {
 }
 .default-header {
   font-size: 2.5rem;
+  font-family: "Thasadith", sans-serif;
 }
 .circle-icon {
   border-radius: 100%;

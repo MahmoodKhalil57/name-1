@@ -34,6 +34,11 @@ const routes = [
     meta: { root: "Home", current: "Terms" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/terms.vue") }],
+  }, {
+    path: "/login",
+    meta: { root: "Home", current: "Login" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [{ path: "", component: () => import("pages/login.vue") }],
   },
   {
     path: "/dev",
@@ -82,10 +87,6 @@ const routes = [
   },
   {
     path: "/harvesting-process",
-    component: () => import("pages/coming-soon.vue"),
-  },
-  {
-    path: "/login",
     component: () => import("pages/coming-soon.vue"),
   },
 

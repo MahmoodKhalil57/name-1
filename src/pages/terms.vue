@@ -41,16 +41,6 @@ export default {
 </script>
 
 <style lang="scss">
-hr {
-  height: 50%;
-}
-.default-link {
-  color: #007bff;
-  text-decoration: none;
-}
-.default-link:hover {
-  color: #0056b3;
-}
 .default-page {
   display: flex;
   flex-direction: column;
@@ -69,11 +59,5 @@ hr {
   color: #707579;
   font-weight: 100;
   font-family: verdana;
-}
-.quote-content {
-  display: inline;
-  font-size: 20px;
-  color: #009f4d;
-  font-family: "Times New Roman", serif;
 }
 </style>

@@ -195,7 +195,7 @@ export default {
 .default-header {
   display: block;
   text-align: center;
-  font-family: thasadith, sans-serif;
+  font-family: "Thasadith", sans-serif;
   color: #323648;
   line-height: 1.2;
   letter-spacing: 2px;
