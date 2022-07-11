@@ -153,7 +153,14 @@ rlu:active {
   width: 70px;
   height: 70px;
 }
-
+.tan {
+  font-size: 1.25rem;
+  font-weight: 700 !important;
+  line-height: 2em;
+  letter-spacing: 1px;
+  color: #707579;
+  font-family: verdana;
+}
 .sectionContainer {
   @include flex-col-center;
   color: #707579;

@@ -3,7 +3,12 @@ const routes = [
     path: "/",
     meta: { root: "Home" },
     component: () => import("layouts/defaultLayout.vue"),
-    children: [{ path: "", component: () => import("src/pages/homePage/homeWrapper.vue") }],
+    children: [
+      {
+        path: "",
+        component: () => import("src/pages/homePage/homeWrapper.vue"),
+      },
+    ],
   },
   {
     path: "/about",
@@ -34,17 +39,29 @@ const routes = [
     meta: { root: "Home", current: "Terms" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/terms.vue") }],
-  }, {
+  },
+  {
     path: "/login",
     meta: { root: "Home", current: "Login" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/login.vue") }],
+    path: "/ripening-tips",
+    meta: { root: "Home", current: "ripening-tips" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("src/pages/ripeningTips.vue") },
+    ],
   },
   {
     path: "/dev",
     meta: { root: "Home", current: "dev" },
     component: () => import("layouts/defaultLayout.vue"),
-    children: [{ path: "", component: () => import("src/pages/homePage/homeWrapper.vue") }],
+    children: [
+      {
+        path: "",
+        component: () => import("src/pages/homePage/homeWrapper.vue"),
+      },
+    ],
   },
   {
     path: "/dev2",
@@ -59,6 +76,7 @@ const routes = [
       { path: "", component: () => import("src/pages/IndexPage.vue") },
     ],
   },
+
   // Always leave this as last one,
   // but you can also remove it
   {
@@ -79,10 +97,6 @@ const routes = [
   },
   {
     path: "/gallery",
-    component: () => import("pages/coming-soon.vue"),
-  },
-  {
-    path: "/tips",
     component: () => import("pages/coming-soon.vue"),
   },
   {
