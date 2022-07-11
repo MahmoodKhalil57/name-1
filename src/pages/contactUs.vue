@@ -1,7 +1,6 @@
 <template>
-  <q-page class="q-mb-xl default-page q-gutter-lg" padding>
+  <q-page class="q-mb-xl column default-page q-gutter-sm" padding>
     <div class="default-header">Contact Us</div>
-
     <div class="row q-gutter-md">
       <div class="row q-gutter-md">
         <q-icon class="fa-brands fa-envira circle-icon" />
@@ -28,6 +27,7 @@
         </div>
       </div>
     </div>
+
     <q-form
       @submit="onSubmit"
       @reset="onReset"
@@ -82,7 +82,7 @@
           type="textarea"
           :rules="[(val) => (val && val.length > 0) || 'Please type something']"
         />
-        <div>
+        <div class="q-pt-md">
           <q-btn label="Submit" type="submit" color="primary" />
           <q-btn
             label="Reset"
@@ -114,8 +114,6 @@ export default {
 
 <style lang="scss">
 .default-page {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -147,9 +145,6 @@ export default {
   border: 0px solid black;
   box-shadow: -4px -3px 45px 21px rgba(0, 0, 0, 0.35);
   width: 75vw;
-  @media only screen and (max-width: 980px) {
-    width: 70vw;
-  }
 }
 .default-form {
   max-width: 3000px;

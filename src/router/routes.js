@@ -7,27 +7,33 @@ const routes = [
   },
   {
     path: "/about",
-    meta: { root: "Home", current: "about" },
+    meta: { root: "Home", current: "About" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/about.vue") }],
   },
   {
     path: "/mango-picking",
-    meta: { root: "Home", current: "mango-picking" },
+    meta: { root: "Home", current: "Mango Picking" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/mangoPicking.vue") }],
   },
   {
     path: "/your-reviews",
-    meta: { root: "Home", current: "testimonials" },
+    meta: { root: "Home", current: "Testimonials" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/yourReviews.vue") }],
   },
   {
     path: "/contact",
-    meta: { root: "Home", current: "contact" },
+    meta: { root: "Home", current: "Contact" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/contactUs.vue") }],
+  },
+  {
+    path: "/terms",
+    meta: { root: "Home", current: "Terms" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [{ path: "", component: () => import("pages/terms.vue") }],
   },
   {
     path: "/dev",
