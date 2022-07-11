@@ -150,6 +150,7 @@ hr {
 }
 .default-header {
   font-size: 2.5rem;
+  font-family: "Thasadith", sans-serif;
 }
 .default-customer {
   display: flex;

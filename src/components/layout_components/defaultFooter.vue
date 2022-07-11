@@ -134,26 +134,14 @@
       [terms - privacy - refund - shipping policy] and then copy right of website, and then a link to the developer info.
       With a vertical line dividing each item from the following. -->
   <q-toolbar class="q-pt-lg justify-center align-center no-margin">
-    <span
-      ><a href="javascript:void(0)" target="_self" class="flinks"
-        >Terms</a
-      ></span
-    >
+    <span><a href="/terms" target="_self" class="flinks">Terms</a></span>
+    <div class="vl q-mx-sm"></div>
+    <span><a href="/privacy" target="_self" class="flinks">privacy</a></span>
+    <div class="vl q-mx-sm"></div>
+    <span><a href="/refund" target="_self" class="flinks">refund</a></span>
     <div class="vl q-mx-sm"></div>
     <span
-      ><a href="javascript:void(0)" target="_self" class="flinks"
-        >privacy</a
-      ></span
-    >
-    <div class="vl q-mx-sm"></div>
-    <span
-      ><a href="javascript:void(0)" target="_self" class="flinks"
-        >refund</a
-      ></span
-    >
-    <div class="vl q-mx-sm"></div>
-    <span
-      ><a href="javascript:void(0)" target="_self" class="flinks"
+      ><a href="/shipping-policy" target="_self" class="flinks"
         >shipping policy</a
       ></span
     >

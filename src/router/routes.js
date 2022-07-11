@@ -3,31 +3,48 @@ const routes = [
     path: "/",
     meta: { root: "Home" },
     component: () => import("layouts/defaultLayout.vue"),
-    children: [{ path: "", component: () => import("src/pages/home/index.vue") }],
+    children: [{ path: "", component: () => import("src/pages/homePage/homeWrapper.vue") }],
   },
   {
     path: "/about",
-    meta: { root: "Home", current: "about" },
+    meta: { root: "Home", current: "About" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/about.vue") }],
   },
   {
     path: "/mango-picking",
-    meta: { root: "Home", current: "mango-picking" },
+    meta: { root: "Home", current: "Mango Picking" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/mangoPicking.vue") }],
   },
   {
     path: "/your-reviews",
-    meta: { root: "Home", current: "testimonials" },
+    meta: { root: "Home", current: "Testimonials" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/yourReviews.vue") }],
+  },
+  {
+    path: "/contact",
+    meta: { root: "Home", current: "Contact" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [{ path: "", component: () => import("pages/contactUs.vue") }],
+  },
+  {
+    path: "/terms",
+    meta: { root: "Home", current: "Terms" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [{ path: "", component: () => import("pages/terms.vue") }],
+  }, {
+    path: "/login",
+    meta: { root: "Home", current: "Login" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [{ path: "", component: () => import("pages/login.vue") }],
   },
   {
     path: "/dev",
     meta: { root: "Home", current: "dev" },
     component: () => import("layouts/defaultLayout.vue"),
-    children: [{ path: "", component: () => import("src/pages/home/home.vue") }],
+    children: [{ path: "", component: () => import("src/pages/homePage/homeWrapper.vue") }],
   },
   {
     path: "/dev2",
@@ -53,10 +70,6 @@ const routes = [
     component: () => import("pages/coming-soon.vue"),
   },
   {
-    path: "/contact",
-    component: () => import("pages/coming-soon.vue"),
-  },
-  {
     path: "/cart",
     component: () => import("pages/coming-soon.vue"),
   },
@@ -74,10 +87,6 @@ const routes = [
   },
   {
     path: "/harvesting-process",
-    component: () => import("pages/coming-soon.vue"),
-  },
-  {
-    path: "/login",
     component: () => import("pages/coming-soon.vue"),
   },
 

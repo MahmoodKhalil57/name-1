@@ -4,11 +4,15 @@
     <q-header elevated :class="!$route.meta.current ? 'home-header' : ''">
       <default-header />
     </q-header>
+    <!-- /The Header -->
 
+    <!-- The Footer-->
     <q-footer class="bg-dark" elevated>
       <default-footer />
     </q-footer>
+    <!-- /The Footer-->
 
+    <!-- The Content -->
     <q-page-container v-if="!$route.meta.current">
       <!-- This is where pages get injected -->
       <router-view />
@@ -20,8 +24,11 @@
         <router-view />
       </q-card>
     </q-page-container>
+    <!-- /The Content -->
 
+    <!-- Floaties -->
     <default-floatie />
+    <!-- /Floaties -->
   </q-layout>
 </template>
 

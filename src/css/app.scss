@@ -2,7 +2,8 @@
 
 /* SCSS syntax is similar to css with addition of variables,
 nesting, mixins(@mixin-@include) with arguments, and functions. */
-
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Thasadith&display=swap");
 /*Mixins*/
 @mixin flex-col-center {
   display: flex;
