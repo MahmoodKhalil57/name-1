@@ -53,6 +53,20 @@ const routes = [
     ],
   },
   {
+    path: "/harvesting-process",
+    meta: { root: "Home", current: "Harvesting Process" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/harvestingProcess.vue") },
+    ],
+  },
+  {
+    path: "/mango-picking",
+    meta: { root: "Home", current: "Mango Picking" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [{ path: "", component: () => import("pages/mangoPicking.vue") }],
+  },
+  {
     path: "/dev",
     meta: { root: "Home", current: "dev" },
     component: () => import("layouts/defaultLayout.vue"),
@@ -99,11 +113,6 @@ const routes = [
     path: "/gallery",
     component: () => import("pages/coming-soon.vue"),
   },
-  {
-    path: "/harvesting-process",
-    component: () => import("pages/coming-soon.vue"),
-  },
-
   {
     path: "/:catchAll(.*)*",
     component: () => import("pages/ErrorNotFound.vue"),
