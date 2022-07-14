@@ -3,7 +3,12 @@ const routes = [
     path: "/",
     meta: { root: "Home" },
     component: () => import("layouts/defaultLayout.vue"),
-    children: [{ path: "", component: () => import("src/pages/homePage/homeWrapper.vue") }],
+    children: [
+      {
+        path: "",
+        component: () => import("src/pages/homePage/homeWrapper.vue"),
+      },
+    ],
   },
   {
     path: "/about",
@@ -40,6 +45,26 @@ const routes = [
     meta: { root: "Home", current: "Login" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/login.vue") }],
+    path: "/ripening-tips",
+    meta: { root: "Home", current: "ripening-tips" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("src/pages/ripeningTips.vue") },
+    ],
+  },
+  {
+    path: "/harvesting-process",
+    meta: { root: "Home", current: "Harvesting Process" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/harvestingProcess.vue") },
+    ],
+  },
+  {
+    path: "/mango-picking",
+    meta: { root: "Home", current: "Mango Picking" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [{ path: "", component: () => import("pages/mangoPicking.vue") }],
   },
   {
     path: "/refund",
@@ -63,7 +88,12 @@ const routes = [
     path: "/dev",
     meta: { root: "Home", current: "dev" },
     component: () => import("layouts/defaultLayout.vue"),
-    children: [{ path: "", component: () => import("src/pages/homePage/homeWrapper.vue") }],
+    children: [
+      {
+        path: "",
+        component: () => import("src/pages/homePage/homeWrapper.vue"),
+      },
+    ],
   },
   {
     path: "/dev2",
@@ -78,6 +108,7 @@ const routes = [
       { path: "", component: () => import("src/pages/IndexPage.vue") },
     ],
   },
+
   // Always leave this as last one,
   // but you can also remove it
   {
@@ -100,15 +131,6 @@ const routes = [
     path: "/gallery",
     component: () => import("pages/coming-soon.vue"),
   },
-  {
-    path: "/tips",
-    component: () => import("pages/coming-soon.vue"),
-  },
-  {
-    path: "/harvesting-process",
-    component: () => import("pages/coming-soon.vue"),
-  },
-
   {
     path: "/:catchAll(.*)*",
     component: () => import("pages/ErrorNotFound.vue"),
