@@ -34,11 +34,30 @@ const routes = [
     meta: { root: "Home", current: "Terms" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/terms.vue") }],
-  }, {
+  },
+  {
     path: "/login",
     meta: { root: "Home", current: "Login" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/login.vue") }],
+  },
+  {
+    path: "/refund",
+    meta: { root: "Home", current: "Refund" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [{ path: "", component: () => import("pages/refundPolicy.vue") }],
+  },
+  {
+    path: "/privacy",
+    meta: { root: "Home", current: "Privacy" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [{ path: "", component: () => import("pages/privacyPolicy.vue") }],
+  },
+  {
+    path: "/shipping",
+    meta: { root: "Home", current: "Shipping" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [{ path: "", component: () => import("pages/shippingPolicy.vue") }],
   },
   {
     path: "/dev",
