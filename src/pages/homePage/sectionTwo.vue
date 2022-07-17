@@ -20,7 +20,7 @@
       <div id="item1">
         <q-icon class="fa-brands fa-envira gcircle" style="color: white" />
         <h4 class="q-my-lg gridHeader1">ALPHONSO</h4>
-        <p>
+        <p class="default-text">
           Alphonso at SooperMango is known as King of Kings and is not just a
           fruit but an emotion. These mangoes are famous for their sweetness and
           pulp, the richness in their flavour, aroma and color makes the fruit
@@ -33,7 +33,7 @@
       <div id="item2">
         <q-icon class="fa-brands fa-envira gcircle" style="color: white" />
         <h4 class="q-my-lg gridHeader1">3EWEES</h4>
-        <p>
+        <p class="default-text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
           repellendus accusamus vel hic iusto ab adipisci maiores neque
           perferendis alias expedita saepe ex incidunt quos magnam qui nesciunt
@@ -45,7 +45,7 @@
       <div id="item3">
         <q-icon class="fa-brands fa-envira gcircle" style="color: white" />
         <h4 class="q-my-lg gridHeader1">MALLIKA</h4>
-        <p>
+        <p class="default-text">
           Alphonso at SooperMango is known as King of Kings and is not just a
           fruit but an emotion. These mangoes are famous for their sweetness and
           pulp, the richness in their flavour, aroma and color makes the fruit
@@ -67,3 +67,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.default-text {
+  min-width: 300px;
+}
+</style>"
