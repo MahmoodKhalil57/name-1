@@ -1,13 +1,12 @@
 <template>
   <!--Second Section-->
   <!-- flexbox gowah 2 children 1 div 3ady w el tany 3obar 3an gridcontainer bel items beta3to  -->
-  <q-card-section class="q-pa-xl sectionContainer">
-    <!-- content -->
-    <div id="child1" class="q-mt-md">
+  <div class="q-pa-xl column flex-center">
+    <div class="q-pt-md width-one">
       <br /><br />
-      <h4 class="sectionHeader1">Reservoir of Vitamins</h4>
+      <h4 class="section-header">Reservoir of Vitamins</h4>
 
-      <p class="q-my-md text-h6 sectionContent">
+      <p class="q-pa-md section-content">
         A slice of FarmWeb's Mangoes fulfills 100% requirement of your daily
         dose of Vitamin C. Besides, Mangoes are also rich in Vitamin A, Vitamin
         B, and other antioxidants, which helps in keeping your immune system
@@ -15,12 +14,11 @@
         cares and improves vision. [Copied]
       </p>
     </div>
-    <div id="child2" class="gridContainer q-mt-xl">
-      <!--item-1-->
-      <div id="item1">
+    <div class="row justify-center q-gutter-md width-two">
+      <div class="width-three">
         <q-icon class="fa-brands fa-envira gcircle" style="color: white" />
-        <h4 class="q-my-lg gridHeader1">ALPHONSO</h4>
-        <p class="default-text">
+        <h4 class="q-py-lg mango-header">ALPHONSO</h4>
+        <p class="mango-content">
           Alphonso at SooperMango is known as King of Kings and is not just a
           fruit but an emotion. These mangoes are famous for their sweetness and
           pulp, the richness in their flavour, aroma and color makes the fruit
@@ -29,11 +27,10 @@
           precursor of vitamin A and vitamin B complex.
         </p>
       </div>
-      <!--item-2-->
-      <div id="item2">
+      <div class="width-three">
         <q-icon class="fa-brands fa-envira gcircle" style="color: white" />
-        <h4 class="q-my-lg gridHeader1">3EWEES</h4>
-        <p class="default-text">
+        <h4 class="q-py-lg mango-header">3EWEES</h4>
+        <p class="mango-content">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
           repellendus accusamus vel hic iusto ab adipisci maiores neque
           perferendis alias expedita saepe ex incidunt quos magnam qui nesciunt
@@ -41,11 +38,10 @@
           Explicabo, totam porro!
         </p>
       </div>
-      <!--item-3-->
-      <div id="item3">
+      <div class="width-three">
         <q-icon class="fa-brands fa-envira gcircle" style="color: white" />
-        <h4 class="q-my-lg gridHeader1">MALLIKA</h4>
-        <p class="default-text">
+        <h4 class="q-py-lg mango-header">MALLIKA</h4>
+        <p class="mango-content">
           Alphonso at SooperMango is known as King of Kings and is not just a
           fruit but an emotion. These mangoes are famous for their sweetness and
           pulp, the richness in their flavour, aroma and color makes the fruit
@@ -55,8 +51,7 @@
         </p>
       </div>
     </div>
-    <br /><br />
-  </q-card-section>
+  </div>
 </template>
 
 <script>
@@ -69,7 +64,38 @@ export default {
 </script>
 
 <style lang="scss">
-.default-text {
-  min-width: 300px;
+.section-header {
+  font-family: "Thesadith", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 36px;
+  color: #323648;
+}
+.section-content {
+  font-family: "Verdana", sans-serif;
+  font-size: 17px;
+  font-weight: 100;
+  line-height: 34px;
+  color: #707579;
+}
+.mango-header {
+  font-family: "Thesadith", sans-serif;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 30px;
+  color: #323648;
+}
+.mango-content {
+  font-family: "Verdana", sans-serif;
+  font-size: 17px;
+  font-weight: 100;
+  line-height: 34px;
+  color: #707579;
+}
+.width-one {
+  max-width: 900px;
+}
+.width-three {
+  max-width: 400px;
 }
 </style>"
