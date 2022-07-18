@@ -141,7 +141,7 @@
     <span><a href="/refund" target="_self" class="flinks">refund</a></span>
     <div class="vl q-mx-sm"></div>
     <span
-      ><a href="/shipping-policy" target="_self" class="flinks"
+      ><a href="/shipping" target="_self" class="flinks"
         >shipping policy</a
       ></span
     >

@@ -27,13 +27,7 @@
         <q-space />
         <div
           v-if="scale_stage_1[fw_gt_lg].nav"
-          class="
-            inline
-            GL__toolbar-link
-            row
-            no-wrap
-            text-body1 text-weight-bold text-white
-          "
+          class="inline GL__toolbar-link row no-wrap text-body1 text-weight-bold text-white"
         >
           <q-btn flat rounded href="/"> <q-icon name="home" /> Home </q-btn>
           <q-btn flat rounded href="/about"> About </q-btn>
@@ -92,15 +86,7 @@
         <!-- Menu -->
         <q-btn dense flat>
           <div
-            class="
-              row
-              items-center
-              no-wrap
-              bg-accent
-              q-pa-sm
-              rounded-borders
-              shadow-3
-            "
+            class="row items-center no-wrap bg-accent q-pa-sm rounded-borders shadow-3"
           >
             more
             <q-icon
@@ -117,7 +103,7 @@
               <q-item clickable href="/gallery">
                 <q-item-section>Gallery</q-item-section>
               </q-item>
-              <q-item clickable href="/tips">
+              <q-item clickable href="/ripening-tips">
                 <q-item-section>Ripening Tips</q-item-section>
               </q-item>
               <q-item clickable href="/harvesting-process">
