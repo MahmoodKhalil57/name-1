@@ -20,7 +20,7 @@
 
     <q-page-container class="bg-secondary" v-else>
       <!-- This is where pages get injected -->
-      <q-card class="my-card bg-info q-ma-md shadow-24">
+      <q-card class="my-card q-ma-md shadow-24">
         <router-view />
       </q-card>
     </q-page-container>
