@@ -85,6 +85,12 @@ const routes = [
     children: [{ path: "", component: () => import("pages/shippingPolicy.vue") }],
   },
   {
+    path: "/shop",
+    meta: { root: "Home", current: "Shop" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [{ path: "", component: () => import("pages/shopPage.vue") }],
+  },
+  {
     path: "/dev",
     meta: { root: "Home", current: "dev" },
     component: () => import("layouts/defaultLayout.vue"),
@@ -111,10 +117,6 @@ const routes = [
 
   // Always leave this as last one,
   // but you can also remove it
-  {
-    path: "/shop",
-    component: () => import("pages/coming-soon.vue"),
-  },
   {
     path: "/your-responses",
     component: () => import("pages/coming-soon.vue"),
