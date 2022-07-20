@@ -76,13 +76,17 @@ const routes = [
     path: "/privacy",
     meta: { root: "Home", current: "Privacy" },
     component: () => import("layouts/defaultLayout.vue"),
-    children: [{ path: "", component: () => import("pages/privacyPolicy.vue") }],
+    children: [
+      { path: "", component: () => import("pages/privacyPolicy.vue") },
+    ],
   },
   {
     path: "/shipping",
     meta: { root: "Home", current: "Shipping" },
     component: () => import("layouts/defaultLayout.vue"),
-    children: [{ path: "", component: () => import("pages/shippingPolicy.vue") }],
+    children: [
+      { path: "", component: () => import("pages/shippingPolicy.vue") },
+    ],
   },
   {
     path: "/shop",
@@ -131,7 +135,9 @@ const routes = [
   },
   {
     path: "/gallery",
-    component: () => import("pages/coming-soon.vue"),
+    meta: { root: "Home", current: "Gallery" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [{ path: "", component: () => import("pages/galleryPage.vue") }],
   },
   {
     path: "/:catchAll(.*)*",
