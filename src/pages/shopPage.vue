@@ -11,7 +11,9 @@
         v-for="product in products"
         :key="product"
       >
-        <q-img class="default-image" :src="product.image"> </q-img>
+        <a :href="product.link"
+          ><q-img class="default-image" :src="product.image"> </q-img
+        ></a>
         <div class="q-pa-md">
           <span class="title-font">{{ product.title }}</span>
         </div>
@@ -31,7 +33,7 @@
             ></q-icon>
           </div>
           <div class="row flex-center">
-            <a :href="product.reviews.link" class="link-font"
+            <a :href="product.link + '#review'" class="link-font"
               >Based on {{ product.reviews.count }} reviews</a
             >
           </div>
@@ -88,13 +90,13 @@ export default {
     return {
       products: [
         {
+          link: "/alphonso",
           image:
             "https://soopermango.com/images/product-images/ratnagiri_shop3.jpg",
           title: "Alphonso - Badami Mango",
           reviews: {
             stars: 4,
             count: 51,
-            link: "https://soopermango.com/alphonso#reviews",
           },
           availabilty: false,
           prices: ["₹900 - 3kg", "₹1500 - 6kg"],
@@ -102,13 +104,13 @@ export default {
           date: "Delivery May 17, 2022 onwards",
         },
         {
+          link: "/rajgira-lalbagh-mango",
           image:
             "https://soopermango.com/images/product-images/rajgira_shop.jpg",
           title: "Lalbagh Mango - Sindhura Mango",
           reviews: {
             stars: 3,
             count: 4,
-            link: "https://soopermango.com/rajgira-lalbagh-mango#reviews",
           },
           availabilty: false,
           prices: ["₹900 - 3kg", "₹1500 - 6kg"],
@@ -116,13 +118,13 @@ export default {
           date: "Delivery May 17, 2022 onwards",
         },
         {
+          link: "/totapuri",
           image:
             "https://soopermango.com/images/product-images/totapuri_shop.jpg",
           title: "Totapuri Mango",
           reviews: {
             stars: 5,
             count: 3,
-            link: "https://soopermango.com/totapuri#reviews",
           },
           availabilty: false,
           prices: ["₹900 - 3kg", "₹1500 - 6kg"],
@@ -130,13 +132,13 @@ export default {
           date: "Delivery May 17, 2022 onwards",
         },
         {
+          link: "/romania-apple-mango",
           image:
             "https://soopermango.com/images/product-images/apple_mango.jpg",
           title: "Romania Apple Mango",
           reviews: {
             stars: 4,
             count: 3,
-            link: "https://soopermango.com/romania-apple-mango#reviews",
           },
           availabilty: false,
           prices: ["₹900 - 3kg", "₹1500 - 6kg"],
@@ -144,12 +146,12 @@ export default {
           date: "Delivery June 1, 2022 onwards",
         },
         {
+          link: "/neelam",
           image: "https://soopermango.com/images/product-images/neelam.jpg",
           title: "Neelam Mango",
           reviews: {
             stars: 0,
             count: 0,
-            link: "https://soopermango.com/neelam#reviews",
           },
           availabilty: false,
           prices: ["₹900 - 3kg", "₹1500 - 6kg"],
@@ -157,13 +159,13 @@ export default {
           date: "Delivery June 20, 2022 onwards",
         },
         {
+          link: "/mallika",
           image:
             "https://soopermango.com/images/product-images/mallika_shop.jpg",
           title: "Mallika Mango",
           reviews: {
             stars: 0,
             count: 0,
-            link: "https://soopermango.com/mallika#reviews",
           },
           availabilty: false,
           prices: ["₹900 - 3kg", "₹1500 - 6kg"],
@@ -171,12 +173,12 @@ export default {
           date: "Delivery June 20, 2021 onwards",
         },
         {
+          link: "/mulgoba",
           image: "https://soopermango.com/images/product-images/mulgoba.jpg",
           title: "Mulgoba Mango",
           reviews: {
             stars: 5,
             count: 3,
-            link: "https://soopermango.com/mallika#reviews",
           },
           availabilty: false,
           prices: ["₹900 - 3kg", "₹1500 - 6kg"],
@@ -184,12 +186,12 @@ export default {
           date: "Delivery June 20, 2021 onwards",
         },
         {
+          link: "/banganapalli",
           image: "https://soopermango.com/images/product-images/benishan.png",
           title: "Mallika Mango",
           reviews: {
             stars: 0,
             count: 0,
-            link: "https://soopermango.com/mallika#reviews",
           },
           availabilty: false,
           prices: ["₹900 - 3kg", "₹1500 - 6kg"],

@@ -45,6 +45,8 @@ const routes = [
     meta: { root: "Home", current: "Login" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/login.vue") }],
+  },
+  {
     path: "/ripening-tips",
     meta: { root: "Home", current: "ripening-tips" },
     component: () => import("layouts/defaultLayout.vue"),
@@ -93,6 +95,78 @@ const routes = [
     meta: { root: "Home", current: "Shop" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/shopPage.vue") }],
+  },
+  {
+    path: "/alphonso",
+    meta: { root: "Home", current: "Alphonso" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/rajgira-lalbagh-mango",
+    meta: { root: "Home", current: "Rajgira Lalbagh Mango" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/totapuri",
+    meta: { root: "Home", current: "Totapuri" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/romania-apple-mango",
+    meta: { root: "Home", current: "Romania Apple Mango" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/neelam",
+    meta: { root: "Home", current: "Neelam" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/malika",
+    meta: { root: "Home", current: "Malika" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/mulgoba",
+    meta: { root: "Home", current: "Mulgoba" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/banganapalli",
+    meta: { root: "Home", current: "Banganapalli" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/mallika",
+    meta: { root: "Home", current: "Mallika" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
   },
   {
     path: "/dev",
