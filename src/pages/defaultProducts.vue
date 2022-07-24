@@ -63,7 +63,7 @@
             :src="image"
             v-for="(image, index) in products_full[current_product].images"
             :key="image"
-            @click="set_image(index)"
+            @click="this.current_image = index"
           />
         </div>
       </div>
@@ -717,20 +717,13 @@ export default {
     set_more: function () {
       var more_products = [];
       for (let i = 0; i < 3; i++) {
-        var rand = -1;
-        while (
-          rand < 0 ||
-          rand == this.current_product ||
-          more_products.includes(rand)
-        ) {
+        var rand = Math.floor(Math.random() * this.products_full.length);
+        while (rand == this.current_product || more_products.includes(rand)) {
           rand = Math.floor(Math.random() * this.products_full.length);
         }
         more_products.push(rand);
       }
       this.more_products = more_products;
-    },
-    set_image: function (index) {
-      this.current_image = index;
     },
   },
   created() {
