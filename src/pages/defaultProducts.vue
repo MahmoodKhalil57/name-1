@@ -210,6 +210,15 @@
         <span class="rating_title" id="review">Ratings & Reviews</span>
       </div>
       <q-separator style="opacity: 0" />
+      <div
+        class="text-center"
+        v-if="!products_full[current_product].reviews.review_array.length"
+      >
+        <span class="login-text"
+          >Please <a class="link-font" href="/login">login</a> & order to write
+          a review</span
+        >
+      </div>
       <q-separator style="opacity: 0" />
       <div
         class="row justify-around review-container no-margin"
@@ -905,5 +914,9 @@ export default {
 }
 .default-button {
   border: 2px solid white;
+}
+.login-text {
+  font: normal normal 400 16px/24px roboto, sans-serif;
+  color: #212529;
 }
 </style>
