@@ -680,9 +680,9 @@ export default {
       });
     },
     set_more: function () {
-      const more_products = [];
+      var more_products = [];
       for (let i = 0; i < 3; i++) {
-        const rand = 0;
+        var rand = 0;
         while (rand != this.current_product) {
           rand = Math.floor(Math.random() * this.products_full.length);
         }
