@@ -201,6 +201,23 @@ export default {
       ],
     };
   },
+  methods: {
+    set_search: function (search) {
+      var new_products = [];
+      this.products.forEach((product) => {
+        if (product.title.includes(search)) {
+          new_products.push(product);
+        }
+      });
+      this.products = new_products;
+    },
+  },
+  created() {
+    const search = window.location.href.split("?search=")[1];
+    if (search) {
+      this.set_search(search);
+    }
+  },
   setup() {
     return {
       model: ref(null),
@@ -214,7 +231,7 @@ export default {
   max-width: 2400px;
 }
 .title-font {
-  font: normal normal 500 24px/29px Thasadith, sans-serif;
+  font: normal normal 700 30px/36px Thasadith, sans-serif;
   color: #323648;
   text-transform: capitalize;
 }
