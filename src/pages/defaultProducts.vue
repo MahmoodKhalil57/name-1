@@ -680,10 +680,14 @@ export default {
       });
     },
     set_more: function () {
-      const more_products = [];
+      var more_products = [];
       for (let i = 0; i < 3; i++) {
-        const rand = 0;
-        while (rand != this.current_product) {
+        var rand = -1;
+        while (
+          rand < 0 ||
+          rand == this.current_product ||
+          more_products.includes(rand)
+        ) {
           rand = Math.floor(Math.random() * this.products_full.length);
         }
         more_products.push(rand);
@@ -696,6 +700,7 @@ export default {
   },
   created() {
     this.set_product();
+    this.set_more();
   },
   setup() {
     return {
