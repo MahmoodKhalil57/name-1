@@ -72,7 +72,6 @@
       <!-- Info (right)-->
       <div class="col-7 column">
         <div>
-          <q-btn round color="primary" icon="shopping_cart" />
           <span class="product-title">{{
             products_full[current_product].title_two
           }}</span>
