@@ -205,7 +205,7 @@ export default {
     set_search: function (search) {
       var new_products = [];
       this.products.forEach((product) => {
-        if (product.title.includes(search)) {
+        if (product.title.toLowerCase().includes(search)) {
           new_products.push(product);
         }
       });
