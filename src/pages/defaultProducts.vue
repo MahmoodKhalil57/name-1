@@ -717,11 +717,13 @@ export default {
     set_more: function () {
       var more_products = [];
       for (let i = 0; i < 3; i++) {
-        var rand = Math.floor(Math.random() * this.products_full.length);
-        while (rand == this.current_product || more_products.includes(rand)) {
-          rand = Math.floor(Math.random() * this.products_full.length);
+        if (more_products.length + 1 < this.products_full.length) {
+          var rand = Math.floor(Math.random() * this.products_full.length);
+          while (rand == this.current_product || more_products.includes(rand)) {
+            rand = Math.floor(Math.random() * this.products_full.length);
+          }
+          more_products.push(rand);
         }
-        more_products.push(rand);
       }
       this.more_products = more_products;
     },
