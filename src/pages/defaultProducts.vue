@@ -15,7 +15,17 @@
     >
       <!-- Images (left) <--/  ---   /-->
       <div class="col-4 q-ma-md column bg-wolf">
-        <q-dialog class="dialog-bg" v-model="alert">
+        <q-dialog class="dialog-bg justify-between" v-model="alert">
+          <div class="no-shadow" v-if="current_image > 0">
+            <q-btn
+              class="default-button"
+              round
+              color="black"
+              icon="fa-solid fa-angle-left"
+              @click="current_image--"
+            />
+          </div>
+          <q-space />
           <img
             class="selected_image zoomed-in"
             :src="products_full[current_product].images[current_image]"
@@ -25,7 +35,23 @@
               border-color: aliceblue;
               box-shadow: 10px 10px 800px 80px #000;
             "
-        /></q-dialog>
+          />
+          <q-space />
+          <div
+            class="no-shadow"
+            v-if="
+              current_image < products_full[current_product].images.length - 1
+            "
+          >
+            <q-btn
+              class="default-button"
+              round
+              color="black"
+              icon="fa-solid fa-angle-right"
+              @click="current_image++"
+            />
+          </div>
+        </q-dialog>
         <img
           class="q-pa-sm selected_image zoom-without-container point-img-zoom"
           :src="products_full[current_product].images[current_image]"
@@ -46,6 +72,7 @@
       <!-- Info (right)-->
       <div class="col-7 column">
         <div>
+          <q-btn round color="primary" icon="shopping_cart" />
           <span class="product-title">{{
             products_full[current_product].title_two
           }}</span>
@@ -876,5 +903,8 @@ export default {
   font: normal normal 500 24px/29px Thasadith, sans-serif;
   color: #323648;
   text-transform: capitalize;
+}
+.default-button {
+  border: 2px solid white;
 }
 </style>
