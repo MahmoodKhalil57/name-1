@@ -53,26 +53,30 @@
   </q-toolbar>
   <!-- /Icon  -->
   <!-- Social media -->
-  <q-toolbar class="justify-between q-pb-xl">
+  <q-toolbar
+    class="row max-width wrap justify-evenly q-py-xl fa-4x q-gutter-lg"
+    style="width: auto; height: auto"
+  >
     <q-space />
-    <a href="javascript:void(0)" target="_self" class="flinks scl-x4 q-mx-xl">
-      <q-icon class="fa-brands fa-facebook-square" color="blue-9" />
+    <a href="javascript:void(0)" target="_self" class="flinks">
+      <q-icon class="fa-brands fa-facebook-square" color="blue-8" />
     </a>
 
-    <a href="javascript:void(0)" target="_self" class="flinks scl-x4 q-mx-xl">
-      <q-icon class="fa-brands fa-instagram-square flinks" color="pink-7" />
+    <a href="javascript:void(0)" target="_self" class="flinks">
+      <q-icon class="fa-brands fa-instagram insta radio" color="dark" />
     </a>
 
-    <a href="javascript:void(0)" target="_self" class="flinks scl-x4 q-mx-xl">
+    <a href="javascript:void(0)" target="_self" class="flinks">
       <q-icon class="fa-brands fa-twitter-square" color="light-blue-5" />
     </a>
 
-    <a href="javascript:void(0)" target="_self" class="flinks scl-x4 q-mx-xl">
-      <q-icon class="fa-brands fa-youtube-square" color="red-9" />
+    <a href="javascript:void(0)" target="_self" class="flinks">
+      <q-icon class="fa-brands fa-youtube-square" color="red" />
     </a>
     <q-space />
   </q-toolbar>
   <!-- /Social media -->
+
   <!-- whatsapp/num/email-->
   <q-toolbar class="q-my-md justify-center align-center">
     <q-card class="bg-primary">
@@ -90,23 +94,27 @@
     </q-card>
   </q-toolbar>
   <!-- /whatsapp/num/email-->
+
   <!-- Appstore / Google play buttons-->
-  <q-toolbar class="q-pa-lg justify-center align-center no-margin">
-    <q-btn class="q-ma-md" color="deep-orange" push>
+  <q-toolbar
+    class="row q-pa-lg justify-center align-center no-margin idk"
+    style="max-width: fit-content; height: auto"
+  >
+    <q-btn class="q-my-md" color="deep-orange" push>
       <q-card flat class="flat transparent">
         <q-card-section horizontal>
           <q-card-section class="q-pa-sm">
             <q-icon left name="fa-brands fa-apple" />
           </q-card-section>
-          <q-separator vertical />
-          <q-card-section class="q-py-none q-px-sm">
+          <q-separator vertical class="" />
+          <q-card-section class="q-py-none">
             Available at the<br />
             App Store
           </q-card-section>
         </q-card-section>
       </q-card>
     </q-btn>
-    <q-btn class="q-ma-md" color="deep-orange" push>
+    <q-btn class="q-my-md" color="deep-orange" push>
       <q-card flat class="flat transparent">
         <q-card-section horizontal>
           <q-card-section class="q-pa-sm">
@@ -122,13 +130,15 @@
     </q-btn>
   </q-toolbar>
   <!-- /Appstore / Google play buttons-->
+
+  <!--location-->
   <q-toolbar class="q-pt-lg justify-center align-center no-margin">
     <span>
       <q-icon name="fa-solid fa-location-dot" /> 28 Cairo - Alexandria Desert
       Rd, Al Giza Desert, Giza Governorate 12677, Egypt</span
     >
   </q-toolbar>
-  <!--[terms - privacy - refund - shipping policy]-->
+  <!--location-->
 
   <!-- User can see a small list of strings next to each other with the first four as hyper links indicating
       [terms - privacy - refund - shipping policy] and then copy right of website, and then a link to the developer info.
@@ -156,6 +166,7 @@
       <span>All rights reserved © 2022 <strong>SupaDevs.</strong> </span>
     </a>
   </q-toolbar>
+  <!--[terms - privacy - refund - shipping policy]-->
 </template>
 
 <script>
@@ -210,3 +221,42 @@ export default {
   },
 };
 </script>
+
+<style>
+.insta {
+  background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.radio {
+  border-radius: 30%;
+}
+.idk {
+  @media only screen and (max-width: 375px) {
+    max-width: 365px;
+  }
+}
+</style>
