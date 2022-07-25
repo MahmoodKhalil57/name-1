@@ -1,7 +1,7 @@
 <template>
   <q-page
     class="column content-center page_container"
-    v-if="products_full"
+    v-if="products_full.length"
     padding
   >
     <!-- Title -->
@@ -402,12 +402,12 @@ export default {
       const productsCol = collection(db, "products_full");
       const prodSnapshot = await getDocs(productsCol);
       const prodList = prodSnapshot.docs.map((doc) => doc.data());
-      return prodList;
+      this.products_full = prodList;
     },
   },
   created() {
     this.set_product();
-    this.products_full = this.getProducts(db);
+    this.getProducts(db);
     this.set_more();
   },
   setup() {

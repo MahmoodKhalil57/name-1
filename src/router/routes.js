@@ -170,13 +170,10 @@ const routes = [
   },
   {
     path: "/dev",
-    meta: { root: "Home", current: "dev" },
+    meta: { root: "Home", current: "Dev" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [
-      {
-        path: "",
-        component: () => import("src/pages/homePage/homeWrapper.vue"),
-      },
+      { path: "", component: () => import("pages/testPage.vue") },
     ],
   },
   {
