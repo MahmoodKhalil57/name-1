@@ -1,5 +1,9 @@
 <template>
-  <q-page class="column content-center page_container" padding>
+  <q-page
+    class="column content-center page_container"
+    v-if="products_full.length"
+    padding
+  >
     <!-- Title -->
     <div class="column text-center q-mb-xl q-mt-sm">
       <span class="header-title">{{
@@ -11,7 +15,13 @@
     </div>
     <!-- Product -->
     <div
-      class="row justify-between no-margin no-padding q-gutter-md product_container"
+      class="
+        row
+        justify-between
+        no-margin no-padding
+        q-gutter-md
+        product_container
+      "
     >
       <!-- Images (left) <--/  ---   /-->
       <div class="col-4 q-ma-md column bg-wolf">
@@ -263,7 +273,7 @@
     <div class="text-center">
       <span class="more_title">More Products</span>
     </div>
-    <div class="row content-center q-pa-md q-gutter-xl">
+    <div class="row content-center q-pa-md q-gutter-xl" v-if="more_products">
       <q-card
         class="flex-item column shadow-3"
         v-for="product in more_products"
@@ -341,358 +351,17 @@
 
 <script>
 import { ref } from "vue";
+import dataModel from "src/boot/dataModel";
 
 export default {
   // name: 'PageName',
+  mixins: [dataModel],
   data: function () {
     return {
       current_product: null,
       current_image: 0,
-      more_products: [0, 1, 5],
-      products_full: [
-        {
-          name: "Alphonso",
-          link: "/alphonso",
-          title_one: "Sooper Alphonso - Badami Mango",
-          desc_one: "Delivery May 17, 2022 onwards",
-          images: [
-            "https://soopermango.com/images/product-images/ratnagiri_2.jpg",
-            "https://soopermango.com/images/product-images/ratnagiri_shop.jpg",
-            "https://soopermango.com/images/product-images/ratnagiri_3.jpg",
-            "https://soopermango.com/images/product-images/ratnagiri_4.jpg",
-          ],
-
-          title_two: "Alphonso - Badami Mango",
-          reviews: {
-            stars: 4,
-            count: 51,
-            review_array: [
-              {
-                name: "Megha Bhaskar",
-                date: "18-May-2022",
-                location: "Bengaluru, Karnataka",
-                stars: 5,
-                content:
-                  "Awesome and tasty mangoes which was enjoyed by all age groups at our house.... ordering, processing, support and delivery were excellent .....Love you guys !! ",
-              },
-              {
-                name: "Omar Khorshid",
-                date: "18-May-2022",
-                location: "Bengaluru, Karnataka",
-                stars: 5,
-                content:
-                  "Awesome and tasty mangoes which was enjoyed by all age groups at our house.... ordering, processing, support and delivery were excellent .....Love you guys !! ",
-              },
-            ],
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-
-          product_code: "AL1009",
-          description:
-            "Alphonso is a premium quality mango in terms of sweetness, richness, and flavour. It is famous for its unique fragrance and taste. Alphonso is considered as the king of mangoes. It must be noted that in India, it is an obsession during the season.",
-          nutrients: "Vitamin A&B",
-          health_benefits: [
-            "Presence of rich anti-oxidants makes Alphonso an effective fighter against cancer.",
-            "Presence of certain nutrients make Alphonso an effective fighter against problems related to respiratory system, digestive system, and skin related ailments.",
-            "Research studies have shown that Alphonso can fight ailments like nephritis.",
-            "Presence of iron makes Alphonso a must have for anaemic patients.",
-          ],
-          color: ["Saffron", "Yellow", "Golden"],
-          shares: 2.4,
-        },
-        {
-          name: "Rajgira Lalbagh Mango",
-          link: "/rajgira-lalbagh-mango",
-          title_one: "Sooper Lalbagh Mango - Sindhura Mango",
-          desc_one: "Delivery May 17, 2022 onwards",
-          images: [
-            "https://soopermango.com/images/product-images/D804CE5B-985B-49B2-9BBE-172AEE9C2E00.jpeg",
-            "https://soopermango.com/images/product-images/rajgira_shop.jpg",
-            "https://soopermango.com/images/product-images/sindhura_boxed.jpg",
-          ],
-
-          title_two: "Lalbagh Mango - Sindhura Mango",
-          reviews: {
-            stars: 3,
-            count: 4,
-            review_array: [
-              {
-                name: "Megha Bhaskar",
-                date: "18-May-2022",
-                location: "Bengaluru, Karnataka",
-                stars: 5,
-                content:
-                  "Awesome and tasty mangoes which was enjoyed by all age groups at our house.... ordering, processing, support and delivery were excellent .....Love you guys !! ",
-              },
-              {
-                name: "Omar Khorshid",
-                date: "18-May-2022",
-                location: "Bengaluru, Karnataka",
-                stars: 5,
-                content:
-                  "Awesome and tasty mangoes which was enjoyed by all age groups at our house.... ordering, processing, support and delivery were excellent .....Love you guys !! ",
-              },
-            ],
-          },
-          availabilty: false,
-          prices: ["₹650 - 3kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-
-          product_code: "PD1009",
-          description:
-            "Rajgira in some parts of Karnataka known as lalbagh mango and as sindhoora mango in most parts of India. The term 'sindhoora' came about due to its vermillion shade that resembles Sindoor. It is also known as 'Honey Mango' because of its exceptional flavor and sweetness.",
-          nutrients: "Vitamin C",
-          health_benefits: [
-            "Presence of rich anti-oxidants makes Rajgira an effective fighter against cancer.",
-            "Prevents heart related ailments",
-            "Fights inflammation",
-          ],
-          color: ["Green with a tinge of red"],
-          shares: 0,
-        },
-        {
-          name: "Totapuri",
-          link: "/totapuri",
-          title_one: "Sooper Totapuri Mango",
-          desc_one: "Delivery May 17, 2022 onwards",
-          images: [
-            "https://soopermango.com/images/product-images/totapuri_2.jpg",
-            "https://soopermango.com/images/product-images/totapuri_3.jpg",
-          ],
-
-          title_two: "Totapuri Mango",
-          reviews: {
-            stars: 5,
-            count: 3,
-            review_array: [
-              {
-                name: "Megha Bhaskar",
-                date: "18-May-2022",
-                location: "Bengaluru, Karnataka",
-                stars: 5,
-                content:
-                  "Awesome and tasty mangoes which was enjoyed by all age groups at our house.... ordering, processing, support and delivery were excellent .....Love you guys !! ",
-              },
-              {
-                name: "Omar Khorshid",
-                date: "18-May-2022",
-                location: "Bengaluru, Karnataka",
-                stars: 5,
-                content:
-                  "Awesome and tasty mangoes which was enjoyed by all age groups at our house.... ordering, processing, support and delivery were excellent .....Love you guys !! ",
-              },
-            ],
-          },
-          availabilty: false,
-          prices: ["₹550 - 3kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-
-          product_code: "TO1009",
-          description:
-            "Totapuri mangoes are also known by the following names: Bengalura, Sandarsha. The matured (ripe) totapuri mangoes are medium or large in size, with an oblong shape and a pointed base. The pointed beak like shape of the fruit fetched the name Totapuri. In Devanagiri language, parrot is referred to as Totatpuri. It must be noted that the by-products from Totapuri mangoes are of high nutritional value.",
-          nutrients: "Vitamin A, E, C & B5",
-          health_benefits: [
-            "Presence of rich anti-oxidants makes Totapuri an effective fighter against cancer.",
-            "Presence of certain nutrients make Totapuri an effective medicine for ailments related to the eye.",
-            "Totapuri mangoes can be used to handle heart related ailments. ",
-          ],
-          color: ["Yellow", "Green", "or a mix of yellow and green"],
-          shares: 0,
-        },
-        {
-          name: "Romania Apple Mango",
-          link: "/romania-apple-mango",
-          title_one: "Sooper Romania Apple Mango",
-          desc_one: "Delivery June 1, 2022 onwards",
-          images: [
-            "https://soopermango.com/images/product-images/45A29F20-5120-442D-B411-6D7BBB6879D8.jpeg",
-            "https://soopermango.com/images/product-images/36D7F424-8A11-4752-8F5C-39916D09F665.jpeg",
-            "https://soopermango.com/images/product-images/mug_shot.jpg",
-            "https://soopermango.com/images/product-images/IMG_9558.jpg",
-            "https://soopermango.com/images/product-images/IMG_9559.jpg",
-          ],
-
-          title_two: "Romania Apple Mango",
-          reviews: {
-            stars: 4,
-            count: 3,
-            review_array: [
-              {
-                name: "Megha Bhaskar",
-                date: "18-May-2022",
-                location: "Bengaluru, Karnataka",
-                stars: 5,
-                content:
-                  "Awesome and tasty mangoes which was enjoyed by all age groups at our house.... ordering, processing, support and delivery were excellent .....Love you guys !! ",
-              },
-              {
-                name: "Omar Khorshid",
-                date: "18-May-2022",
-                location: "Bengaluru, Karnataka",
-                stars: 5,
-                content:
-                  "Awesome and tasty mangoes which was enjoyed by all age groups at our house.... ordering, processing, support and delivery were excellent .....Love you guys !! ",
-              },
-            ],
-          },
-          availabilty: false,
-          prices: ["₹950 - 3kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-
-          product_code: "RA1009",
-          description:
-            "Mangoes of the Romanian kind are primarily farmed in North Andhra Pradesh also known as Rumani Mango. The tasty pulp is golden yellow in hue and the mature mango skin is yellowish green with a red tint at the top. It has a pulp that is sweet, juicy, and low in fibre. Romanian mangoes are also high in vitamins A and C. These are primarily used as table fruit, but they can also be used to make a variety of mango cocktails, such as smoothies.",
-          nutrients: "Vitamin A & C",
-          health_benefits: ["Helps in digestion"],
-          color: ["Yellowish green"],
-          shares: 0,
-        },
-        {
-          name: "Neelam",
-          link: "/neelam",
-          title_one: "Sooper Neelam Mango",
-          desc_one: "Delivery June 20, 2022 onwards",
-          images: ["https://soopermango.com/images/product-images/neelam.jpg"],
-
-          title_two: "Neelam Mango",
-          reviews: {
-            stars: 0,
-            count: 0,
-            review_array: [],
-          },
-          availabilty: false,
-          prices: ["₹500 - 3kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-
-          product_code: "NE1009",
-          description:
-            "Neelam is a south indian mango variety, widely grown throughout the country and in China. The Neelam is known for its availability. Neelam mangoes are perfectly shaped - large, oblong, and pointed base.",
-          nutrients: "Dietary Fiber and Proteins",
-          health_benefits: [
-            "Presence of rich anti-oxidants makes Neelam an effective fighter against cancer.",
-            "Prevents heart related ailments",
-          ],
-          color: ["mooth-skinned and bright yellow upon ripening."],
-          shares: 0,
-        },
-        {
-          name: "Mallika",
-          link: "/mallika",
-          title_one: "Sooper Mallika Mango",
-          desc_one: "Delivery June 20, 2021 onwards",
-          images: [
-            "https://soopermango.com/images/product-images/mallika_shop.jpg",
-            "https://soopermango.com/images/product-images/mallika_1.jpg",
-          ],
-
-          title_two: "Mallika Mango",
-          reviews: {
-            stars: 0,
-            count: 0,
-            review_array: [],
-          },
-          availabilty: false,
-          prices: ["₹500 - 3kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-
-          product_code: "MA1009",
-          description:
-            "Mallika is a hybrid variety of mangoes that is born out of combining Neelam and Dasheri varieties of mangoes. It must be noted that this variety is picked up as raw mangoes (green), and then ripened by maintaining them at room temperature. The process of ripening typically takes 2 to 3 weeks. Mallika happens to be a semi - dwarf variety of mango that is from India.",
-          nutrients: "Vitamin A & B",
-          health_benefits: [
-            "Presence of rich anti-oxidants makes Mallika an effective fighter against cancer.",
-            "Presence of certain nutrients make Mallika an effective medicine for ailments related to the eye.",
-            "Improves the digestive system",
-            "Increased immunity system",
-            "Plays a key role in fighting stroke",
-          ],
-          color: ["Saffron", "Yellow", "Golden", "Green"],
-          shares: 0,
-        },
-        {
-          name: "Mulgoba",
-          link: "/mulgoba",
-          title_one: "Sooper Mulgoba Mango",
-          desc_one: "Delivery June 20, 2022 onwards",
-          images: [
-            "https://soopermango.com/images/product-images/mulgoba.jpg",
-            "https://soopermango.com/images/product-images/mulgoba_2.jpg",
-          ],
-
-          title_two: "Mulgoba Mango",
-          reviews: {
-            stars: 5,
-            count: 3,
-            review_array: [
-              {
-                name: "Megha Bhaskar",
-                date: "18-May-2022",
-                location: "Bengaluru, Karnataka",
-                stars: 5,
-                content:
-                  "Awesome and tasty mangoes which was enjoyed by all age groups at our house.... ordering, processing, support and delivery were excellent .....Love you guys !! ",
-              },
-              {
-                name: "Omar Khorshid",
-                date: "18-May-2022",
-                location: "Bengaluru, Karnataka",
-                stars: 5,
-                content:
-                  "Awesome and tasty mangoes which was enjoyed by all age groups at our house.... ordering, processing, support and delivery were excellent .....Love you guys !! ",
-              },
-            ],
-          },
-          availabilty: false,
-          prices: ["₹350 - 3kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-
-          product_code: "MAL1009",
-          description:
-            "Malgova variety of mangoes can be termed as the mangoes from the south of India. The yield in case of this variety is less. Malgova is considered as one of the best varieties of mangoes. This variety of mangoes are transplanted in Florida, and a strain is grown is Malaysia.",
-          nutrients: "It has low acidity (0.11) with a pH of 4.65",
-          health_benefits: [
-            "Presence of rich anti-oxidants makes Malgova an effective fighter against cancer.",
-            "Improves cardiac health",
-            "Lowers cholesterol ",
-          ],
-          color: ["Green colour (with hints of red) when ripe."],
-          shares: 0,
-        },
-        {
-          name: "Banganapalli",
-          link: "/banganapalli",
-          title_one: "Sooper Banganapalli Mango",
-          desc_one: "Delivery June 20, 2021 onwards",
-          images: [
-            "https://soopermango.com/images/product-images/benishan.png",
-          ],
-
-          title_two: "Banganapalli Mango",
-          reviews: {
-            stars: 0,
-            count: 0,
-            review_array: [],
-          },
-          availabilty: false,
-          prices: ["₹500 - 3kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-
-          product_code: "BP1009",
-          description:
-            "Banganapalli mango hails from a village of the same name in Andhra Pradesh. With its pleasant aroma, thin blemish - free skin and fibre - free sweet yellow pulp, the Baganapalli is certainly the choice for those who dont like fibrous textures in their fruit.",
-          nutrients: "Vitamin A & C",
-          health_benefits: [
-            "Presence of rich anti-oxidants makes Banganapalli an effective fighter against cancer.",
-            "Prevents heat stroke",
-            "Improves concentration and memory",
-            "Boosts Immunity ",
-          ],
-          color: ["Yellow flesh and a thin", " smooth yellow skin"],
-          shares: 0,
-        },
-      ],
+      more_products: [],
+      products_full: [],
     };
   },
   methods: {
@@ -715,22 +384,25 @@ export default {
       });
     },
     set_more: function () {
-      var more_products = [];
+      var rand_products = [];
       for (let i = 0; i < 3; i++) {
-        if (more_products.length + 1 < this.products_full.length) {
+        if (rand_products.length + 1 < this.products_full.length) {
           var rand = Math.floor(Math.random() * this.products_full.length);
-          while (rand == this.current_product || more_products.includes(rand)) {
+          while (rand == this.current_product || rand_products.includes(rand)) {
             rand = Math.floor(Math.random() * this.products_full.length);
           }
-          more_products.push(rand);
+          rand_products.push(rand);
         }
       }
-      this.more_products = more_products;
+      this.more_products = rand_products;
     },
   },
   created() {
     this.set_product();
-    this.set_more();
+    this.getProducts("products_full").then((products_full) => {
+      this.products_full = products_full;
+      this.set_more();
+    });
   },
   setup() {
     return {

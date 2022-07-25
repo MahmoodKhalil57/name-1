@@ -12,10 +12,10 @@
         :key="product"
       >
         <a :href="product.link"
-          ><q-img class="default-image" :src="product.image"> </q-img
+          ><q-img class="default-image" :src="product.images[0]"> </q-img
         ></a>
         <div class="q-pa-md">
-          <span class="title-font">{{ product.title }}</span>
+          <span class="title-font">{{ product.name }}</span>
         </div>
         <div class="row align-center q-px-md q-pb-sm q-gutter-md">
           <div class="row flex-center">
@@ -42,7 +42,7 @@
         <div class="row q-px-xl q-py-sm q-gutter-sm">
           <span>Availabilty: </span>
           <span class="stock-font">{{
-            product.reviews.availability ? "In Stock" : "Out of Stock"
+            product.availability ? "In Stock" : "Out of Stock"
           }}</span>
         </div>
         <hr class="default-separator" />
@@ -70,7 +70,7 @@
         </div>
         <hr class="default-separator" />
         <div class="q-py-sm text-center delivery-font">
-          <span>{{ product.date }}</span>
+          <span>{{ product.desc_one }}</span>
         </div>
         <hr class="default-separator final-separator" />
         <div class="row q-pa-md justify-center buttons-background">
@@ -84,139 +84,36 @@
 
 <script>
 import { ref } from "vue";
+import dataModel from "src/boot/dataModel";
+
 export default {
   // name: 'ComponentName',
+
+  mixins: [dataModel],
   data: function () {
     return {
-      products: [
-        {
-          link: "/alphonso",
-          image:
-            "https://soopermango.com/images/product-images/ratnagiri_shop3.jpg",
-          title: "Alphonso - Badami Mango",
-          reviews: {
-            stars: 4,
-            count: 51,
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery May 17, 2022 onwards",
-        },
-        {
-          link: "/rajgira-lalbagh-mango",
-          image:
-            "https://soopermango.com/images/product-images/rajgira_shop.jpg",
-          title: "Lalbagh Mango - Sindhura Mango",
-          reviews: {
-            stars: 3,
-            count: 4,
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery May 17, 2022 onwards",
-        },
-        {
-          link: "/totapuri",
-          image:
-            "https://soopermango.com/images/product-images/totapuri_shop.jpg",
-          title: "Totapuri Mango",
-          reviews: {
-            stars: 5,
-            count: 3,
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery May 17, 2022 onwards",
-        },
-        {
-          link: "/romania-apple-mango",
-          image:
-            "https://soopermango.com/images/product-images/apple_mango.jpg",
-          title: "Romania Apple Mango",
-          reviews: {
-            stars: 4,
-            count: 3,
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery June 1, 2022 onwards",
-        },
-        {
-          link: "/neelam",
-          image: "https://soopermango.com/images/product-images/neelam.jpg",
-          title: "Neelam Mango",
-          reviews: {
-            stars: 0,
-            count: 0,
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery June 20, 2022 onwards",
-        },
-        {
-          link: "/mallika",
-          image:
-            "https://soopermango.com/images/product-images/mallika_shop.jpg",
-          title: "Mallika Mango",
-          reviews: {
-            stars: 0,
-            count: 0,
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery June 20, 2021 onwards",
-        },
-        {
-          link: "/mulgoba",
-          image: "https://soopermango.com/images/product-images/mulgoba.jpg",
-          title: "Mulgoba Mango",
-          reviews: {
-            stars: 5,
-            count: 3,
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery June 20, 2021 onwards",
-        },
-        {
-          link: "/banganapalli",
-          image: "https://soopermango.com/images/product-images/benishan.png",
-          title: "Mallika Mango",
-          reviews: {
-            stars: 0,
-            count: 0,
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery June 20, 2021 onwards",
-        },
-      ],
+      products: [],
     };
   },
   methods: {
     set_search: function (search) {
-      var new_products = [];
-      this.products.forEach((product) => {
-        if (product.title.includes(search)) {
-          new_products.push(product);
-        }
-      });
-      this.products = new_products;
+      if (search) {
+        var new_products = [];
+        this.products.forEach((product) => {
+          if (product.title.toLowerCase().includes(search)) {
+            new_products.push(product);
+          }
+        });
+        this.products = new_products;
+      }
     },
   },
-  created() {
+  beforeMount() {
     const search = window.location.href.split("?search=")[1];
-    if (search) {
+    this.getProducts("products_full").then((products_full) => {
+      this.products = products_full;
       this.set_search(search);
-    }
+    });
   },
   setup() {
     return {
