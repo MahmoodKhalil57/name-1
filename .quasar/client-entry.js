@@ -141,7 +141,9 @@ createQuasarApp(createApp, quasarUserOptions)
       
       import('boot/RegisterGlobalComponents'),
       
-      import('boot/firebase')
+      import('boot/firebase'),
+      
+      import('boot/dataModel')
       
     ]).then(bootFiles => {
       const boot = bootFiles

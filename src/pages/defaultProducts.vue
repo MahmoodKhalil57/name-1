@@ -351,12 +351,11 @@
 
 <script>
 import { ref } from "vue";
-import { collection, getDocs } from "firebase/firestore/lite";
-
-import db from "src/boot/firebase";
+import dataModel from "src/boot/dataModel";
 
 export default {
   // name: 'PageName',
+  mixins: [dataModel],
   data: function () {
     return {
       current_product: null,
@@ -397,18 +396,13 @@ export default {
       }
       this.more_products = rand_products;
     },
-
-    getProducts: async function (db) {
-      const productsCol = collection(db, "products_full");
-      const prodSnapshot = await getDocs(productsCol);
-      const prodList = prodSnapshot.docs.map((doc) => doc.data());
-      this.products_full = prodList;
-    },
   },
   created() {
     this.set_product();
-    this.getProducts(db);
-    this.set_more();
+    this.getProducts("products_full").then((products_full) => {
+      this.products_full = products_full;
+      this.set_more();
+    });
   },
   setup() {
     return {
