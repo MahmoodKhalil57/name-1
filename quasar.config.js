@@ -31,7 +31,8 @@ module.exports = configure(function (/* ctx */) {
     // https://v2.quasar.dev/quasar-cli/boot-files
     boot: [
       "RegisterGlobalComponents",
-      "firebase"
+      "firebase",
+      "dataModel"
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
