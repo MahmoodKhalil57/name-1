@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import dataModel from "src/boot/dataModel";
+import dataModel from "src/mixins/dataModel";
 
 export default {
   // name: 'PageName',
@@ -16,8 +16,8 @@ export default {
     };
   },
   created() {
-    this.getProducts("products_full").then((products_full) => {
-      this.products_full = products_full;
+    this.getProducts("products_full").then((result) => {
+      this.products_full = result;
     });
   },
 };

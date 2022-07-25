@@ -1,4 +1,3 @@
-
 import db from "src/boot/firebase";
 import { collection, getDocs, setDoc } from 'firebase/firestore/lite';
 // "async" is optional;
@@ -13,9 +12,7 @@ export default {
     },
     async setProducts(col, data) {
       const productsCol = collection(db, col);
-      const prodSnapshot = await setDoc(productsCol, data);
-      const products_full = prodSnapshot.docs.map((doc) => doc.data());
-      return products_full;
+      await setDoc(productsCol, data);
     }
   }
 };

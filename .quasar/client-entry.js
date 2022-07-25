@@ -139,11 +139,7 @@ createQuasarApp(createApp, quasarUserOptions)
   .then(app => {
     return Promise.all([
       
-      import('boot/RegisterGlobalComponents'),
-      
-      import('boot/firebase'),
-      
-      import('boot/dataModel')
+      import('boot/RegisterGlobalComponents')
       
     ]).then(bootFiles => {
       const boot = bootFiles

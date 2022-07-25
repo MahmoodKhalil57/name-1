@@ -351,7 +351,7 @@
 
 <script>
 import { ref } from "vue";
-import dataModel from "src/boot/dataModel";
+import dataModel from "src/mixins/dataModel";
 
 export default {
   // name: 'PageName',
