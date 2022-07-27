@@ -52,30 +52,6 @@
     </a>
   </q-toolbar>
   <!-- /Icon  -->
-  <!-- Social media -->
-  <q-toolbar
-    class="row max-width wrap justify-evenly q-py-xl fa-4x q-gutter-lg"
-    style="width: auto; height: auto"
-  >
-    <q-space />
-    <a href="javascript:void(0)" target="_self" class="flinks">
-      <q-icon class="fa-brands fa-facebook-square" color="blue-8" />
-    </a>
-
-    <a href="javascript:void(0)" target="_self" class="flinks">
-      <q-icon class="fa-brands fa-instagram insta radio" color="dark" />
-    </a>
-
-    <a href="javascript:void(0)" target="_self" class="flinks">
-      <q-icon class="fa-brands fa-twitter-square" color="light-blue-5" />
-    </a>
-
-    <a href="javascript:void(0)" target="_self" class="flinks">
-      <q-icon class="fa-brands fa-youtube-square" color="red" />
-    </a>
-    <q-space />
-  </q-toolbar>
-  <!-- /Social media -->
 
   <!-- whatsapp/num/email-->
   <q-toolbar class="q-my-md justify-center align-center">
@@ -130,6 +106,31 @@
     </q-btn>
   </q-toolbar>
   <!-- /Appstore / Google play buttons-->
+
+  <!-- Social media -->
+  <q-toolbar
+    class="row max-width wrap justify-evenly q-py-xs fa-4x q-gutter-lg"
+    style="width: auto; height: auto"
+  >
+    <q-space />
+    <a href="javascript:void(0)" target="_self" class="flinks">
+      <q-icon class="fa-brands fa-facebook-square" color="blue-8" />
+    </a>
+
+    <a href="javascript:void(0)" target="_self" class="flinks">
+      <q-icon class="fa-brands fa-instagram insta radio" color="dark" />
+    </a>
+
+    <a href="javascript:void(0)" target="_self" class="flinks">
+      <q-icon class="fa-brands fa-twitter-square" color="light-blue-5" />
+    </a>
+
+    <a href="javascript:void(0)" target="_self" class="flinks">
+      <q-icon class="fa-brands fa-youtube-square" color="red" />
+    </a>
+    <q-space />
+  </q-toolbar>
+  <!-- /Social media -->
 
   <!--location-->
   <q-toolbar class="q-pt-lg justify-center align-center no-margin">
