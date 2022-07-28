@@ -15,13 +15,7 @@
     </div>
     <!-- Product -->
     <div
-      class="
-        row
-        justify-between
-        no-margin no-padding
-        q-gutter-md
-        product_container
-      "
+      class="row justify-between no-margin no-padding q-gutter-md product_container"
     >
       <!-- Images (left) <--/  ---   /-->
       <div class="col-4 q-ma-md column bg-wolf">
@@ -63,13 +57,13 @@
           </div>
         </q-dialog>
         <img
-          class="q-pa-sm selected_image zoom-without-container point-img-zoom"
+          class="q-pa-sm selected_image zoom-without-container point-img-zoom animate__backInDown zoom-in-pointer"
           :src="products_full[current_product].images[current_image]"
           @click="alert = true"
         />
-        <div class="row q-pa-sm q-gutter-md image_group">
+        <div class="row q-pa-sm q-gutter-md image_group animate__backInDown">
           <img
-            class="single_image"
+            class="single_image animate__backInDown pointer"
             :src="image"
             v-for="(image, index) in products_full[current_product].images"
             :key="image"
@@ -352,6 +346,7 @@
 <script>
 import { ref } from "vue";
 import dataModel from "src/mixins/dataModel";
+import "animate.css";
 
 export default {
   // name: 'PageName',
@@ -585,5 +580,11 @@ export default {
 .login-text {
   font: normal normal 400 16px/24px roboto, sans-serif;
   color: #212529;
+}
+.pointer:hover {
+  cursor: pointer;
+}
+.zoom-in-pointer:hover {
+  cursor: zoom-in;
 }
 </style>
