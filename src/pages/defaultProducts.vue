@@ -351,11 +351,9 @@
 
 <script>
 import { ref } from "vue";
-import dataModel from "src/mixins/dataModel";
 
 export default {
   // name: 'PageName',
-  mixins: [dataModel],
   data: function () {
     return {
       current_product: null,
@@ -399,7 +397,7 @@ export default {
   },
   created() {
     this.set_product();
-    this.getProducts("products_full").then((products_full) => {
+    this.$store.commit('mydata/getProducts').then((products_full) => {
       this.products_full = products_full;
       this.set_more();
     });
