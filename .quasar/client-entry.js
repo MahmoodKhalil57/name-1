@@ -252,7 +252,7 @@ const publicPath = `/`
 async function start ({
   app,
   router
-  
+  , store, storeKey
 }, bootFiles) {
   
 
@@ -290,7 +290,7 @@ async function start ({
       await bootFiles[i]({
         app,
         router,
-        
+        store,
         ssrContext: null,
         redirect,
         urlPath,
@@ -314,7 +314,7 @@ async function start ({
   
 
   app.use(router)
-  
+  app.use(store, storeKey)
 
   
 
