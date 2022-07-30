@@ -1,9 +1,7 @@
 <template>
   <q-page
-
     class="column flex-center"
-    v-if="products_full && current_product"
-
+    v-if="this.products_full && this.current_product!== null"
   >
     <div class=" q-pa-lg content-center page-top">
       <!-- Title -->
