@@ -2,7 +2,7 @@ const { initializeApp } = require('firebase/app');
 const { getFirestore , collection , getDocs  } = require('firebase/firestore');
 
 
-var serviceAccount = require(process.cwd() + "netlify\\farmweb-fe430-firebase-adminsdk-kta05-b31654ee77.json");
+var serviceAccount = require(process.cwd() + "\\netlify\\farmweb-fe430-firebase-adminsdk-kta05-b31654ee77.json");
 
 // admin.initializeApp({
 //   credential: admin.credential.cert(serviceAccount)
