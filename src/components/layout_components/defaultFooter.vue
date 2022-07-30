@@ -134,9 +134,9 @@
 
   <!--location-->
   <q-toolbar class="q-pt-lg justify-center align-center no-margin">
-    <span>
+    <a href="https://goo.gl/maps/XHHJXeABQKWpaBGw8" target="_blank" class="flinks">
       <q-icon name="fa-solid fa-location-dot" /> 28 Cairo - Alexandria Desert
-      Rd, Al Giza Desert, Giza Governorate 12677, Egypt</span
+      Rd, Al Giza Desert, Giza Governorate 12677, Egypt</a
     >
   </q-toolbar>
   <!--location-->
