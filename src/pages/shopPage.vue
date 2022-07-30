@@ -50,8 +50,8 @@
         <div
           class="row full-width flex-center justify-between q-px-xl q-py-sm q-gutter-sm"
         >
-          <label for="framework">Price:</label>
-          <select id="framework" class="select-round">
+          <label for="price">Price:</label>
+          <select id="price" class="select-round ss-400">
             <option
               style="text-align: center"
               v-for="price in product.prices"
@@ -64,9 +64,10 @@
         <hr class="default-separator" />
         <!--quantity-->
         <div class="row full-width flex-center justify-between q-px-xl q-py-sm">
-          <label>Quantity:</label>
-          <select class="select-round">
+          <label for="quanity">Quantity:</label>
+          <select id="quanity" class="select-round ss-400">
             <option
+              class="ss-400"
               style="text-align: center"
               v-for="quanitiy in product.quanitiy"
               :key="quanitiy"
@@ -210,10 +211,14 @@ export default {
   border-radius: 20px;
   background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
   background-repeat: no-repeat;
-  background-position-x: 98%;
+  background-position-x: 99.9%;
   background-position-y: 7px;
   -moz-appearance: none; /* Firefox */
   -webkit-appearance: none; /* Safari and Chrome */
   appearance: none;
+}
+.ss-400{
+  font:normal normal 100 14px/21px sans-serif;
+  color:hsl(0, 0%, 46%);
 }
 </style>

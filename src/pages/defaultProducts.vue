@@ -65,13 +65,13 @@
             </div>
           </q-dialog>
           <img
-            class="q-pa-sm selected_image zoom-without-container point-img-zoom"
+            class="q-pa-sm selected_image zoom-without-container point-img-zoom zoom-in-pointer"
             :src="products_full[current_product].images[current_image]"
             @click="alert = true"
           />
           <div class="row q-pa-sm q-gutter-md image_group">
             <img
-              class="single_image"
+              class="single_image pointer"
               :src="image"
               v-for="(image, index) in products_full[current_product].images"
               :key="image"
@@ -110,16 +110,20 @@
               >
             </div>
           </div>
-          <div class="column q-py-sm q-gutter-sm">
-            <span class="product_header">Price</span>
-            <q-select
-              rounded
-              outlined
-              :options="products_full[current_product].prices"
-              label="Rounded"
-              style="width: 100px"
-            />
-          </div>
+        <div
+          class="column full-width flex-start q-py-sm q-gutter-sm"
+        >
+          <label for="price" class="product_header q-ml-none">Price:</label>
+          <select id="price" class="select-round q-ml-none border2 bg-mouse">
+            <option
+              style="text-align: center"
+              v-for="price in products_full[current_product].prices"
+              :key="price"
+            >
+              {{ price }}
+            </option>
+          </select>
+        </div>
           <div class="column q-py-sm q-gutter-sm">
             <span class="product_header">Availabilty</span>
             <span class="stock-font">{{
@@ -128,17 +132,18 @@
                 : "Out of Stock"
             }}</span>
           </div>
-          <div class="column q-py-sm q-gutter-sm">
-            <span class="product_header">Quantity</span>
-            <q-select
-              class="default-select"
-              rounded
-              outlined
-              v-model="model"
-              :options="products_full[current_product].quanitiy"
-              label="Rounded Filled"
-            />
-          </div>
+          <div class="column full-width flex-start q-py-sm q-gutter-sm">
+          <label for="quanity" class="product_header q-ml-none">Quantity:</label>
+          <select id="quanity" class="select-round q-ml-none border2 bg-mouse">
+            <option
+              style="text-align: center"
+              v-for="quanitiy in products_full[current_product].quanitiy"
+              :key="quanitiy"
+            >
+              {{ quanitiy }}
+            </option>
+          </select>
+        </div>
           <div class="row q-gutter-md q-py-md">
             <q-btn class="q-pa-sm cart-button" no-caps>Add to Cart</q-btn>
             <q-btn class="q-pa-sm buy-button" no-caps>Buy Now</q-btn>
@@ -275,7 +280,7 @@
       <div class="text-center">
         <span class="more_title">More Products</span>
       </div>
-      <div class="row flex-center q-pa-md q-gutter-xl full-width items-stretch no-padding" v-if="more_products">
+      <div class="row flex-center q-py-xl q-gutter-xl full-width items-stretch" v-if="more_products">
         <q-card
           class="column shadow-3"
           v-for="product in more_products"
@@ -319,28 +324,33 @@
             }}</span>
           </div>
           <hr class="default-separator" />
-          <div class="row q-px-xl q-py-sm q-gutter-sm">
-            <span>Price: </span>
-            <q-select
-              rounded
-              outlined
-              :options="products_full[product].prices"
-              label="Rounded"
-              style="width: 100px"
-            />
-          </div>
+          <div
+          class="row full-width flex-center justify-between q-px-xl q-py-sm q-gutter-sm"
+        >
+          <label for="price" class="product_header">Price:</label>
+          <select id="price" class="select-round">
+            <option
+              style="text-align: center"
+              v-for="price in products_full[current_product].prices"
+              :key="price"
+            >
+              {{ price }}
+            </option>
+          </select>
+        </div>
           <hr class="default-separator" />
-          <div class="row q-px-xl q-py-sm q-gutter-sm">
-            <span>Quantity: </span>
-            <q-select
-              class="default-select"
-              rounded
-              outlined
-              v-model="model"
-              :options="products_full[product].quanitiy"
-              label="Rounded Filled"
-            />
-          </div>
+          <div class="row full-width flex-center justify-between q-px-xl q-py-sm">
+          <label for="quanity" class="product_header">Quantity:</label>
+          <select id="quanity" class="select-round">
+            <option
+              style="text-align: center"
+              v-for="quanitiy in products_full[current_product].quanitiy"
+              :key="quanitiy"
+            >
+              {{ quanitiy }}
+            </option>
+          </select>
+        </div>
           <hr class="default-separator final-separator" />
           <div class="row q-pa-md justify-center buttons-background">
             <q-btn class="q-pa-sm q-ma-sm cart-button" no-caps>Add to Cart</q-btn>
@@ -591,5 +601,31 @@ export default {
 }
 .page-top{
   max-width:70%;
+}
+.select-round {
+  width: 55%;
+  height: 40px;
+  border-color: $info;
+  cursor: pointer;
+  border-radius: 20px;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 99.9%;
+  background-position-y: 7px;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+}
+.border2{
+border: 2px inset #e6e6e6;
+}
+.bg-mouse{
+  background-color: #e6e6e6;
+}
+.pointer:hover {
+  cursor: pointer;
+}
+.zoom-in-pointer:hover {
+  cursor: zoom-in;
 }
 </style>
