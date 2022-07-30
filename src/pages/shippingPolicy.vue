@@ -67,7 +67,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .default-header-text {
   font-family: "Thasadith", sans-serif;
   font-size: 30px;

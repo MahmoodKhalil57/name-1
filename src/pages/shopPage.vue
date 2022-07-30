@@ -4,16 +4,16 @@
     <!--Item1:header-->
     <span class="title-font text-center q-mt-xl"> Order now </span>
     <!--Item2:FlexRowContainer-->
-    <div class="row q-pa-xl q-mb-xl q-gutter-lg justify-center flex-container">
+    <div class="row q-pa-xl q-mb-xl q-gutter-lg justify-center flex-container" v-if="products">
       <!--5Items Of Item2: FlexColumnContainer -->
       <q-card
         class="flex-item column shadow-3"
         v-for="product in products"
         :key="product"
       >
-        <a :href="product.link"
-          ><q-img class="default-image" :src="product.images[0]"> </q-img
-        ></a>
+        <router-link class="link-font" :to="{ path: product.link }">
+          <q-img class="default-image" :src="product.images[0]"> </q-img>
+        </router-link>
         <div class="q-pa-md">
           <span class="title-font">{{ product.name }}</span>
         </div>
@@ -33,9 +33,7 @@
             ></q-icon>
           </div>
           <div class="row flex-center">
-            <a :href="product.link + '#review'" class="link-font"
-              >Based on {{ product.reviews.count }} reviews</a
-            >
+            <router-link class="link-font" :to="{ path: product.link + '#review' }">Based on {{ product.reviews.count }} reviews</router-link>
           </div>
         </div>
         <hr class="default-separator" />
@@ -73,7 +71,7 @@
           <span>{{ product.desc_one }}</span>
         </div>
         <hr class="default-separator final-separator" />
-        <div class="row q-pa-md justify-center buttons-background">
+        <div class="row q-pa-md justify-center buttons-background full-width">
           <q-btn class="q-pa-sm q-ma-sm cart-button" no-caps>Add to Cart</q-btn>
           <q-btn class="q-pa-sm q-ma-sm buy-button" no-caps>Buy Now</q-btn>
         </div>
@@ -84,35 +82,45 @@
 
 <script>
 import { ref } from "vue";
-import dataModel from "src/mixins/dataModel";
+import { mapGetters , mapActions } from "vuex";
 
 export default {
-  // name: 'ComponentName',
-
-  mixins: [dataModel],
+  name: 'shopPage',
   data: function () {
     return {
-      products: [],
+      products : [],
     };
   },
+  computed: {
+    ...mapGetters({products_full : ('mydata/getProducts')}),
+    },
   methods: {
+    ...mapActions({
+      updateProducts: 'mydata/updateProductsFromDatabase'
+    }),
     set_search: function (search) {
       if (search) {
         var new_products = [];
-        this.products.forEach((product) => {
-          if (product.title.toLowerCase().includes(search)) {
+        this.products_full.forEach((product) => {
+          if (product.name.toLowerCase().includes(search)) {
             new_products.push(product);
           }
         });
         this.products = new_products;
       }
+      else{
+        this.products = this.products_full;
+      }
     },
   },
-  beforeMount() {
-    const search = window.location.href.split("?search=")[1];
-    this.getProducts("products_full").then((products_full) => {
-      this.products = products_full;
+  watch: {
+    "$route.query.search"(search) {
       this.set_search(search);
+    }
+  },
+  created() {
+    this.updateProducts().then(() => {
+      this.set_search(this.$route.query.search);
     });
   },
   setup() {
@@ -123,7 +131,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .flex-container {
   max-width: 2400px;
 }
@@ -155,7 +163,7 @@ export default {
   height: 100%;
 }
 .default-image {
-  width: 300px;
+  width: 100%;
   height: 240px;
 }
 .cart-button {

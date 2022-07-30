@@ -21,14 +21,13 @@
         value="Other button"
         @click="printstuff"
       />
-      <div>{{ $store.state.mydata.productData }}</div>
+      <div v-if="this.products_full">{{ this.products_full }}</div>
     </div>
   </q-page>
 </template>
 
 <script>
 import { api } from "boot/axios";
-
 export default {
   // name: 'PageName',
   data: function () {
@@ -41,11 +40,16 @@ export default {
   },
   methods:{
     dostuff:function(){
-      this.$store.commit('mydata/getProducts',"yeah!");
+      this.$store.dispatch('mydata/updateProductsFromDatabase');
     },
-    printstuff:function(){console.log(this.$store.state.mydata.userData)}
+    printstuff:function(){console.log(this.$store.getters['mydata/getProducts'])}
     },
-  created() {},
+  created() {
+    this.$store.dispatch('mydata/updateProductsFromDatabase').then(() => {
+      this.products_full = this.$store.getters['mydata/getProducts'];
+      // this.set_more();
+    });
+  },
   setup() {
     let data = {
       email: "",

@@ -15,10 +15,10 @@
       <!-- Top-Bar -->
       <div class="bg row items-center" :class="scale_stage_1.header">
         <!-- Logo -->
-        <a href="/"  :class="scale_stage_3.icon_align" class="q-my-lg rlu">
+        <router-link to="/"  :class="scale_stage_3.icon_align" class="q-my-lg rlu">
           <w-icon class="col" :iconSize="scale_stage_1.icon[0]" :style="scale_stage_3.icon_offset" />
           <w-name class="col" :iconSize="scale_stage_1.icon[1]" :style="scale_stage_3.name_offset" />
-        </a>
+        </router-link>
 
         <q-space v-if="scale_stage_2.logo_space"/>
 
@@ -29,14 +29,14 @@
           <div v-if="scale_stage_1.nav"
             class="inline GL__toolbar-link row no-wrap text-body1 text-weight-bold text-white"
           >
-            <q-btn flat rounded href="/">
+            <q-btn flat rounded to="/">
               <q-icon name="home" /> Home
             </q-btn>
-            <q-btn flat rounded href="/about"> About </q-btn>
-            <q-btn flat rounded href="/shop"> Shop </q-btn>
-            <q-btn flat rounded href="/mango-picking"> MangoPicking </q-btn>
-            <q-btn flat rounded href="/your-responses"> Testimonials </q-btn>
-            <q-btn flat rounded href="/contact"> Contact </q-btn>
+            <q-btn flat rounded to="/about"> About </q-btn>
+            <q-btn flat rounded to="/shop"> Shop </q-btn>
+            <q-btn flat rounded to="/mango-picking"> MangoPicking </q-btn>
+            <q-btn flat rounded to="/your-responses"> Testimonials </q-btn>
+            <q-btn flat rounded to="/contact"> Contact </q-btn>
           </div>
         </div>
         <!--- /Links -->
@@ -60,31 +60,31 @@
               <q-list dense style="min-width: 100px">
                 <q-item
                   clickable
-                  href="/about"
+                  to="/about"
                 >
                   <q-item-section>About</q-item-section>
                 </q-item>
                 <q-item
                   clickable
-                  href="/shop"
+                  to="/shop"
                 >
                   <q-item-section>Shop</q-item-section>
                 </q-item>
                 <q-item
                   clickable
-                  href="/mango-picking"
+                  to="/mango-picking"
                 >
                   <q-item-section>Mangopicking</q-item-section>
                 </q-item>
                 <q-item
                   clickable
-                  href="/your-responses"
+                  to="/your-responses"
                 >
                   <q-item-section>Testimonials</q-item-section>
                 </q-item>
                 <q-item
                   clickable
-                  href="contact"
+                  to="contact"
                 >
                   <q-item-section>Contact</q-item-section>
                 </q-item>
@@ -93,7 +93,7 @@
           </q-btn>
           <!-- /Navigate -->
           <!-- Cart -->
-          <q-btn color="accent" text-color="black" icon="shopping_cart" label="cart" href="/cart  " />
+          <q-btn color="accent" text-color="black" icon="shopping_cart" label="cart" to="/cart  " />
           <!-- /Cart -->
 
           <!-- Menu -->
@@ -112,32 +112,32 @@
               <q-list dense style="min-width: 100px">
                 <q-item
                   clickable
-                  href="/blog"
+                  to="/blog"
                 >
                   <q-item-section>Blog</q-item-section>
                 </q-item>
                 <q-item
                   clickable
-                  href="/gallery"
+                  to="/gallery"
                 >
                   <q-item-section>Gallery</q-item-section>
                 </q-item>
                 <q-item
                   clickable
-                  href="/tips"
+                  to="/tips"
                 >
                   <q-item-section>Ripening Tips</q-item-section>
                 </q-item>
                 <q-item
                   clickable
-                  href="/harvesting-process"
+                  to="/harvesting-process"
                 >
                   <q-item-section>Harvesting Process</q-item-section>
                 </q-item>
                 <q-separator />
                 <q-item
                   clickable
-                  href="/login"
+                  to="/login"
                 >
                   <q-item-section><q-icon name="login" />Login</q-item-section>
                 </q-item>
@@ -174,7 +174,7 @@
       </q-toolbar>
 
       <q-toolbar class=" q-py-lg row justify-center">
-        <q-btn class="text-h3" color="accent" text-color="black" icon="shopping_cart" label="Shop Now" href="/shop" rounded/>
+        <q-btn class="text-h3" color="accent" text-color="black" icon="shopping_cart" label="Shop Now" to="/shop" rounded/>
       </q-toolbar>
 
 
@@ -193,7 +193,7 @@
     <!-- The Footer -->
     <q-footer class="bg-dark" elevated>
       <q-toolbar class="bg-primary q-py-lg row justify-center">
-       <q-btn class="text-h3" color="accent" text-color="black" icon="shopping_cart" label="Shop Now" href="/shop" rounded/>
+       <q-btn class="text-h3" color="accent" text-color="black" icon="shopping_cart" label="Shop Now" to="/shop" rounded/>
       </q-toolbar>
       <!-- Google Maps-->
       <q-toolbar class="no-padding no-margin">
@@ -212,26 +212,26 @@
       </q-toolbar>
       <!-- Icon-->
       <q-toolbar class="q-py-lg row justify-center">
-        <a href="/" :class="scale_stage_3.icon_align" class="rlu">
+        <router-link to="/" :class="scale_stage_3.icon_align" class="rlu">
           <w-icon class="col self-center" :iconSize="scale_stage_1.icon[0]" :style="scale_stage_3.icon_offset" />
           <w-name class="col self-center" :iconSize="scale_stage_1.icon[1]" :style="scale_stage_3.name_offset" />
-        </a>
+        </router-link>
       </q-toolbar>
       <!-- whatsapp/num/email-->
       <q-toolbar class="q-my-md justify-center align-center">
         <q-card class="bg-primary">
           <q-card-section :class="scale_stage_3.icon_align">
-            <a href="javascript:void(0)" target="_self" class="flinks">
+            <router-link to="javascript:void(0)" target="_self" class="flinks">
               <q-icon name="mail" > </q-icon>
               Emailaddress@website.com
-            </a>
+            </router-link>
             <q-separator dark vertical class="q-mx-sm" />
-            <a href="/" class="flinks">
+            <router-link to="/" class="flinks">
               <q-icon
                 name="fa-brands fa-whatsapp"
               ></q-icon>
               +20122222234345
-            </a>
+            </router-link>
           </q-card-section>
         </q-card>
 

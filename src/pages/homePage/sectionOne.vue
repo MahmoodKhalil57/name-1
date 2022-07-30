@@ -33,7 +33,7 @@
         text-color="black"
         icon="shopping_cart"
         label="Shop Now"
-        href="/shop"
+        to="/shop"
         rounded
       />
     </q-toolbar>
@@ -55,7 +55,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .my-text {
   z-index: 2;
 }

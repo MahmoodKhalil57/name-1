@@ -98,7 +98,7 @@
   </q-page>
 </template>
 
-<style>
+<style scoped>
 div p {
   font-size: 17px;
   line-height: 2em;

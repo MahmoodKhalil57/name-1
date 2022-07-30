@@ -67,7 +67,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .flex-item {
   border-style: solid;
   border-width: 1px;

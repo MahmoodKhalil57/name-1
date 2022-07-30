@@ -20,8 +20,8 @@
         International Airport (45 min from Airport). Our mango trees are
         nourished under parental care and there are around hundreds of mango
         trees with all varieties. The major attraction are the
-        <a href="#" class="default-link">Totapuries</a> and
-        <a href="#" class="default-link">Alphonsos</a>. Pavana Vatika also grows
+        <router-link to="#" class="default-link">Totapuries</router-link> and
+        <router-link to="#" class="default-link">Alphonsos</router-link>. Pavana Vatika also grows
         other trees such as Aamla, jackfruits, cashews and blackberries. The
         total quantity of mangoes available may vary each year as mangoes are
         widely known to be irregular bearers in alternate years. <br /><br />
@@ -46,7 +46,7 @@
         pariatur.
         <br /><br />
         Each tree is subjected to our
-        <a href="#" class="default-link">harvesting cycle</a> over 1 week in
+        <router-link to="#" class="default-link">harvesting cycle</router-link> over 1 week in
         order to ensure that only ripe and healthy fruits are harvested.
         <br /><br />
 
@@ -61,7 +61,7 @@
         assisting natural ripening of mangoes for more than 48 hours. This
         method is universally approved all over the world including the USA and
         European Union. Check out our
-        <a href="#" class="default-link">Harvesting & Delivery process</a>.
+        <router-link to="#" class="default-link">Harvesting & Delivery process</router-link>.
       </div>
       <br />
       <hr />
@@ -84,7 +84,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 hr {
   height: 50%;
 }

@@ -3,8 +3,8 @@
     <!-- Top-Bar -->
     <div class="row items-center" :class="scale_stage_1[fw_gt_lg].header">
       <!-- Logo -->
-      <a
-        href="/"
+      <router-link
+        to="/"
         :class="scale_stage_2[fw_gt_sm].icon_align"
         class="q-my-lg rlu"
       >
@@ -18,7 +18,7 @@
           :iconSize="scale_stage_1[fw_gt_lg].icon[1]"
           :style="scale_stage_2[fw_gt_sm].name_offset"
         />
-      </a>
+      </router-link>
 
       <q-space v-if="scale_stage_2[fw_gt_sm].logo_space" />
       <!-- /Logo -->
@@ -29,12 +29,12 @@
           v-if="scale_stage_1[fw_gt_lg].nav"
           class="inline GL__toolbar-link row no-wrap text-body1 text-weight-bold text-white"
         >
-          <q-btn flat rounded href="/"> <q-icon name="home" /> Home </q-btn>
-          <q-btn flat rounded href="/about"> About </q-btn>
-          <q-btn flat rounded href="/shop"> Shop </q-btn>
-          <q-btn flat rounded href="/mango-picking"> MangoPicking </q-btn>
-          <q-btn flat rounded href="/your-reviews"> Testimonials </q-btn>
-          <q-btn flat rounded href="/contact"> Contact </q-btn>
+          <q-btn flat rounded to="/"> <q-icon name="home" /> Home </q-btn>
+          <q-btn flat rounded to="/about"> About </q-btn>
+          <q-btn flat rounded to="/shop"> Shop </q-btn>
+          <q-btn flat rounded to="/mango-picking"> MangoPicking </q-btn>
+          <q-btn flat rounded to="/your-reviews"> Testimonials </q-btn>
+          <q-btn flat rounded to="/contact"> Contact </q-btn>
         </div>
       </div>
       <!--- /Links -->
@@ -54,19 +54,19 @@
           </div>
           <q-menu auto-close>
             <q-list dense style="min-width: 100px">
-              <q-item clickable href="/about">
+              <q-item clickable to="/about">
                 <q-item-section>About</q-item-section>
               </q-item>
-              <q-item clickable href="/shop">
+              <q-item clickable to="/shop">
                 <q-item-section>Shop</q-item-section>
               </q-item>
-              <q-item clickable href="/mango-picking">
+              <q-item clickable to="/mango-picking">
                 <q-item-section>Mangopicking</q-item-section>
               </q-item>
-              <q-item clickable href="your-reviews">
+              <q-item clickable to="your-reviews">
                 <q-item-section>Testimonials</q-item-section>
               </q-item>
-              <q-item clickable href="contact">
+              <q-item clickable to="contact">
                 <q-item-section>Contact</q-item-section>
               </q-item>
             </q-list>
@@ -79,7 +79,7 @@
           text-color="black"
           icon="shopping_cart"
           label="cart"
-          href="/cart  "
+          to="/cart  "
         />
         <!-- /Cart -->
 
@@ -97,20 +97,20 @@
           </div>
           <q-menu auto-close>
             <q-list dense style="min-width: 100px">
-              <q-item clickable href="/blog">
+              <q-item clickable to="/blog">
                 <q-item-section>Blog</q-item-section>
               </q-item>
-              <q-item clickable href="/gallery">
+              <q-item clickable to="/gallery">
                 <q-item-section>Gallery</q-item-section>
               </q-item>
-              <q-item clickable href="/ripening-tips">
+              <q-item clickable to="/ripening-tips">
                 <q-item-section>Ripening Tips</q-item-section>
               </q-item>
-              <q-item clickable href="/harvesting-process">
+              <q-item clickable to="/harvesting-process">
                 <q-item-section>Harvesting Process</q-item-section>
               </q-item>
               <q-separator />
-              <q-item clickable href="/login">
+              <q-item clickable to="/login">
                 <q-item-section transition-show="slide-down">
                   <div>
                     <q-icon name="login" />
@@ -127,12 +127,12 @@
     </div>
     <!-- /Top-Bar -->
     <!-- searchBar -->
-    <q-toolbar class="row bg-primary" v-if="!!$route.meta.current">
+    <q-toolbar class="row bg-primary" v-if="$route.meta.current =! 'Home'">
       <q-breadcrumbs class="gt-sm">
-        <q-breadcrumbs-el :label="$route.meta.root" href="/" />
+        <q-breadcrumbs-el :label="$route.meta.root" to="/" />
         <q-breadcrumbs-el
           :label="$route.meta.current"
-          :href="'/' + $route.meta.current"
+          :to="'/' + $route.meta.current"
         />
       </q-breadcrumbs>
       <q-space />
@@ -169,8 +169,9 @@
     <q-img
       src="~assets\background\doc-layout.jpg"
       class="header-image absolute-top"
+      style="z-index: -1;"
       no-spinner
-      v-if="!!$route.meta.current"
+      v-if="$route.meta.current != 'Home' "
     />
   </div>
 </template>
@@ -178,6 +179,7 @@
 <script>
 import { useQuasar } from "quasar";
 import { ref } from "vue";
+import { mapActions } from "vuex";
 
 export default {
   // name: 'LayoutName',
@@ -213,7 +215,7 @@ export default {
   },
   methods: {
     search_redirect() {
-      window.location.href = "/shop?search=" + this.search;
+      this.$router.push({path: "shop", query: {search : this.search}});
     },
   },
   computed: {
@@ -234,3 +236,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.bg-image{
+    width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+</style>

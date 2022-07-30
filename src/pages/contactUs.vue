@@ -112,7 +112,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .default-page {
   align-items: center;
   justify-content: center;

@@ -137,7 +137,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 hr {
   width: 70vw;
 }

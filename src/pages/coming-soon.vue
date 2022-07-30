@@ -6,9 +6,9 @@
       no-spinner
     />
     <div class="el">
-      <a href="/" class="q-my-lg rlu">
+      <router-link to="/" class="q-my-lg rlu">
         <WIcon icon-size="10" class="no-filter logo_offset q-my-xl" />
-      </a>
+      </router-link>
 
       <div>
         <div class="q-mt-xl q-pt-xl text-h3 text-white text-center text-bold">
@@ -26,7 +26,7 @@
           text-color="black"
           icon="home"
           label="Home"
-          href="/"
+          to="/"
         />
       </q-toolbar>
     </div>
@@ -41,7 +41,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .logo_offset {
   transform: translateX(3%) translateY(50%);
 }

@@ -63,7 +63,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .section-header {
   font-family: "Thesadith", sans-serif;
   font-size: 30px;

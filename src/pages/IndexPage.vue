@@ -8,7 +8,7 @@
             style="z-index: 10; transform: translateY(10vh)"
           >
             <!-- Logo -->
-            <a href="/" :class="scale_stage_3.icon_align" class="q-my-lg rlu">
+            <router-link to="/" :class="scale_stage_3.icon_align" class="q-my-lg rlu">
               <w-icon
                 class="col"
                 :iconSize="scale_stage_1.icon[0]"
@@ -19,7 +19,7 @@
                 :iconSize="scale_stage_1.icon[1]"
                 :style="scale_stage_3.name_offset"
               />
-            </a>
+            </router-link>
 
             <q-space v-if="scale_stage_2.logo_space" />
 
@@ -37,16 +37,16 @@
                   text-body1 text-weight-bold text-white
                 "
               >
-                <q-btn flat rounded href="/">
+                <q-btn flat rounded to="/">
                   <q-icon name="home" /> Home
                 </q-btn>
-                <q-btn flat rounded href="/about"> About </q-btn>
-                <q-btn flat rounded href="/shop"> Shop </q-btn>
-                <q-btn flat rounded href="/mango-picking"> MangoPicking </q-btn>
-                <q-btn flat rounded href="/your-responses">
+                <q-btn flat rounded to="/about"> About </q-btn>
+                <q-btn flat rounded to="/shop"> Shop </q-btn>
+                <q-btn flat rounded to="/mango-picking"> MangoPicking </q-btn>
+                <q-btn flat rounded to="/your-responses">
                   Testimonials
                 </q-btn>
-                <q-btn flat rounded href="/contact"> Contact </q-btn>
+                <q-btn flat rounded to="/contact"> Contact </q-btn>
               </div>
             </div>
             <!--- /Links -->
@@ -75,19 +75,19 @@
                 </div>
                 <q-menu auto-close>
                   <q-list dense style="min-width: 100px">
-                    <q-item clickable href="/about">
+                    <q-item clickable to="/about">
                       <q-item-section>About</q-item-section>
                     </q-item>
-                    <q-item clickable href="/shop">
+                    <q-item clickable to="/shop">
                       <q-item-section>Shop</q-item-section>
                     </q-item>
-                    <q-item clickable href="/mango-picking">
+                    <q-item clickable to="/mango-picking">
                       <q-item-section>Mangopicking</q-item-section>
                     </q-item>
-                    <q-item clickable href="/your-responses">
+                    <q-item clickable to="/your-responses">
                       <q-item-section>Testimonials</q-item-section>
                     </q-item>
-                    <q-item clickable href="contact">
+                    <q-item clickable to="contact">
                       <q-item-section>Contact</q-item-section>
                     </q-item>
                   </q-list>
@@ -100,7 +100,7 @@
                 text-color="black"
                 icon="shopping_cart"
                 label="cart"
-                href="/cart  "
+                to="/cart  "
               />
               <!-- /Cart -->
 
@@ -126,20 +126,20 @@
                 </div>
                 <q-menu auto-close>
                   <q-list dense style="min-width: 100px">
-                    <q-item clickable href="/blog">
+                    <q-item clickable to="/blog">
                       <q-item-section>Blog</q-item-section>
                     </q-item>
-                    <q-item clickable href="/gallery">
+                    <q-item clickable to="/gallery">
                       <q-item-section>Gallery</q-item-section>
                     </q-item>
-                    <q-item clickable href="/tips">
+                    <q-item clickable to="/tips">
                       <q-item-section>Ripening Tips</q-item-section>
                     </q-item>
-                    <q-item clickable href="/harvesting-process">
+                    <q-item clickable to="/harvesting-process">
                       <q-item-section>Harvesting Process</q-item-section>
                     </q-item>
                     <q-separator />
-                    <q-item clickable href="/login">
+                    <q-item clickable to="/login">
                       <q-item-section
                         ><q-icon name="login" />Login</q-item-section
                       >
@@ -192,7 +192,7 @@
               text-color="black"
               icon="shopping_cart"
               label="Shop Now"
-              href="/shop"
+              to="/shop"
               rounded
             />
           </q-toolbar>
@@ -456,7 +456,7 @@ export default {
 </script>
 
 
-<style lang="sass">
+<style lang="sass" scoped>
 .my-text
   z-index: 2
 .my-btn

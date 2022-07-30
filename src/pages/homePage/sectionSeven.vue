@@ -128,7 +128,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .header-image {
   width: 100%;
   height: 105%;

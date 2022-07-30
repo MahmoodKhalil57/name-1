@@ -19,7 +19,7 @@
         text-color="black"
         icon="home"
         label="Home"
-        href="/"
+        to="/"
       />
     </div>
     <q-img
@@ -38,7 +38,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .header-image {
   width: 100%;
   height: 100%;

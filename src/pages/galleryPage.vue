@@ -7,9 +7,9 @@
     <div class="row q-pa-xl q-gutter-lg justify-between flex-container">
       <!--5Items Of Item2: FlexColumnContainer-->
       <div class="column flex-item" v-for="image in images" :key="image">
-        <a v-if="!!image.image_link" :href="image.image_link"
+        <router-link v-if="!!image.image_link" :to="image.image_link"
           ><img :src="image.image_link" class="defualt-width default-height"
-        /></a>
+        /></router-link>
         <iframe
           v-else
           class="floating-video defualt-width default-height"
@@ -93,7 +93,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .flex-container {
   max-width: 1200px;
 }

@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hhh lpr fff">
     <!-- The Header -->
-    <q-header elevated :class="!$route.meta.current ? 'home-header' : ''">
+    <q-header elevated :class="$route.meta.current == 'Home' ? 'home-header' : ''" >
       <default-header />
     </q-header>
     <!-- /The Header -->
@@ -13,7 +13,7 @@
     <!-- /The Footer-->
 
     <!-- The Content -->
-    <q-page-container v-if="!$route.meta.current">
+    <q-page-container v-if="$route.meta.current == 'Home'">
       <!-- This is where pages get injected -->
       <router-view />
     </q-page-container>
@@ -44,7 +44,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .home-header {
   height: 0;
 }
