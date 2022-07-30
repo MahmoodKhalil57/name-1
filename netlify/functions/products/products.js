@@ -12,8 +12,8 @@ const firebaseApp = initializeApp(serviceAccount);
 
 const db = getFirestore(firebaseApp);
 
-getDb = () => {
-  var col = collection(db,"products_full")
+function getDb(){
+  var col = collection(db,"products_full");
   getDocs(col).then((prodSnapshot) => {
     const products_full = prodSnapshot.docs.map((response) => response.data());
     return products_full;
