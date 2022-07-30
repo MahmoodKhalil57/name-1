@@ -12,27 +12,26 @@ const firebaseApp = initializeApp(serviceAccount);
 
 const db = getFirestore(firebaseApp);
 
-function getDb(){
+async function getDb(){
   var col = collection(db,"products_full");
-  getDocs(col).then((prodSnapshot) => {
+  await getDocs(col).then((prodSnapshot) => {
     const products_full = prodSnapshot.docs.map((response) => response.data());
     return products_full;
-  })
-  .catch((error) => {
-    console.log(error);
   });
 };
 
+async function test(){
+  await setTimeout(resolve, ms);
+  return "hmm";
+}
+
 const handler = async (event) => {
-  try {
-    const subject = getDb();
-    return {
-      statusCode: 200,
-      body: JSON.stringify(subject)
-    }
-  } catch (error) {
-    return { statusCode: 500, body: error.toString() }
+  const result = await test()
+  return {
+  statusCode: 200,
+  body: JSON.stringify(result)
   }
+
 }
 
 module.exports = { handler }
