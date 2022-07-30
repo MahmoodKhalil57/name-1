@@ -1,7 +1,7 @@
 const routes = [
   {
     path: "/",
-    meta: { current: "Home" },
+    meta: { root: "Home" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [
       {
