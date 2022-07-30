@@ -15,9 +15,11 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "animate.css": "^4.1.1",
+    "axios": "^0.27.2",
     "firebase": "^9.9.1",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.0"
+    "vue-router": "^4.0.0",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@quasar/app-vite": "^1.0.0-alpha.0",
