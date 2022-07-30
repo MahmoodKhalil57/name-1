@@ -4,16 +4,18 @@
     <!--Item1:header-->
     <span class="title-font text-center q-mt-xl"> Order now </span>
     <!--Item2:FlexRowContainer-->
-    <div class="row q-pa-xl q-mb-xl q-gutter-lg justify-center flex-container">
+    <div class="row q-pa-xl q-mb-xl q-gutter-lg justify-center flex-container" v-if="products">
       <!--5Items Of Item2: FlexColumnContainer -->
       <q-card
         class="flex-item column shadow-3"
         v-for="product in products"
         :key="product"
       >
-        <q-img class="default-image" :src="product.image"> </q-img>
+        <a :href="product.link"
+          ><q-img class="default-image" :src="product.images[0]"> </q-img
+        ></a>
         <div class="q-pa-md">
-          <span class="title-font">{{ product.title }}</span>
+          <span class="title-font">{{ product.name }}</span>
         </div>
         <div class="row align-center q-px-md q-pb-sm q-gutter-md">
           <div class="row flex-center">
@@ -31,7 +33,7 @@
             ></q-icon>
           </div>
           <div class="row flex-center">
-            <a :href="product.reviews.link" class="link-font"
+            <a :href="product.link + '#review'" class="link-font"
               >Based on {{ product.reviews.count }} reviews</a
             >
           </div>
@@ -40,38 +42,45 @@
         <div class="row q-px-xl q-py-sm q-gutter-sm">
           <span>Availabilty: </span>
           <span class="stock-font">{{
-            product.reviews.availability ? "In Stock" : "Out of Stock"
+            product.availability ? "In Stock" : "Out of Stock"
           }}</span>
         </div>
         <hr class="default-separator" />
-        <div class="row q-px-xl q-py-sm q-gutter-sm">
-          <span>Price: </span>
-          <q-select
-            rounded
-            outlined
-            :options="product.prices"
-            label="Rounded"
-            style="width: 100px"
-          />
+        <!--price-->
+        <div
+          class="row full-width flex-center justify-between q-px-xl q-py-sm q-gutter-sm"
+        >
+          <label for="framework">Price:</label>
+          <select id="framework" class="select-round">
+            <option
+              style="text-align: center"
+              v-for="price in product.prices"
+              :key="price"
+            >
+              {{ price }}
+            </option>
+          </select>
         </div>
         <hr class="default-separator" />
-        <div class="row q-px-xl q-py-sm q-gutter-sm">
-          <span>Quantity: </span>
-          <q-select
-            class="default-select"
-            rounded
-            outlined
-            v-model="model"
-            :options="product.quanitiy"
-            label="Rounded Filled"
-          />
+        <!--quantity-->
+        <div class="row full-width flex-center justify-between q-px-xl q-py-sm">
+          <label>Quantity:</label>
+          <select class="select-round">
+            <option
+              style="text-align: center"
+              v-for="quanitiy in product.quanitiy"
+              :key="quanitiy"
+            >
+              {{ quanitiy }}
+            </option>
+          </select>
         </div>
         <hr class="default-separator" />
         <div class="q-py-sm text-center delivery-font">
-          <span>{{ product.date }}</span>
+          <span>{{ product.desc_one }}</span>
         </div>
         <hr class="default-separator final-separator" />
-        <div class="row q-pa-md justify-center buttons-background">
+        <div class="row q-pa-md justify-center buttons-background full-width">
           <q-btn class="q-pa-sm q-ma-sm cart-button" no-caps>Add to Cart</q-btn>
           <q-btn class="q-pa-sm q-ma-sm buy-button" no-caps>Buy Now</q-btn>
         </div>
@@ -82,122 +91,41 @@
 
 <script>
 import { ref } from "vue";
+import { mapGetters , mapActions } from "vuex";
+
 export default {
-  // name: 'ComponentName',
+  name: 'shopPage',
   data: function () {
     return {
-      products: [
-        {
-          image:
-            "https://soopermango.com/images/product-images/ratnagiri_shop3.jpg",
-          title: "Alphonso - Badami Mango",
-          reviews: {
-            stars: 4,
-            count: 51,
-            link: "https://soopermango.com/alphonso#reviews",
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery May 17, 2022 onwards",
-        },
-        {
-          image:
-            "https://soopermango.com/images/product-images/rajgira_shop.jpg",
-          title: "Lalbagh Mango - Sindhura Mango",
-          reviews: {
-            stars: 3,
-            count: 4,
-            link: "https://soopermango.com/rajgira-lalbagh-mango#reviews",
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery May 17, 2022 onwards",
-        },
-        {
-          image:
-            "https://soopermango.com/images/product-images/totapuri_shop.jpg",
-          title: "Totapuri Mango",
-          reviews: {
-            stars: 5,
-            count: 3,
-            link: "https://soopermango.com/totapuri#reviews",
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery May 17, 2022 onwards",
-        },
-        {
-          image:
-            "https://soopermango.com/images/product-images/apple_mango.jpg",
-          title: "Romania Apple Mango",
-          reviews: {
-            stars: 4,
-            count: 3,
-            link: "https://soopermango.com/romania-apple-mango#reviews",
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery June 1, 2022 onwards",
-        },
-        {
-          image: "https://soopermango.com/images/product-images/neelam.jpg",
-          title: "Neelam Mango",
-          reviews: {
-            stars: 0,
-            count: 0,
-            link: "https://soopermango.com/neelam#reviews",
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery June 20, 2022 onwards",
-        },
-        {
-          image:
-            "https://soopermango.com/images/product-images/mallika_shop.jpg",
-          title: "Mallika Mango",
-          reviews: {
-            stars: 0,
-            count: 0,
-            link: "https://soopermango.com/mallika#reviews",
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery June 20, 2021 onwards",
-        },
-        {
-          image: "https://soopermango.com/images/product-images/mulgoba.jpg",
-          title: "Mulgoba Mango",
-          reviews: {
-            stars: 5,
-            count: 3,
-            link: "https://soopermango.com/mallika#reviews",
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery June 20, 2021 onwards",
-        },
-        {
-          image: "https://soopermango.com/images/product-images/benishan.png",
-          title: "Mallika Mango",
-          reviews: {
-            stars: 0,
-            count: 0,
-            link: "https://soopermango.com/mallika#reviews",
-          },
-          availabilty: false,
-          prices: ["₹900 - 3kg", "₹1500 - 6kg"],
-          quanitiy: [1, 2, 3, 4, 5],
-          date: "Delivery June 20, 2021 onwards",
-        },
-      ],
+      products : [],
     };
+  },
+  computed: {
+    ...mapGetters({products_full : ('mydata/getProducts')}),
+    },
+  methods: {
+    ...mapActions({
+      updateProducts: 'mydata/updateProductsFromDatabase'
+    }),
+    set_search: function (search) {
+      if (search) {
+        var new_products = [];
+        this.products_full.forEach((product) => {
+          if (product.name.toLowerCase().includes(search)) {
+            new_products.push(product);
+          }
+        });
+        this.products = new_products;
+      }
+      else{
+        this.products = this.products_full;
+      }
+    },
+  },
+  created() {
+    this.updateProducts().then(() => {
+      this.set_search(this.$route.query.search);
+    });
   },
   setup() {
     return {
@@ -207,12 +135,12 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .flex-container {
   max-width: 2400px;
 }
 .title-font {
-  font: normal normal 500 24px/29px Thasadith, sans-serif;
+  font: normal normal 700 30px/36px Thasadith, sans-serif;
   color: #323648;
   text-transform: capitalize;
 }
@@ -239,7 +167,7 @@ export default {
   height: 100%;
 }
 .default-image {
-  width: 300px;
+  width: 100%;
   height: 240px;
 }
 .cart-button {
@@ -273,5 +201,19 @@ export default {
 }
 .final-separator {
   width: 100%;
+}
+.select-round {
+  width: 55%;
+  height: 40px;
+  border-color: $info;
+  cursor: pointer;
+  border-radius: 20px;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 7px;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
 }
 </style>

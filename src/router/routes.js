@@ -1,6 +1,7 @@
 const routes = [
   {
     path: "/",
+    name: "Home",
     meta: { root: "Home" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [
@@ -12,6 +13,7 @@ const routes = [
   },
   {
     path: "/about",
+    name: "About",
     meta: { root: "Home", current: "About" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/about.vue") }],
@@ -45,6 +47,8 @@ const routes = [
     meta: { root: "Home", current: "Login" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [{ path: "", component: () => import("pages/login.vue") }],
+  },
+  {
     path: "/ripening-tips",
     meta: { root: "Home", current: "ripening-tips" },
     component: () => import("layouts/defaultLayout.vue"),
@@ -76,13 +80,17 @@ const routes = [
     path: "/privacy",
     meta: { root: "Home", current: "Privacy" },
     component: () => import("layouts/defaultLayout.vue"),
-    children: [{ path: "", component: () => import("pages/privacyPolicy.vue") }],
+    children: [
+      { path: "", component: () => import("pages/privacyPolicy.vue") },
+    ],
   },
   {
     path: "/shipping",
     meta: { root: "Home", current: "Shipping" },
     component: () => import("layouts/defaultLayout.vue"),
-    children: [{ path: "", component: () => import("pages/shippingPolicy.vue") }],
+    children: [
+      { path: "", component: () => import("pages/shippingPolicy.vue") },
+    ],
   },
   {
     path: "/shop",
@@ -91,14 +99,83 @@ const routes = [
     children: [{ path: "", component: () => import("pages/shopPage.vue") }],
   },
   {
-    path: "/dev",
-    meta: { root: "Home", current: "dev" },
+    path: "/alphonso",
+    meta: { root: "Home", current: "Alphonso" },
     component: () => import("layouts/defaultLayout.vue"),
     children: [
-      {
-        path: "",
-        component: () => import("src/pages/homePage/homeWrapper.vue"),
-      },
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/rajgira-lalbagh-mango",
+    meta: { root: "Home", current: "Rajgira Lalbagh Mango" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/totapuri",
+    meta: { root: "Home", current: "Totapuri" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/romania-apple-mango",
+    meta: { root: "Home", current: "Romania Apple Mango" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/neelam",
+    meta: { root: "Home", current: "Neelam" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/malika",
+    meta: { root: "Home", current: "Malika" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/mulgoba",
+    meta: { root: "Home", current: "Mulgoba" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/banganapalli",
+    meta: { root: "Home", current: "Banganapalli" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/mallika",
+    meta: { root: "Home", current: "Mallika" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/defaultProducts.vue") },
+    ],
+  },
+  {
+    path: "/dev",
+    meta: { root: "Home", current: "Dev" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [
+      { path: "", component: () => import("pages/testPage.vue") },
     ],
   },
   {
@@ -131,7 +208,9 @@ const routes = [
   },
   {
     path: "/gallery",
-    component: () => import("pages/coming-soon.vue"),
+    meta: { root: "Home", current: "Gallery" },
+    component: () => import("layouts/defaultLayout.vue"),
+    children: [{ path: "", component: () => import("pages/galleryPage.vue") }],
   },
   {
     path: "/:catchAll(.*)*",

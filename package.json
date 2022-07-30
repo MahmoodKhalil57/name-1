@@ -6,14 +6,20 @@
   "author": "MahmoodKhalil57 <46604753+MahmoodKhalil57@users.noreply.github.com>",
   "private": true,
   "scripts": {
+    "start": "quasar build",
+    "dev": "quasar dev",
     "lint": "eslint --ext .js,.vue ./",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "animate.css": "^4.1.1",
+    "axios": "^0.27.2",
+    "firebase": "^9.9.1",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.0"
+    "vue-router": "^4.0.0",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@quasar/app-vite": "^1.0.0-alpha.0",
