@@ -16,7 +16,7 @@ getDb = () => {
   var col = collection(db,"products_full")
   getDocs(col).then((prodSnapshot) => {
     const products_full = prodSnapshot.docs.map((response) => response.data());
-    res.json(products_full);
+    return products_full;
   })
   .catch((error) => {
     console.log(error);
