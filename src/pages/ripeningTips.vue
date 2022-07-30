@@ -8,7 +8,7 @@
     "
   >
     <div
-      class="column justify-center q-pt-md q-pb-xl"
+      class="column justify-center q-pt-md q-pb-xl q-px-xl"
       style="max-width: 1110px"
     >
       <!--page title-->

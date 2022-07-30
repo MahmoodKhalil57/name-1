@@ -145,6 +145,7 @@
         bg-color="white"
         color="shadow-1"
         placeholder="Search for fresh fruits or vegetables"
+        @keyup.enter="search_redirect()"
       >
         <template v-slot:prepend>
           <q-icon v-if="search === ''" name="search" />
@@ -155,6 +156,12 @@
             @click="search = ''"
           />
         </template>
+        <template v-slot:append
+          ><q-icon
+            v-if="search !== ''"
+            name="search"
+            @click="search_redirect()"
+        /></template>
       </q-input>
       <q-space />
     </q-toolbar>
@@ -170,6 +177,7 @@
 
 <script>
 import { useQuasar } from "quasar";
+import { ref } from "vue";
 
 export default {
   // name: 'LayoutName',
@@ -203,6 +211,11 @@ export default {
       ],
     };
   },
+  methods: {
+    search_redirect() {
+      window.location.href = "/shop?search=" + this.search;
+    },
+  },
   computed: {
     fw_gt_lg() {
       return +!this.$q.screen.gt.lg;
@@ -216,6 +229,7 @@ export default {
     $q.screen.setSizes({ sm: 300, md: 1041, lg: 1500, xl: 1500 });
     return {
       $q,
+      search: ref(""),
     };
   },
 };
