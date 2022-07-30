@@ -58,25 +58,40 @@
       class="row max-width wrap justify-evenly q-py-xl fa-4x q-gutter-lg"
       style="width: auto; height: auto"
     >
-      <q-space />
-      <router-link to="javascript:void(0)" target="_self" class="flinks">
-        <q-icon class="fa-brands fa-facebook-square" color="blue-8" />
-      </router-link>
-
-      <router-link to="javascript:void(0)" target="_self" class="flinks">
-        <q-icon class="fa-brands fa-instagram insta radio" color="dark" />
-      </router-link>
-
-      <router-link to="javascript:void(0)" target="_self" class="flinks">
-        <q-icon class="fa-brands fa-twitter-square" color="light-blue-5" />
-      </router-link>
-
-      <router-link to="javascript:void(0)" target="_self" class="flinks">
-        <q-icon class="fa-brands fa-youtube-square" color="red" />
-      </router-link>
-      <q-space />
-    </q-toolbar>
-    <!-- /Social media -->
+      <iframe
+        frameBorder="0"
+        class="full-width"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15786.75439222384!2d31.02494087802049!3d30.059745364807686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14585b0554c9b7a3%3A0xdb3b24f330c6ae90!2sDandy%20Mega%20Mall!5e0!3m2!1sen!2suk!4v1651997535725!5m2!1sen!2suk"
+        height="450"
+        style="
+          border-radius: 10px;
+          border: 0px solid black;
+          box-shadow: -4px -3px 45px 21px rgba(0, 0, 0, 0.35);
+          max-width: 85%;
+        "
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </q-toolbar>
+   /Google Maps-->
+  <!-- Icon  -->
+  <q-toolbar class="q-py-lg row justify-center">
+    <a href="/" :class="scale_stage_2[fw_gt_sm].icon_align" class="rlu">
+      <w-icon
+        class="col self-center"
+        :iconSize="scale_stage_1[fw_gt_lg].icon[0]"
+        :style="scale_stage_2[fw_gt_sm].icon_offset"
+      />
+      <w-name
+        class="col self-center"
+        :iconSize="scale_stage_1[fw_gt_lg].icon[1]"
+        :style="scale_stage_2[fw_gt_sm].name_offset"
+      />
+    </a>
+  </q-toolbar>
+  <!-- /Icon  -->
 
     <!-- whatsapp/num/email-->
     <q-toolbar class="q-my-md justify-center align-center">
@@ -96,10 +111,36 @@
     </q-toolbar>
     <!-- /whatsapp/num/email-->
 
-    <!-- Appstore / Google play buttons-->
-    <q-toolbar
-      class="row q-pa-lg row justify-center align-center content-center q-gutter-md idk"
-      style=""
+  <!-- Social media -->
+  <q-toolbar
+    class="row max-width wrap justify-evenly q-py-xs fa-4x q-gutter-lg"
+    style="width: auto; height: auto"
+  >
+    <q-space />
+    <a href="javascript:void(0)" target="_self" class="flinks">
+      <q-icon class="fa-brands fa-facebook-square" color="blue-8" />
+    </a>
+
+    <a href="javascript:void(0)" target="_self" class="flinks">
+      <q-icon class="fa-brands fa-instagram insta radio" color="dark" />
+    </a>
+
+    <a href="javascript:void(0)" target="_self" class="flinks">
+      <q-icon class="fa-brands fa-twitter-square" color="light-blue-5" />
+    </a>
+
+    <a href="javascript:void(0)" target="_self" class="flinks">
+      <q-icon class="fa-brands fa-youtube-square" color="red" />
+    </a>
+    <q-space />
+  </q-toolbar>
+  <!-- /Social media -->
+
+  <!--location-->
+  <q-toolbar class="q-pt-lg justify-center align-center no-margin">
+    <a href="https://goo.gl/maps/XHHJXeABQKWpaBGw8" target="_blank" class="flinks">
+      <q-icon name="fa-solid fa-location-dot" /> 28 Cairo - Alexandria Desert
+      Rd, Al Giza Desert, Giza Governorate 12677, Egypt</a
     >
       <q-btn class="q-my-md" color="deep-orange" push>
         <q-card flat class="flat transparent">

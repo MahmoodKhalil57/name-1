@@ -2,7 +2,7 @@
   <q-page
 
     class="column flex-center"
-    v-if="products_full"
+    v-if="products_full && current_product"
 
   >
     <div class=" q-pa-lg content-center page-top">
@@ -375,6 +375,7 @@ export default {
     }),
 
     set_product: function () {
+<<<<<<< HEAD
       // const product_order = [
       //   "Alphonso",
       //   "Rajgira Lalbagh Mango",
@@ -386,6 +387,8 @@ export default {
       //   "Banganapalli",
       // ];
 
+=======
+>>>>>>> name-1/main
       this.products_full.forEach((item,index) => {
         if (item.name === this.$route.meta.current) {
           this.current_product = index
@@ -603,6 +606,15 @@ export default {
   font: normal normal 400 16px/24px roboto, sans-serif;
   color: #212529;
 }
+<<<<<<< HEAD
+=======
+.pointer:hover {
+  cursor: pointer;
+}
+.zoom-in-pointer:hover {
+  cursor: zoom-in;
+}
+>>>>>>> name-1/main
 .page-top{
   max-width:70%;
 }

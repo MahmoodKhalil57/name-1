@@ -44,27 +44,34 @@
           }}</span>
         </div>
         <hr class="default-separator" />
-        <div class="row q-px-xl q-py-sm q-gutter-sm">
-          <span>Price: </span>
-          <q-select
-            rounded
-            outlined
-            :options="product.prices"
-            label="Rounded"
-            style="width: 100px"
-          />
+        <!--price-->
+        <div
+          class="row full-width flex-center justify-between q-px-xl q-py-sm q-gutter-sm"
+        >
+          <label for="framework">Price:</label>
+          <select id="framework" class="select-round">
+            <option
+              style="text-align: center"
+              v-for="price in product.prices"
+              :key="price"
+            >
+              {{ price }}
+            </option>
+          </select>
         </div>
         <hr class="default-separator" />
-        <div class="row q-px-xl q-py-sm q-gutter-sm">
-          <span>Quantity: </span>
-          <q-select
-            class="default-select"
-            rounded
-            outlined
-            v-model="model"
-            :options="product.quanitiy"
-            label="Rounded Filled"
-          />
+        <!--quantity-->
+        <div class="row full-width flex-center justify-between q-px-xl q-py-sm">
+          <label>Quantity:</label>
+          <select class="select-round">
+            <option
+              style="text-align: center"
+              v-for="quanitiy in product.quanitiy"
+              :key="quanitiy"
+            >
+              {{ quanitiy }}
+            </option>
+          </select>
         </div>
         <hr class="default-separator" />
         <div class="q-py-sm text-center delivery-font">
@@ -112,11 +119,6 @@ export default {
         this.products = this.products_full;
       }
     },
-  },
-  watch: {
-    "$route.query.search"(search) {
-      this.set_search(search);
-    }
   },
   created() {
     this.updateProducts().then(() => {
@@ -197,5 +199,19 @@ export default {
 }
 .final-separator {
   width: 100%;
+}
+.select-round {
+  width: 55%;
+  height: 40px;
+  border-color: $info;
+  cursor: pointer;
+  border-radius: 20px;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 7px;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
 }
 </style>
