@@ -28,7 +28,7 @@ const handler = async (event) => {
     const subject = getDb();
     return {
       statusCode: 200,
-      body: subject
+      body: JSON.stringify(subject)
     }
   } catch (error) {
     return { statusCode: 500, body: error.toString() }
