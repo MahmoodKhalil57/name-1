@@ -15,8 +15,9 @@ export async function addNewProductToDatabase(state) {
   if (!state.productData) {
     try {
       let test = {
-        task: "setProducts",
-        payload: {
+        task: "setProduct",
+        payload:
+        {
           "name": "Rajgira Lalbagh Mango",
           "shares": 0,
           "desc_one": "Delivery May 17, 2022 onwards",
@@ -43,14 +44,14 @@ export async function addNewProductToDatabase(state) {
             "Green with a tinge of red"
           ],
           "quanitiy": [
-            1,
-            2,
-            3,
-            4,
-            5
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
           ],
           "availabilty": false,
-          "reviews": { "stars": 5, "count": 1 }
+          "reviews": { "stars": "5", "count": "1" }
         },
       };
       await api.post('api', test)

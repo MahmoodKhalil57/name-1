@@ -1,7 +1,5 @@
 const { requestObj, responseObj } = require('./utils/helpers.js');
-const { collectionWrapper } = require('./models/collectionWrapper.js');
-const { product } = require('./models/product.js');
-const { user } = require('./models/user.js');
+const { getProducts, setProduct, getUsers } = require('./logic.js');
 
 const handler = async (event, context) => {
 
@@ -13,31 +11,23 @@ const handler = async (event, context) => {
   }
   catch (ignore) { }
 
-
-
   let response = "fail";
   switch (task) {
     case "getProducts":
       try {
-        let db_name = "products_full";
-        let products_obj = new collectionWrapper(product, db_name);
-        // console.log(db_name);
-        response = await products_obj.getCollectionFromDB();
+        response = await getProducts();
         // console.log(db_name);
       } catch (ignore) { }
       break;
-    case "setProducts":
+    case "setProduct":
       try {
-        let db_name = "products_full";
-        let products_obj = new collectionWrapper(product, db_name, payload);
-        response = await products_obj.updateCollection();
-      } catch (ignore) { }
+        // console.log(payload);
+        response = await setProduct(payload);
+      } catch (ignore) { console.log(ignore) }
       break;
     case "getUsers":
       try {
-        let db_name = "users";
-        let users_obj = new collectionWrapper(user, db_name);
-        response = await users_obj.getCollectionFromDB();
+        response = await getUsers();
         // console.log(users_obj.db_name);
       } catch (ignore) { }
       break;

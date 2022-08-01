@@ -2,108 +2,61 @@ const { setDocs } = require('../utils/setDocs.js');
 
 class product {
   constructor(payload, is_db) {
-    this.name
-    this.availabilty
-    this.title_two
-    this.product_code
-    this.nutrients
-    this.link
-    this.desc_one
-    this.shares
-    this.title_one
-    this.description
+    this.info = {
+      name: '',
+      availabilty: '',
+      title_two: '',
+      product_code: '',
+      nutrients: '',
+      link: '',
+      desc_one: '',
+      shares: '',
+      title_one: '',
+      description: '',
 
-    this.health_benefits
-    this.quanitity
-    this.color
-    this.prices
-    this.images
+      health_benefits: [],
+      quanitity: [],
+      color: [],
+      prices: [],
+      images: [],
 
-    this.reviews
+      reviews: []
+
+    }
     if (payload) {
-      this.setData(payload, is_db);
-    }
-  }
-  getDBJson() {
-    return {
-      id: this.name,
-      data: {
-        availabilty: this.availabilty,
-        title_two: this.title_two,
-        product_code: this.product_code,
-        nutrients: this.nutrients,
-        link: this.link,
-        desc_one: this.desc_one,
-        shares: this.shares,
-        title_one: this.title_one,
-        description: this.description,
-
-        health_benefits: this.health_benefits,
-        quanitity: this.quanitity,
-        color: this.color,
-        prices: this.prices,
-        images: this.images,
-        reviews: this.reviews
-      }
-    };
-  }
-
-  getClientJson() {
-    return {
-      name: this.name,
-      availabilty: this.availabilty,
-      title_two: this.title_two,
-      product_code: this.product_code,
-      nutrients: this.nutrients,
-      link: this.link,
-      desc_one: this.desc_one,
-      shares: this.shares,
-      title_one: this.title_one,
-      description: this.description,
-
-      health_benefits: this.health_benefits,
-      quanitity: this.quanitity,
-      color: this.color,
-      prices: this.prices,
-      images: this.images,
-      reviews: this.reviews
+      this.setModel(payload, is_db);
     }
   }
 
-  setData(payload, is_db) {
-
+  setModel(payload, is_db) {
     try {
       if (is_db) {
-        this.name = payload.id;
-        payload = payload.data();
+        payload.data().name = payload.id;
+        this.info = payload.data();
       }
       else {
-        this.name = payload.name;
+        this.info = payload;
       }
-
-      this.availabilty = payload.availabilty;
-      this.title_two = payload.title_two;
-      this.product_code = payload.product_code;
-      this.nutrients = payload.nutrients;
-      this.link = payload.link;
-      this.desc_one = payload.desc_one;
-      this.shares = payload.shares;
-      this.title_one = payload.title_one;
-      this.description = payload.description;
-
-      this.health_benefits = payload.health_benefits;
-      this.quanitity = payload.quanitiy;
-      this.color = payload.color;
-      this.prices = payload.prices;
-      this.images = payload.images;
-
-      this.reviews = payload.reviews;
     }
     catch (ignore) { }
   }
 
-  async setProduct(db_name) {
+  getDBJson() {
+    let cur_id = this.info.name;
+    delete this.info.name;
+    return {
+      id: cur_id,
+      data: this.info
+    };
+  }
+
+  getClientJson() {
+    return this.info;
+  }
+
+  async setDoc(db_name) {
     try {
+      // console.log(db_name);
       let data = this.getDBJson();
       await setDocs(db_name, data.id, data.data);
     }

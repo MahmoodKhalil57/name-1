@@ -18,7 +18,8 @@ class collectionWrapper {
   }
   async updateCollection() {
     try {
-      response = await this.docs.map((payload) => payload.setProduct(this.db_name));
+      console.log("db_name");
+      response = await this.docs.map((payload) => payload.setDoc(this.db_name));
       return response;
     } catch (ignore) { }
   }

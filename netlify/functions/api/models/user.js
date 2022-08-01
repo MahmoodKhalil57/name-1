@@ -2,90 +2,51 @@ const { setDocs } = require('../utils/setDocs.js');
 
 class user {
   constructor(payload, is_db) {
-    this.db_name = "users";
+    this.info = {
+      Username: '',
+      firstName: '',
+      lastName: '',
+      email: '',
+      dateCreated: '',
+      lastLogin: '',
 
-    this.userId = "";
-    this.username = "";
-    this.firstName = "";
-    this.lastName = "";
-    this.email = "";
-    this.dateCreated = "";
-    this.lastLogin = "";
+      reviews: [],
+      orders: [],
+      cart: [],
+      visits: [],
 
-    this.reviews = [];
-    this.orders = [];
-    this.cart = [];
-    this.visits = [];
-
-    this.isAdmin = false;
+      isAdmin: false
+    }
     if (payload) {
-      this.setData(payload, is_db);
+      this.setModel(payload, is_db);
     }
   }
-  getDBJson() {
-    return {
-      id: this.userId,
-      data: {
-        Username: this.Username,
-        firstName: this.firstName,
-        lastName: this.lastName,
-        email: this.email,
-        dateCreated: this.dateCreated,
-        lastLogin: this.lastLogin,
 
-        reviews: this.reviews,
-        orders: this.orders,
-        cart: this.cart,
-        visits: this.visits,
-
-        isAdmin: this.isAdmin
+  setModel(payload, is_db) {
+    try {
+      if (is_db) {
+        payload.data().username = payload.userId;
+        this.info = payload.data();
       }
+      else {
+        this.info = payload;
+      }
+
+    }
+    catch (ignore) { }
+  }
+
+  getDBJson() {
+    let cur_id = this.info.Username;
+    delete this.info.name;
+    return {
+      id: cur_id,
+      data: this.info
     };
   }
 
   getClientJson() {
-    return {
-      username: this.username,
-      firstName: this.firstName,
-      lastName: this.lastName,
-      email: this.email,
-      dateCreated: this.dateCreated,
-      lastLogin: this.lastLogin,
-
-      reviews: this.reviews,
-      orders: this.orders,
-      cart: this.cart,
-      visits: this.visits,
-
-      isAdmin: this.isAdmin,
-    }
-  }
-
-  setData(payload, is_db) {
-
-    try {
-      if (is_db) {
-        this.username = payload.userId;
-        payload = payload.data();
-      }
-      else {
-        this.username = payload.username;
-      }
-
-      this.firstName = payload.firstName;
-      this.lastName = payload.lastName;
-      this.email = payload.email;
-      this.dateCreated = payload.dateCreated;
-      this.lastLogin = payload.lastLogin;
-
-      this.reviews = payload.reviews;
-      this.orders = payload.orders;
-      this.cart = payload.cart;
-      this.visits = payload.visits;
-
-      this.isAdmin = payload.isAdmin;
-    }
-    catch (ignore) { }
+    return this.info;
   }
 
   async setUser() {
