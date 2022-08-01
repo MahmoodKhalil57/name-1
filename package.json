@@ -7,16 +7,26 @@
   "private": true,
   "scripts": {
     "start": "quasar build",
-    "dev": "quasar dev",
+    "dev": "concurrently \"npm:quasar-dev\" \"npm:functions-dev\"",
+    "quasar-dev": "quasar dev",
+    "functions-dev": "netlify dev",
     "lint": "eslint --ext .js,.vue ./",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "@netlify/functions": "^1.0.0",
     "@quasar/extras": "^1.0.0",
     "animate.css": "^4.1.1",
     "axios": "^0.27.2",
+    "bad-words": "^3.0.4",
+    "faunadb": "^4.6.0",
     "firebase": "^9.9.1",
+    "middy": "^0.36.0",
+    "node-fetch": "^2.6.7",
+    "qs": "^6.11.0",
+    "stripe": "^9.16.0",
+    "uuid": "^8.3.2",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0",
     "vuex": "^4.0.2"

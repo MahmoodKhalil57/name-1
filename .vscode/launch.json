@@ -5,20 +5,22 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "command": "quasar dev",
-      "name": "quasar dev",
+      "command": "npm run dev",
+      "name": "start local",
       "request": "launch",
       "type": "node-terminal"
     },
     {
-      "type": "chrome",
+      "command": "npm run quasar-dev",
+      "name": "start quasar only",
       "request": "launch",
-      "name": "quasar debug",
-      "url": "http://localhost:9000",
-      "webRoot": "${workspaceFolder}/src",
-      "sourceMapPathOverrides": {
-        "webpack://package-name/./src/*": "${webRoot}/*"
-      }
+      "type": "node-terminal"
+    },
+    {
+      "command": "npm run functions-dev",
+      "name": "start backend only",
+      "request": "launch",
+      "type": "node-terminal"
     }
   ]
 }

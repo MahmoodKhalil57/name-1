@@ -4,7 +4,10 @@
     <!--Item1:header-->
     <span class="title-font text-center q-mt-xl"> Order now </span>
     <!--Item2:FlexRowContainer-->
-    <div class="row q-pa-xl q-mb-xl q-gutter-lg justify-center flex-container" v-if="products">
+    <div
+      class="row q-pa-xl q-mb-xl q-gutter-lg justify-center flex-container"
+      v-if="products"
+    >
       <!--5Items Of Item2: FlexColumnContainer -->
       <q-card
         class="flex-item column shadow-3"
@@ -48,7 +51,13 @@
         <hr class="default-separator" />
         <!--price-->
         <div
-          class="row full-width flex-center justify-between q-px-xl q-py-sm q-gutter-sm"
+          class="
+            row
+            full-width
+            flex-center
+            justify-between
+            q-px-xl q-py-sm q-gutter-sm
+          "
         >
           <label for="framework">Price:</label>
           <select id="framework" class="select-round">
@@ -87,25 +96,27 @@
       </q-card>
     </div>
   </q-page>
+  <q-btn color="primary" icon="check" label="OK" @click="this.addProduct()" />
 </template>
 
 <script>
 import { ref } from "vue";
-import { mapGetters , mapActions } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
-  name: 'shopPage',
+  name: "shopPage",
   data: function () {
     return {
-      products : [],
+      products: [],
     };
   },
   computed: {
-    ...mapGetters({products_full : ('mydata/getProducts')}),
-    },
+    ...mapGetters({ products_full: "mydata/getProducts" }),
+  },
   methods: {
     ...mapActions({
-      updateProducts: 'mydata/updateProductsFromDatabase'
+      updateProducts: "mydata/updateProductsFromDatabase",
+      addProduct: "mydata/addNewProductToDatabase",
     }),
     set_search: function (search) {
       if (search) {
@@ -116,8 +127,7 @@ export default {
           }
         });
         this.products = new_products;
-      }
-      else{
+      } else {
         this.products = this.products_full;
       }
     },
