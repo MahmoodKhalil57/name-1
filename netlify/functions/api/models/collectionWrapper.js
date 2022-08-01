@@ -1,4 +1,3 @@
-const { product } = require('./product.js');
 const { db } = require('../utils/getDb.js');
 const { collection, getDocs } = require('firebase/firestore');
 
@@ -7,15 +6,15 @@ class collectionWrapper {
     this.docs = [];
     this.type = type;
 
-    if (this.type == 'products') {
-      if (payloads) {
-        this.docs = this.setWrapper(payloads);
-      }
+    if (payloads) {
+      this.docs = this.setWrapper(payloads);
+
     }
   }
   setWrapper(payloads) {
-    let products_array = payloads.map((payload) => new product(payload));
+    let products_array = payloads.map((payload) => new this.type(payload));
     return products_array;
+
   }
   async updateCollection() {
     try {
@@ -29,12 +28,10 @@ class collectionWrapper {
 
   async getCollectionFromDB(col_string) {
     try {
-      if (this.type == 'products') {
-        var col = collection(db, col_string);
-        const snapshots = await getDocs(col);
-        this.docs = snapshots.docs.map((payload) => (new product(payload, true)));
-        return this.getClientarray()
-      }
+      var col = collection(db, col_string);
+      const snapshots = await getDocs(col);
+      this.docs = snapshots.docs.map((payload) => (new this.type(payload, true)));
+      return this.getClientarray()
     } catch (error) {
       console.info('googleanalytics error!', error)
     }

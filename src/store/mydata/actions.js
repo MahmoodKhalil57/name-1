@@ -43,14 +43,14 @@ export async function addNewProductToDatabase(state) {
             "Green with a tinge of red"
           ],
           "quanitiy": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"
+            1,
+            2,
+            3,
+            4,
+            5
           ],
           "availabilty": false,
-          "reviews": { "stars": "5", "count": "1" }
+          "reviews": { "stars": 5, "count": 1 }
         },
       };
       await api.post('api', test)
