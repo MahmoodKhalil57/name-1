@@ -102,10 +102,10 @@ class product {
     catch (ignore) { }
   }
 
-  async setProduct() {
+  async setProduct(db_name) {
     try {
       let data = this.getDBJson();
-      await setDocs("products_full", data.id, data.data);
+      await setDocs(db_name, data.id, data.data);
     }
     catch (ignore) { }
     return this.getClientJson();

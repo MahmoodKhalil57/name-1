@@ -1,10 +1,10 @@
-const { db } = require('../utils/getDb.js');
-const { collection, getDocs } = require('firebase/firestore');
+const { getCollection } = require('../utils/getCollection.js');
 
 class collectionWrapper {
-  constructor(type, ...payloads) {
+  constructor(type, db_name, ...payloads) {
     this.docs = [];
     this.type = type;
+    this.db_name = db_name;
 
     if (payloads) {
       this.docs = this.setWrapper(payloads);
@@ -18,7 +18,7 @@ class collectionWrapper {
   }
   async updateCollection() {
     try {
-      response = await this.docs.map((payload) => payload.setProduct());
+      response = await this.docs.map((payload) => payload.setProduct(this.db_name));
       return response;
     } catch (ignore) { }
   }
@@ -26,14 +26,14 @@ class collectionWrapper {
     return this.docs.map((product) => product.getClientJson());
   }
 
-  async getCollectionFromDB(col_string) {
+  async getCollectionFromDB() {
     try {
-      var col = collection(db, col_string);
-      const snapshots = await getDocs(col);
-      this.docs = snapshots.docs.map((payload) => (new this.type(payload, true)));
+      let collection_obj = await getCollection(this.db_name);
+      this.docs = collection_obj.docs.map((payload) => (new this.type(payload, true)));
+      // console.log(this.getClientarray());
       return this.getClientarray()
-    } catch (error) {
-      console.info('googleanalytics error!', error)
+    } catch (ignore) {
+      // console.info('googleanalytics error!', error)
     }
   };
 }
