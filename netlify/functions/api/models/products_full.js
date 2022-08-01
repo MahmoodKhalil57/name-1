@@ -32,7 +32,6 @@ class products_full {
       let product_obj = await temp_product.setProduct(payload);
       return product_obj;
     } catch (ignore) { }
-
   }
 }
 

@@ -74,8 +74,6 @@ class product {
 
     try {
       if (is_db) {
-        console.log(payload.data())
-
         this.name = payload.id;
         payload = payload.data();
       }
@@ -104,9 +102,8 @@ class product {
     catch (ignore) { }
   }
 
-  async setProduct(payload) {
+  async setProduct() {
     try {
-      this.setData(payload);
       let data = this.getDBJson();
       await setDocs("products_full", data.id, data.data);
     }

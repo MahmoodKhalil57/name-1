@@ -1,5 +1,5 @@
 const { requestObj, responseObj } = require('./utils/helpers.js');
-const { products_full } = require('./models/products_full.js');
+const { collectionWrapper } = require('./models/collectionWrapper.js');
 
 const handler = async (event, context) => {
 
@@ -11,18 +11,23 @@ const handler = async (event, context) => {
   }
   catch (ignore) { }
 
-  let products_obj = new products_full()
+
 
   let response = "fail";
   switch (task) {
     case "getProducts":
-      response = await products_obj.getCollection();
+      try {
+        let products_obj = new collectionWrapper('products');
+        response = await products_obj.getCollectionFromDB('products_full');
+        // console.log(response);
+      } catch (ignore) { }
       break;
     case "setProducts":
       try {
-        response = await products_obj.setProduct(payload);
-        break;
+        let products_obj = new collectionWrapper('products', payload);
+        response = await products_obj.updateCollection();
       } catch (ignore) { }
+      break;
   }
   return responseObj(200, response)
 
